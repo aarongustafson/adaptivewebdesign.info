@@ -1,0 +1,69 @@
+<?php
+
+header('Content-Type: text/css');
+include "{$_SERVER['DOCUMENT_ROOT']}/global/.config.php";
+
+?>
+
+/* -----------------------------------------------
+ * Easy Readers
+ * Stylesheet for IE <= 6
+ * Created by Easy! Designs, LLC
+ * http://easy-designs.net
+ * ----------------------------------------------- */
+
+#content,
+#order,
+#top,
+#bottom .wrapper,
+#easy-network ul {
+    width: 940px;
+}
+
+#contributors #jeffrey-zeldman,
+#contributors #craig-cook {
+    margin-left: 70px;
+}
+
+#adaptive-web-design-preview #free-preview a.button mark {
+    background: url('/i/c/free-badge-8bit.png') no-repeat 50% 50%;
+}
+
+#top .logo {
+	  position: relative;
+	  top: 5px;
+    background-image: none;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/c/logo.png', sizingMethod='crop');
+}
+
+#content .book-preview figure {
+	  height: 1%;
+    width: auto;
+		float: left;
+    position: relative;
+}
+#adaptive-web-design-preview figure img {
+	  width: 0;
+	  height: 508px;
+		padding-left: 401px;
+		margin-left: 0;
+    background-image: none;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/adaptive-web-design/cover-stacked.png', sizingMethod='crop');
+}
+
+#cart li a {
+	white-space: nowrap;
+}
+
+#easy-network {
+    width: 50%;
+    padding-left: 50%;
+}
+#easy-network ul {
+	margin-left:  -360px;
+}
+#easy-network ul li {
+    float: left;
+    width: 20px;
+    white-space: nowrap;
+}

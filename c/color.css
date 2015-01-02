@@ -1,0 +1,205 @@
+html, body {
+    background: #fdf4e8 url('<?php echo $IMG_PREFIX; ?>/c/bg.png') 50% 0;
+}
+
+/* colors */
+
+body {
+    color: #3d3d3d;
+}
+
+a,
+label abbr {
+    color: #ca6627;
+}
+
+:focus {
+	outline-color: #1989a6;
+}
+
+a:hover, a:focus {
+    color: #e24e0e;
+}
+
+#free-preview b,
+h1,
+#reviews h2 { 
+    color: #115860;
+}
+
+.book-preview h1 {
+    color: #323023;
+}
+
+.book-preview h2,
+.book-preview .author,
+.book-preview .contributor,
+.hreview p.reviewer,
+#easy-network ul li a,
+#easy-network ul li a:hover,
+#easy-network ul li a:focus,
+#free-preview,
+#content section header h2,
+table.cart thead th {
+    color: #57533f;
+}
+.book-preview blockquote:before {
+    color: #57533f;
+}
+
+button span, 
+a.button span {
+    color: #fff;
+}
+
+del,
+#order .description {
+    color: #868060;
+}
+
+form .failure a, .error {
+    color: #c00;
+}
+
+table caption,
+#print-specs h1,
+#content section header {
+    border-bottom-color: #868060;
+}
+
+#shopping-cart table tbody th,
+#shopping-cart table tbody td,
+#checkout table tbody th,
+#checkout table tbody td,
+#faq #content h1,
+form fieldset,
+form .email input,
+form .text input,
+form textarea {
+    border-color: #c1baa4;
+}
+
+table tbody:first-child,
+table thead,
+#content section .entry-content {
+    border-top-color: #fff;
+}
+
+section.author figure img,
+#contributors figure img {
+    border-color: #e2d9ce;
+}
+
+/* backgrounds */
+
+button,
+a.button {
+    background: transparent;
+}
+
+button span, 
+a.button span {
+    background: #1989a6 50% 0;
+}
+
+button:hover span,
+a.button:hover span,
+button:focus span,
+a.button:focus span {
+    background-color: #e24e0e;
+}
+
+.cssgradients button span,
+.cssgradients a.button span {
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgba(255,255,255,0.0)),
+        color-stop(1, rgba(255,255,255,0.33))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgba(255,255,255,0.0) 0%,
+        rgba(255,255,255,0.33) 100%
+    );
+}
+
+#top .logo {
+    background: url(<?php echo $IMG_PREFIX; ?>/c/logo.png) no-repeat 50% 50%;
+}
+
+#top .tagline {
+    background: url(<?php echo $IMG_PREFIX; ?>/c/presents.png) no-repeat 50% 20px;
+}
+
+#social-links li.twitter a {
+	background-image: url(<?php echo $IMG_PREFIX; ?>/c/twitter.png);
+}
+#social-links li.facebook a {
+	background-image: url(<?php echo $IMG_PREFIX; ?>/c/facebook.png);
+}
+
+#easy-network {
+    background: #faefe1;
+}
+
+.rgba #easy-network {
+    background: rgba(250,239,225,0.5);
+}
+
+#easy-network ul li a,
+#easy-network ul li a:hover,
+#easy-network ul li a:focus {
+    background: no-repeat 0 50%;
+}
+
+.opacity #easy-network ul li a {
+    opacity: 0.5;
+}
+
+.opacity #easy-network ul li a:hover,
+.opacity #easy-network ul li a:focus {
+    opacity: 0.99; /* value of 1 changes the antialiasing */
+}
+
+#easy-network ul li.easy-designs a {
+    background-image: url(<?php echo $IMG_PREFIX; ?>/c/en-easy-designs.png);
+}
+
+#easy-network ul li.blog a {
+    background-image: url(<?php echo $IMG_PREFIX; ?>/c/en-blog.png);
+}
+
+#easy-network ul li.r4g a {
+    background-image: url(<?php echo $IMG_PREFIX; ?>/c/en-r4g.png);
+}
+
+.rgba section.author figure img,
+.rgba #contributors figure img {
+    background-color: rgba(226,217,206,0.3);
+}
+
+#bottom {
+    background: #f0e1ce;
+}
+
+#cart, .notice {
+    background: #efe1ca;
+}
+
+.notice {
+	border-color: #faefe1;
+}
+
+.rgba #cart {
+    background: rgba(207,181,134,0.1);
+}
+
+#cart .description {
+    background: url(<?php echo $IMG_PREFIX; ?>/c/cart.png) no-repeat 0 0;
+}
+
+#adaptive-web-design-preview #free-preview a.button mark {
+    background: url(<?php echo $IMG_PREFIX; ?>/c/free-badge.png) no-repeat 50% 50%;
+}

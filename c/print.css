@@ -1,0 +1,13 @@
+/* =Global Print Styles */
+@media print {
+	@page { margin: 0.5in; }
+	* { background: transparent !important; }
+	body { font-size: 120%; }
+	h1, h2, h3, h4, h5, h6 { margin: 1em 0; }
+	p { widows: 4; orphans: 4; }
+	h1, h2, ul, ol { page-break-inside: avoid; }
+	nav, .frame, #contact, #mobile-nav { display: none; }
+	#bottom { margin-top: .05in; padding-top: 0.05in; border-top: 1px solid; }
+	#bottom p { display: inline; }
+}
+

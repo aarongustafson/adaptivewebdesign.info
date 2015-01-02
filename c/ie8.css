@@ -1,0 +1,213 @@
+<?php header('Content-Type: text/css'); ?>
+
+/* -----------------------------------------------
+ * Easy Readers
+ * Stylesheet for IE <= 8
+ * Created by Easy! Designs, LLC
+ * http://easy-designs.net
+ * ----------------------------------------------- */
+
+/* Media Query stuff */
+.cart #top {
+	margin-top: 30px;
+}
+#order, #free-preview {
+	max-width: none;
+}
+#order aside,
+section.author figure {
+    width: 333px;
+    float: left;
+}
+.book-preview {
+    margin-left: -62px;
+    padding-left: 62px;
+    min-height: 489px;
+}
+.book-preview h1,
+.book-preview h2,
+.book-preview .author,
+.book-preview .contributor,
+.book-preview blockquote,
+#free-preview {
+    margin-left: 380px;
+}
+#content figure {
+		width: auto;
+		height: auto;
+		margin: 0;
+}
+#content .book-preview figure {
+    float: left;
+    margin: 10px 30px 0 -62px;
+}
+.book-preview figure img {
+  	width: auto;
+		margin-left: 0;
+}
+.book-preview #net-feature {
+	left: 75px;
+}
+#content h1,
+.book-preview h1,
+.book-preview h2,
+#adaptive-web-design-preview .description,
+.book-preview .author,
+.book-preview .contributor {
+		text-align: left;
+}
+.book-preview blockquote {
+	  max-width: none;
+		padding-left: 0;
+}
+.book-preview blockquote:before {
+    left: -.45em;
+}
+blockquote p.reviewer {
+	width: auto;
+}
+#free-preview {
+	clear: right;
+	text-align: left;
+}
+#free-preview .pitch {
+    float: left;
+}
+#free-preview a.button {
+    float: right;
+    margin-top: 4px;
+}
+#free-preview a.button mark {
+    top: -29px;
+		bottom: auto;
+}
+section#share {
+	clear: right;
+	margin: 0;
+	padding: 10px 0 0;
+	text-align: right;
+}
+#share p, #share div {
+	display: block;
+	float: right;
+	width: 70px;
+	margin: 0 0 0 10px;
+}
+#order article,
+section.author article {
+    width: 560px;
+    float: right;
+}
+#print-specs {
+	clear: left;
+}
+#table-of-contents {
+	display: table;
+	max-width: 560px;
+}
+#table-of-contents ol {
+	width: 560px;
+}
+#contributors h1,
+#reviews h1 {
+	text-align: center;
+}
+#contributors ul {
+    overflow: visible;
+    margin-bottom: 0;
+}
+#contributors .vcard {
+	clear: none;
+	padding-top: 0;
+}
+#contributors figure img {
+    float: left;
+		margin-top: 0;
+}
+#contributors ul li:nth-child(n+1) figure img {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+}
+#contributors ul li:nth-child(n+1) {
+    float: left;
+    margin-left: 155px;
+    width: 210px;
+}
+#contributors ul li:nth-child(3n+1) {
+    margin-left: 0;
+}
+#contributors ul li:nth-child(3n+1) {
+    clear: both;
+}
+#contributors ul li:nth-child(3n+1):not(:first-child) {
+    margin-left: 150px;
+}
+#reviews ul {
+		float: left;
+    width: 450px;
+		padding: 0;
+    margin-left: 40px;
+    margin-bottom: -40px;
+}
+#reviews ul#tweets li {
+	margin-right: 40px;
+	width: 287px;
+	clear: none;
+}
+#reviews ul#tweets li.one {
+	clear: left;
+}
+#reviews ul#tweets li.three {
+	margin-right: -1px;
+}	
+#reviews blockquote p.reviewer {
+	text-indent: 0;
+	width: 60%;
+}
+#bottom {
+    padding: 30px 0;
+    margin: 74px auto 0;
+}
+#bottom .wrapper {
+    overflow: hidden;
+}
+#bottom section {
+    float: left;
+    width: 460px;
+    margin-left: 20px;
+}
+#bottom #bottom-about {
+    margin-left: 0;
+		margin-bottom: 0;
+}
+#cart {
+    position: absolute;
+    top: 0;
+    left: auto;
+		right: 50%;
+    margin-right: -479px;
+    z-index: 100;
+    width: 228px;
+    padding: 46px 20px 18px;
+    overflow: hidden;
+}
+
+/* Layout */
+#contributors ul li {
+    float: left;
+    margin: .5em 30px 1em 0;
+    width: 210px;
+  	height: 290px;
+}
+#contributors #craig-cook {
+    clear: left;
+}
+#contributors #jeffrey-zeldman,
+#contributors #craig-cook {
+    margin-left: 140px;
+}
+#contributors img {
+    width: 170px !important;
+		height: 170px !important;
+}
