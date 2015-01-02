@@ -1,10 +1,3 @@
-<?php
-
-header('Content-Type: text/css');
-include "{$_SERVER['DOCUMENT_ROOT']}/global/.config.php";
-
-?>
-
 /* -----------------------------------------------
  * Easy Readers
  * Stylesheet for IE <= 6
@@ -48,7 +41,7 @@ include "{$_SERVER['DOCUMENT_ROOT']}/global/.config.php";
 		padding-left: 401px;
 		margin-left: 0;
     background-image: none;
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/adaptive-web-design/cover-stacked.png', sizingMethod='crop');
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/i/1st-ed/cover-stacked.png', sizingMethod='crop');
 }
 
 #cart li a {
