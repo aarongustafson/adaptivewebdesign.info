@@ -106,19 +106,6 @@ FunctionHandler.register(
 	'*',
 	function(){
 		
-		// Google Analytics
-		//window._gaq = window._gaq || [];
-		//window._gaq.push(['_setAccount', 'UA-176472-10']);
-		//window._gaq.push(['_trackPageview']);
-		//var
-		//s  = document.getElementsByTagName('script')[0],
-		//ga = document.createElement('script');
-		//ga.type   = 'text/javascript';
-		//ga.async  = true;
-		//ga.src    = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
-		//            '.google-analytics.com/ga.js';
-		//s.parentNode.insertBefore(ga, s);
-		
 		// for iOS (remove the toolbar)
 		if ( window.location.hash == '' )
 		{

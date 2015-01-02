@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html>
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Chapter 2: Progressive Enhancement with Markup - Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement</title>
+	<link href="template.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="title-page" class="page">
+		<hgroup>
+			<h1>ADAPTIVE WEB DESIGN</h1>
+			<h2>Crafting Rich Experiences with Progressive Enhancement</h2>
+		</hgroup>
+		<p class="byline">by Aaron Gustafson</p>
+  	</div>
+  	
+	<div id="chapter-2" class="page">
+		<header>
+			<h1 id="chapter-title"><strong>CHAPTER 2: </strong>PROGRESSIVE ENHANCEMENT WITH&#160;MARKUP</h1>
+		</header>
+
+	    <blockquote class="ch-quote">
+	      <p>“The meaning is in the content of the text and not in the&#160;typeface.”</p>
+	      <p class="author">— Wim Crouwel</p>
+	    </blockquote>
+
+		<p>When it comes to the web, markup calls the shots. It is the foundation upon which every beautiful design and each amazing experience is built. Whether your preferred flavor is HTML or its more rigorous sibling, XHTML, each element has a purpose and can profoundly affect the user experience for better or worse, depending on how you use (or abuse) it.</p>
+
+		<div class="keep">
+			<h2 id="from-a-rough-start-to-the-right-way">FROM A ROUGH START TO THE RIGHT&#160;WAY<sup>™</sup></h2>
+
+			<p>When we first began building web pages, many of us misunderstood the importance of good markup. Those of us coming to the web from a programming background often considered learning HTML beneath us, so we never put in the time to come to grips with the semantics it provided. Those of us who came to the web from a design background didn’t understand the importance of semantics either. We thought only of the presentational aspect of a web page and latched on to the <code>table</code> as a means of laying out pages on a grid, then we went hog-wild and found hundreds of other uses for the <code>table</code> element, many of which supplanted existing (and well-supported) semantic elements (like lists).</p>
+		</div>
+
+		<p>In many offices across the globe, advocacy for semantic application of HTML fell on deaf ears; the argument was seen as a largely idealistic one because: 1) the fact remained that old-school websites looked okay in modern browsers and 2) the case for greater web accessibility was lost on many people who had no first-hand experience of using the web with a disability. Then Google came along and changed everything. Suddenly, semantic markup was important.</p>
+
+		<p>Google was the first search engine to take semantics into account when indexing web pages. Starting with the humble anchor (<code>a</code>) element, the cornerstone of their original PageRank algorithm, Google pioneered the use of semantic markup to infer meaning and relevancy. The other search engines soon followed and, as search engine spiders began hunting for other meaningful HTML elements on web pages (e.g., <code>h1</code> which indicates the most important content on a page), semantic markup became more important to the business world because proper use of it meant a better ranking in search engines and, thereby, a greater opportunity to attract new customers.</p>
+
+		<div class="keep">
+			<h2 id="the-semantic-foundation">THE SEMANTIC FOUNDATION</h2>
+
+			<p>If content were soil, semantic markup would be the compost you’d add to ensure a productive garden. It enriches the content, providing your users with clues about intent and context, as well as supplementary information about the content itself.</p>
+		</div>
+
+		<p>Take, for example, the abbreviation element (<code>abbr</code>). It is used to denote abbreviations (and acronyms, now that it has officially replaced the <code>acronym</code> element):</p>
+		
+		<pre><b class="text">Gatlinburg,</b> &lt;abbr title="Tennessee"&gt;<b class="text">TN</b>&lt;/abbr&gt;</pre>
+
+		<p>In this simple HTML snippet, you can see how the abbreviation enhances the letters “TN” by informing the user that they stand for “Tennessee.”</p>
+
+		<p>As HTML has evolved, its vocabulary has steadily expanded to offer more options for describing the content it encapsulates. The advent of HTML5 ushered in a slew of new semantic options (such as <code>header</code>) and even augmented a few existing ones (such as the aforementioned <code>abbr</code> that took over for the ousted <code>acronym</code>). As we proceed through this chapter, we’ll employ several of these new/revised elements and I will provide a little background about why they are an appropriate choice for marking up content.</p>
+
+		<p>Let’s get started.</p>
+
+		<div class="keep">
+			<h2 id="saying-what-we-mean">SAYING WHAT WE&#160;MEAN</h2>
+
+			<p>Looking at the Retreats 4 Geeks web page<a class="footnote-link" href="#footnote-222-1" id="footnote-222-1-backlink">[1]</a>, it may be hard to figure out where to start, but we’ll begin with the most important content: the name of the site and the links to the various sections of the page (since this is, for our purposes, a single-page website).</p>
+		</div>
+
+		<figure id="figure-2-1">
+			<img alt="" src="images/Ch2-1.jpg" />
+			<figcaption>
+				<p><strong>Figure 2.1:</strong> A screen shot of the site highlighting the site name and navigation elements.</p>
+			</figcaption>
+		</figure>
+
+	    <p>Let’s consider this component from a semantician’s point of view, starting with the logo. The Retreats 4 Geeks logo is an image, so we should use an <code>img</code> element to mark it up.<a class="footnote-link" href="#footnote-222-2" id="footnote-222-2-backlink">[2]</a> It’s also pretty important because it provides a context for the entire page, so it should be wrapped in an <code>h1</code>, an element reserved for the most important content on a page:</p>
+	    <pre>&lt;h1&gt;&lt;img src="i/logo.png"/&gt;&lt;/h1&gt;</pre>
+
+	    <p>Though the example page is written using HTML5, I’ve always been more comfortable with the XML serialization of the language, so I’ve chosen to stick with that syntax (as evidenced by the trailing slash on the <code>img</code> element). It is more a matter of preference than requirement.</p>
+
+	    <p>Moving on to the navigation, we’re presenting a list of links, so it should be marked up as such. As the order of the links corresponds to the order of the sections on the page, the list should probably be of the ordered variety (<code>ol</code>). Each link gets placed in a list item (<code>li</code>) and wrapped in an anchor element (<code>a</code>):</p>
+
+	    <pre>&lt;ol&gt;
+  &lt;li&gt;&lt;a href="#details"&gt;<b class="text">Details</b>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#schedule"&gt;<b class="text">Schedule</b>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#instructors"&gt;<b class="text">Instructors</b>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#lodging"&gt;<b class="text">Lodging</b>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#location"&gt;<b class="text">Location</b>&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+	    <p>Up until this point, we’ve made the obvious choices with regard to markup, employing semantics we’ve had in HTML since the beginning. Just over a year ago, we would have likely stopped here and considered the header complete, but HTML5 gives us the opportunity to improve both the semantic value and the accessibility of this content.</p>
+
+	    <p>Traditionally, we might have employed a page division (<code>div</code>) with a semantic identifier (<code>id</code>) of “header” to contain these two elements. Divisions, as you’ll recall, are used to group content, but they provide no context as to the purpose or function of that group (which is why we would identify it as the “header”). HTML5, however, introduces an element that provides the explicit semantic meaning for that division: <code>header</code>.</p>
+
+	    <p>Semantically, a <code>header</code> is used to demarcate any content that is summarily important to a page or section of a page. It can be used to encapsulate headings or heading groups (contained in the new <code>hgroup</code> element), relevant navigational aids, and introductory content. As such, it makes a perfect container for the title of our page and the list of anchors to each article within the page.</p>
+
+	    <p>HTML5 also grants us another more appropriate option when it comes to the navigation. Whereas we would have traditionally identified the ordered list as “nav” or “main-nav,” HTML5’s <code>nav</code> element more directly expresses the semantics we’re trying to imbue the <code>ol</code> with by providing that semantic <code>id</code>. The <code>nav</code> element can be used to wrap any group of navigational links and functions as the semantic equivalent of the ARIA landmark role of “navigation” (which we’ll discuss more in <a href="chapter-5.xhtml">Chapter 5</a>).</p>
+
+	    <p>With these additions, the markup for this section is now:</p>
+
+	    <pre>&lt;header&gt;
+  &lt;h1&gt;&lt;img src="i/logo.png"/&gt;&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href="#details"&gt;<b class="text">Details</b>&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#schedule"&gt;<b class="text">Schedule</b>&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#instructors"&gt;<b class="text">Instructors</b>&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#lodging"&gt;<b class="text">Lodging</b>&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#location"&gt;<b class="text">Location</b>&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</pre>
+
+	    <p>And, thanks to the fact that they ignore anything they don’t understand, the markup we’ve used will work in every browser, regardless of age. Sure, modern browsers may treat the newer elements differently, but even text-based browsers (such as Lynx) will be able to access the content. Devoid of style and stripped of JavaScript-based interactivity, the markup just works, providing us with the second level of support in the progressive enhancement continuum. (Remember: the content itself forms the crucial first level).</p>
+
+	    <div class="keep">
+		    <h2 id="invisible-and-advisory">INVISIBLE AND&#160;ADVISORY</h2>
+
+		    <p>As good as this markup is, we’ve neglected a major accessibility requirement by not providing any alternate text for our logo image (expressed using the <code>alt</code> attribute). “Alt text,” as it’s most often known,<a class="footnote-link" href="#footnote-222-3" id="footnote-222-3-backlink">[3]</a> provides a text-based back-up for users who have images turned off; it is also the content that is read to users of screen reading software (such as the blind), which is why its inclusion is critical.</p>
+	    </div>
+
+	    <p>Returning to the example, I’ve added a simple <code>alt</code> attribute:</p>
+    	
+		<pre>&lt;h1&gt;&lt;img src="i/logo.png" <strong>alt="Retreats 4 Geeks"</strong>/&gt;&lt;/h1&gt;</pre>
+
+	    <p>When the image in question is a logo or conveys information needed to understand the page or accomplish key tasks, <code>alt</code> text should always be supplied. For all other images, it’s perfectly legitimate to leave the <code>alt</code> text blank (<code>alt=""</code>). I would even go so far as to say it’s <em>advisable</em> to use an empty <code>alt</code> attribute in any instance where the image doesn’t supply necessary information. I say this for two reasons: 1) no one really wants to read vacuous copy like “Smiling man throws a Frisbee to a leaping Golden Retriever” any more than someone else wants to write it; and 2) screen readers will speak the contents of the <code>alt</code> attribute aloud, but will skip any images with empty <code>alt</code> attributes.<a class="footnote-link" href="#footnote-222-4" id="footnote-222-4-backlink">[4]</a></p>
+
+	    <p>Whereas the <code>alt</code> attribute is used to provide alternative content, the <code>title</code> attribute is used to provide advisory information about an element. In the case of the navigation links in the above example, we can use <code>title</code> to provide the user with information about where each link will take her:</p>
+
+	    <pre>&lt;li&gt;&lt;a href="#location" <strong>title="Get the 411 on Gatlinburg, Tennessee"</strong>&gt;<b class="text">Location</b>&lt;/a&gt;&lt;/li&gt;</pre>
+
+	    <p>Similarly, further down the page in the “location” section, <code>title</code> provides context to the link that wraps the map:</p>
+	
+	    <pre>&lt;a href="http://maps.google.com/…" <strong>title="View Gatlinburg, Tennessee on Google Maps"</strong>&gt;
+  &lt;img src="http://maps.google.com/…" alt="A map showing the location of Gatlinburg, Tennessee"/&gt;
+&lt;/a&gt;</pre>
+
+		<figure id="figure-2-2">
+			<img alt="" src="images/Ch2-2.jpg" />
+			<figcaption>
+				<p><strong>Figure 2.2:</strong> A screen shot of the location portion of the page with a cursor over the map.</p>
+			</figcaption>
+		</figure>
+
+	    <div class="keep">
+			<h2 id="ad-hoc-semantics">AD-HOC SEMANTICS</h2>
+
+			<p>HTML is filled with attributes that help enrich the elements they adorn. It prescribes a number of “fixed use” ones, like <code>alt</code> and <code>title</code>, but it also offers a handful of attributes that can be used to build upon the language’s native semantics in a less formal way. I’m talking, of course, about <code>id</code> and <code>class</code>.</p>
+	    </div>
+
+	    <p>When Dave Raggett drafted a specification for HTML 3.0,<a class="footnote-link" href="#footnote-222-5" id="footnote-222-5-backlink">[5]</a> it contained two new concepts: classification and identification, expressed via the <code>class</code> and <code>id</code> attributes respectively.<a class="footnote-link" href="#footnote-222-6" id="footnote-222-6-backlink">[6]</a> These two attributes were not formally introduced into the HTML lexicon until HTML 4.0, but were implemented in browsers around the same time as Cascading Style Sheet (CSS) support was added. And CSS, of course, brought us two simple selectors that targeted these attributes explicitly, causing some unfortunate confusion over the intended use of <code>class</code> and <code>id</code> from the get-go.</p>
+
+	    <p>For years, nearly every web developer working with CSS thought the correlation between the attributes and the selectors was intentional, believing that <code>id</code> and <code>class</code> were intended purely for use with style sheets. You can hardly blame us though, CSS Level 1 did not provide many mechanisms for selecting elements, so it made sense that the <code>class</code> selector (e.g., <code>ul.menu</code>) and the <code>id</code> selector (e.g., <code>div#content</code>) would have been introduced (along with their corresponding attributes) for the purposes of both the general and specific application of style, respectively.<a class="footnote-link" href="#footnote-222-7" id="footnote-222-7-backlink">[7]</a></p>
+
+	    <p>Thankfully, we now understand how the <code>class</code> and <code>id</code> attributes were meant to operate. The <code>class</code> attribute was introduced specifically to address the limited set of elements within the HTML lexicon:</p>
+
+		<blockquote>
+			<p>As time goes by, people’s expectations change, and more will be demanded of HTML. One manifestation of this is the pressure to add yet more tags. HTML 3.0 introduces a means for subclassing elements in an open-ended way. This can be used to distinguish the role of a paragraph element as being a couplet in a stansa [sic], or a mathematical term as being a tensor. This ability to make fresh distinctions can be exploited to impart distinct rendering styles or to support richer search mechanisms, without further complicating the HTML document format itself.<a class="footnote-link" href="#footnote-222-8" id="footnote-222-8-backlink">[8]</a></p>
+		</blockquote>
+
+	    <p>The intent was that this attribute would contain a list of subclasses for the particular element they were applied to, with the classes listed from most general to most specific:<a class="footnote-link" href="#footnote-222-9" id="footnote-222-9-backlink">[9]</a></p>
+
+	    <pre>&lt;a href="…" title="…"&gt;
+  &lt;img <strong>class="illustration map"</strong> src="…" alt="…"/&gt;
+&lt;/a&gt;</pre>
+
+	    <p>The spec introduced the <code>id</code> attribute for the purposes of identifying a specific element on the page (this is why each <code>id</code> on a page needs to be unique). In practice, this identifier would be used as a reference point for style rules (<code>#details { … }</code>), scripts (<code>document.getElementById('details')</code>), and anchors (<code>&lt;a href="#details"&gt;</code>). You may recall that we actually used that last mechanism in the navigation introduced earlier in the chapter.</p>
+
+	    <p>As all of the information for the Retreats 4 Geeks event is included on a single page, I’ve grouped each chunk of content into separate <code>article</code> elements<a class="footnote-link" href="#footnote-222-10" id="footnote-222-10-backlink">[10]</a>, each with a unique <code>id</code>. The <code>article</code> element was introduced as part of HTML5 and demarcates content that forms an independent part of the document, such as a newspaper article, blog post, or, in our case, a distinct topic. Each of the articles on the page is then targeted, using its <code>id</code> as an anchor reference, by the navigation links. Clicking one of these links will jump a user directly to the appropriate content:</p>
+
+	    <pre>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;img src="i/logo.png" alt="Retreats 4 Geeks"/&gt;&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ol&gt;
+        &lt;li&gt;&lt;a href="<strong>#details</strong>" title="Find out what this retreat is all about"&gt;<b class="text">Details</b>&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="<strong>#schedule</strong>" title="Get familiar with what this retreat will cover"&gt;<b class="text">Schedule</b>&lt;/a&gt;&lt;/li&gt;
+        <b class="comment">&lt;-- … --&gt;</b>
+      &lt;/ol&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;div id="content"&gt;
+    &lt;article <strong>id="details"</strong>&gt;
+      <b class="comment">&lt;-- … --&gt;</b>
+    &lt;/article&gt;
+    &lt;article <strong>id="schedule"</strong>&gt;
+      <b class="comment">&lt;-- … --&gt;</b>
+    &lt;/article&gt;
+    <b class="comment">&lt;-- … --&gt;</b>
+  &lt;/div&gt;
+&lt;/body&gt;</pre>
+
+	    <p>The <code>class</code> and <code>id</code> attributes allow page authors to create their own semantics on top of those that are part of the spec. Together, these ad-hoc semantics imbue the markup with greater meaning and, over time, have gravitated toward a common set of classifications and identifiers in use across the globe (e.g., <code>div#header</code> and <code>ul#nav</code>). This common set of classifications and identifiers has, in turn, provided valuable feedback in the development of the HTML language itself (resulting in additions like HTML5’s <code>header</code> and <code>nav</code> elements, which we reviewed earlier) and fostered the development of a community-driven set of extensions to HTML known as “microformats.”</p>
+
+	    <div class="keep">
+			<h2 id="codified-conventions">CODIFIED CONVENTIONS</h2>
+
+			<p>Microformats are a set of community-driven specifications for how to mark up content to expose semantics (and meta data) that are not available in HTML (or XHTML). At their essence, microformats formalize organically-developed coding conventions into a specification that addresses an oversight or limitation in HTML. For example, HTML provides no robust way to mark up contact information or events, so the community created microformats to fill those needs.</p>
+	    </div>
+
+	    <p>The first microformat arose from a desire to express associations between individuals on the web and was called the XHTML Friends Network (“XFN” for short). Though not developed as a “microformat” (that term came later), XFN was a perfect example of extending the semantics of HTML with a specific goal in mind.</p>
+
+	    <p>Developed by Tantek Çelik, Matthew Mullenweg, and Eric Meyer, XFN makes use of the oft-neglected <code>rel</code> attribute. The purpose of <code>rel</code>—which you are probably familiar with in the context of the <code>link</code> element for inclusion of an external stylesheet (<code>rel="stylesheet"</code>)—is to indicate the relationship of the target of an anchor to the current page. The idea was simple: if I wanted to point from my blog to the blog of a colleague, I could employ XFN and add <code>rel="colleague"</code> to the link. Similarly, if I was linking to my wife’s blog, I would use <code>rel="friend co-resident spouse muse sweetheart co-worker"</code> because she is all of those things.<a class="footnote-link" href="#footnote-222-11" id="footnote-222-11-backlink">[11]</a></p>
+
+	    <p>On its own, this additional markup does little more than provide a bit more information about our relationship and why I might be linking to another website, but if I use it for every link in my blog roll and those people, in turn, use it in theirs, all of a sudden we’ve created a network that is navigable programmatically, creating myriad opportunities for data mining and repurposing. And that’s exactly what happened: XFN spread like wildfire. Software developers integrated it into popular blogging tools (e.g., WordPress, Movable Type) and developers at nearly every site on the “social web” (e.g., Twitter , Flickr, Last.fm) began adorning user profile pages with the special case of <code>rel="me"</code> (used to link from one web page you control to another), enabling tools like Google’s Social Graph to quickly build a full profile of their users starting from a single URL.<a class="footnote-link" href="#footnote-222-12" id="footnote-222-12-backlink">[12]</a></p>
+
+	    <p>An example of XFN in the Retreats 4 Geeks page can be found in the <code>footer</code><a class="footnote-link" href="#footnote-222-13" id="footnote-222-13-backlink">[13]</a>:</p>
+
+		<pre>&lt;footer&gt;
+  &lt;p id="copyright"&gt;<b class="text">&amp;copy;2010 Retreats 4 Geeks. All Rights Reserved.</b>&lt;/p&gt;
+  &lt;p&gt;<b class="text">Retreats 4 Geeks is an </b>&lt;a <strong>rel="me"</strong> href="http://easy-designs.net/"&gt;<b class="text">Easy! Designs</b>&lt;/a&gt;<b class="text"> venture.</b>&lt;/p&gt;
+&lt;/footer&gt;</pre>
+
+	    <p>From that simple (yet powerful) beginning, microformats have increased in number to address common and diverse needs from marking up a person’s profile (hCard), event listings (hCalendar), content for syndication (hAtom), and resumes (hResume), to indicating license information (rel-license), controlling search engine spidering (rel-nofollow), and facilitating tagging (rel-tag).<a class="footnote-link" href="#footnote-222-14" id="footnote-222-14-backlink">[14]</a></p>
+
+	    <p>Almost in parallel with the development of these microformats, numerous tools sprung up to make use of them. As you can probably guess from my mention of the Google Social Graph, search engines have started to pay attention to microformats and, in some cases, even rank microformatted content higher than non-microformatted content. Browser add-ons-such as Operator<a class="footnote-link" href="#footnote-222-15" id="footnote-222-15-backlink">[15]</a> and Oomph<a class="footnote-link" href="#footnote-222-16" id="footnote-222-16-backlink">[16]</a> enable users to extract and repurpose microformatted content. Microformat parsers are also available for nearly every programming language and there are even web-based services, such as Optimus<a class="footnote-link" href="#footnote-222-17" id="footnote-222-17-backlink">[17]</a> and H2VX<a class="footnote-link" href="#footnote-222-18" id="footnote-222-18-backlink">[18]</a>, that give users more direct access to the microformats in use on their sites.</p>
+
+	    <p>As you can see, microformats are yet another layer in the progressive enhancement continuum, enabling us to make our sites even more useful to our users. After all, how cool is it that, using a tool like Operator or a service like Optimus, we can enable users to import an event to their calendar or a business card to their address book directly from our web page? I think that’s pretty awesome.</p>
+
+	    <div class="keep">
+			<h3 id="call-me-call-me-anytime">Call me, call me&#160;anytime</h3>
+
+			<p>As our demo website is for an event, the hCalendar microformat is an obvious place to start, but let’s hold off on that for a moment and look at how we can apply the hCard microformat to my bio <code>section</code> in the “Instructors” <code>article</code>. Before we take a look at the markup though, let’s go over the key hCard classifications.</p>
+		</div>
+
+		<figure id="table-2-1">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">CLASS</th>
+						<th scope="col">PURPOSE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>vcard</td>
+						<td>Signifies that hCard is being used. (This should be the class of the root element containing the hCard information.)</td>
+					</tr>
+					<tr>
+						<td>fn</td>
+						<td>Short for “formatted name,” it’s used to wrap the name of the person who owns the hCard</td>
+					</tr>
+					<tr>
+						<td>url</td>
+						<td>Indicates that a given link takes the user to a web page about this person</td>
+					</tr>
+					<tr>
+						<td>photo</td>
+						<td>Denotes a photo of this person</td>
+					</tr>
+					<tr>
+						<td>org</td>
+						<td>Identifies the company or organization of which this person is a part</td>
+					</tr>
+					<tr>
+						<td>role</td>
+						<td>Conveys the role this person holds within the organization</td>
+					</tr>
+				</tbody>
+			</table>
+			<figcaption>
+		    	<p><strong>Table 2.1:</strong> Key hCard classifications</p>
+			</figcaption>
+		</figure>
+
+
+		<p>The hCard microformat offers many other options for marking up a person’s profile, but these are the key ones we’re going to concern ourselves within the context of the Retreats 4 Geeks website. And, of these five <code>class</code>es, only “vcard” and “fn” are actually required.</p>
+
+		<p>Now let’s take a look at the content we’ve got to work with:</p>
+		
+		<pre>&lt;section id="aaron-gustafson"&gt;
+  &lt;figure&gt;
+    &lt;img src="i/aaron-gustafson.jpg" alt=""/&gt;
+  &lt;/figure&gt;
+  &lt;h1&gt;<b class="text">Aaron Gustafson</b>&lt;/h1&gt;
+  &lt;p&gt;<b class="text">Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP). Aaron and his wife, Kelly, own </b>&lt;a href="http://easy-designs.net"&gt;<b class="text">Easy! Designs</b>&lt;/a&gt;<b class="text">, a boutique web consultancy based in Chattanooga, TN. When not neck deep in code, Aaron is usually found evangelizing his findings and sharing his knowledge and passion with others in the field.</b>&lt;/p&gt;
+  &lt;p&gt;<b class="text">Aaron has trained professionals at </b>&lt;cite&gt;<b class="text">The New York Times</b>&lt;/cite&gt;<b class="text">, Gartner, and the US Environmental Protection Agency (among others), and has presented at the world’s foremost web conferences, such as An Event Apart and Web Directions. He is Group Manager of the </b>&lt;a href="http://webstandards.org"&gt;<b class="text">Web Standards Project (WaSP)</b>&lt;/a&gt;<b class="text"> and serves as an Invited Expert to the World Wide Web Consortium’s </b>&lt;a href="http://www.w3.org/2005/Incubator/owea/"&gt;<b class="text">Open Web Education Alliance (OWEA)</b>&lt;/a&gt;<b class="text">. He created </b>&lt;a href="http://ecsstender.org"&gt;<b class="text">eCSStender</b>&lt;/a&gt;<b class="text">, serves as Technical Editor for </b>&lt;a href="http://alistapart.com"&gt;&lt;cite&gt;<b class="text">A List Apart</b>&lt;/cite&gt;&lt;/a&gt;<b class="text">, is a contributing writer for </b>&lt;a href="http://netmag.co.uk"&gt;&lt;cite&gt;<b class="text">.net  Magazine</b>&lt;/cite&gt;&lt;/a&gt;<b class="text">, and has filled a small library with his technical writing and editing credits. His next book, </b>&lt;cite&gt;<b class="text">Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement</b>&lt;/cite&gt;<b class="text">, is due out in early 2011.</b>&lt;/p&gt;
+&lt;/section&gt;</pre>
+
+		<p>You probably noticed that the <code>section</code> has an <code>h1</code> as its title. Don’t worry: in HTML5, each <code>section</code> creates a new context within which it’s okay to restart the headings at <code>h1</code>. It takes a little getting used to at first, I know, but it makes sense and addresses the limited number of heading levels quite well.<a class="footnote-link" href="#footnote-222-19" id="footnote-222-19-backlink">[19]</a></p>
+
+		<p>If you’ve got keen eyes, you’ve likely already identified exactly where each of the hCard <code>class</code>es should be applied, but I’ll step through each one, just to be sure, starting with the easiest one: “vcard.” This classification needs to be applied to the containing element, in this case, the <code>section</code>:</p>
+		
+		<pre>&lt;section id="aaron-gustafson" <strong>class="vcard"</strong>&gt;</pre>
+
+		<p>The next obvious one is “fn,” which should wrap my name. As my name is already wrapped in an <code>h1</code>, we can apply a <code>class</code> of “fn” to that element to indicate the text contained within the element is my name.</p>
+		
+		<pre>&lt;h1 <strong>class="fn"</strong>&gt;<b class="text">Aaron Gustafson</b>&lt;/h1&gt;</pre>
+
+		<p>Next, we can add a <code>class</code> of “url” to the “Easy! Designs” link, denoting that it points to a website I control:</p>
+		
+		<pre><b class="text">…</b> &lt;a <strong>class="url"</strong> href="http://easy-designs.net"&gt;<b class="text">Easy! Designs</b>&lt;/a&gt;<b class="text">, …</b></pre>
+
+		<p>Continuing down the list, we can apply “photo” to the image of me, which is contained in a <code>figure</code> element. HTML5 introduced the <code>figure</code> element to contain a discrete chunk of content—usually an image or graphic with an optional caption (<code>figcaption</code>)—that can stand on its own or be removed from a document without altering its meaning:</p>
+
+		<pre>&lt;figure&gt;
+  &lt;img <strong>class="photo"</strong> src="i/aaron-gustafson.jpg" alt=""/&gt;
+&lt;/figure&gt;</pre>
+
+		<p>We need to add the two final classes, “org” and “role” to this markup in the final paragraph of my bio, but the content presents us with a bit of a conundrum as there are several roles and organizations mentioned. Which one should we use? Is it okay to include multiple organizations and roles?</p>
+
+		<p>There is nothing in the hCard spec that restricts an hCard to a singular organization and role, but, in practice, few microformats parsers will expose anything beyond the first one encountered because address book software doesn’t typically allow for multiple organizations and roles. For that reason, we’ll simply add the classification to my primary function: Group Manager of the Web Standards Project.</p>
+
+		<p>The “org” bit is easy because “Web Standards Project” is already contained in an element. My role there, however, is part of a larger text string and is not contained within its own element. To apply the classification to my role only, we have to make use of an element bereft of semantic meaning, such as <code>b</code>:<a class="footnote-link" href="#footnote-222-20" id="footnote-222-20-backlink">[20]</a></p>
+		
+		<pre><b class="text">… He is</b> <strong>&lt;b class="role"&gt;</strong><b class="text">Group Manager</b><strong>&lt;/b&gt;</strong><b class="text"> of the </b>&lt;a <strong>class="org"</strong> href="http://webstandards.org"&gt;<b class="text">Web Standards Project (WaSP)</b>&lt;/a&gt; …</pre>
+
+		<p>Viewed all at once, you can see that the adjustments to incorporate the hCard microformat are quite minimal:</p>
+		
+		<pre>&lt;section id="aaron-gustafson" <strong>class="vcard"</strong>&gt;
+  &lt;figure&gt;
+    &lt;img <strong>class="photo"</strong> src="i/aaron-gustafson.jpg" alt=""/&gt;
+  &lt;/figure&gt;
+  &lt;h1 <strong>class="fn"</strong>&gt;<b class="text">Aaron Gustafson</b>&lt;/h1&gt;
+  &lt;p&gt;<b class="text">Aaron has been working on the web for nearly 15 years and, in that time, has cultivated a love of web standards and an in-depth knowledge of website strategy and architecture, interface design, and numerous languages (including XHTML, CSS, JavaScript, and PHP). Aaron and his wife, Kelly, own </b>&lt;a <strong>class="url"</strong> href="http://easy-designs.net"&gt;<b class="text">Easy! Designs</b>&lt;/a&gt;<b class="text">, a boutique web consultancy based in Chattanooga, TN. When not neck deep in code, Aaron is usually found evangelizing his findings and sharing his knowledge and passion with others in the field.</b>&lt;/p&gt;
+  &lt;p&gt;<b class="text">Aaron has trained professionals at </b>&lt;cite&gt;<b class="text">The New York Times</b>&lt;/cite&gt;<b class="text">, Gartner, and the US Environmental Protection Agency (among others), and has presented at the world’s foremost web conferences, such as An Event Apart and Web Directions. He is </b><strong>&lt;b class="role"&gt;</strong><b class="text">Group Manager</b><strong>&lt;/b&gt;</strong><b class="text"> of the </b>&lt;a <strong>class="org"</strong> href="http://webstandards.org"&gt;<b class="text">Web Standards Project (WaSP)</b>&lt;/a&gt;<b class="text"> and serves as an Invited Expert to the World Wide Web Consortium’s </b>&lt;a href="http://www.w3.org/2005/Incubator/owea/"&gt;<b class="text">Open Web Education Alliance (OWEA)</b>&lt;/a&gt;<b class="text">. He created </b>&lt;a href="http://ecsstender.org"&gt;<b class="text">eCSStender</b>&lt;/a&gt;<b class="text">, serves as Technical Editor for </b>&lt;a href="http://alistapart.com"&gt;&lt;cite&gt;<b class="text">A List Apart</b>&lt;/cite&gt;&lt;/a&gt;<b class="text">, is a contributing writer for </b>&lt;a href="http://netmag.co.uk"&gt;&lt;cite&gt;<b class="text">.net Magazine</b>&lt;/cite&gt;&lt;/a&gt;<b class="text">, and has filled a small library with his technical writing and editing credits. His next book, </b>&lt;cite&gt;<b class="text">Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement</b>&lt;/cite&gt;<b class="text">, is due out in early 2011.</b>&lt;/p&gt;
+&lt;/section&gt;</pre>
+
+		<p>But these simple changes allow a microformats parser to put together a profile of me quite easily.</p>
+
+		<figure id="figure-2-3" class="keep">
+			<img alt="" src="images/Ch2-3.jpg" />
+			<figcaption>
+				<p><strong>Figure 2.3:</strong> Screen shots of the information exposed from this code via Operator.</p>
+			</figcaption>
+		</figure>
+
+		<p>What’s really interesting about microformats is that you can use them however you like. The <code>class</code> names don’t need to appear in any particular order (so long as they appear within an appropriately-classified parent element) and they don’t require that the content match the intended export format in any way. And, as this example demonstrates, the hCard does not need to be marked up like a rolodex card entry; instead, you are free to sprinkle its component parts throughout your prose using the appropriate <code>class</code> names to indicate each one.</p>
+
+		<div class="keep">
+			<h3 id="mark-your-calendars">Mark your calendars</h3>
+
+	    	<p>With hCard covered, we can take a look at the hCalendar event microformat mentioned earlier. Again, before we look at the markup, let’s take a look at some of the more important hCalendar classifications.</p>
+		</div>
+		
+		<figure id="table-2-2">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">CLASS</th>
+						<th scope="col">PURPOSE</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>vevent</td>
+					<td>Signifies that an hCalendar event is being used. (This should be the <code>class</code> of the root element containing the hCalendar event information.)</td>
+				</tr>
+				<tr>
+					<td>dtstart</td>
+					<td>Indicates the start date of the event</td>
+				</tr>
+				<tr>
+					<td>dtend</td>
+					<td>Denotes the end date of the event</td>
+				</tr>
+				<tr>
+					<td>summary</td>
+					<td>Identifies the name of the event</td>
+				</tr>
+				<tr>
+					<td>location</td>
+					<td>States the location of the event</td>
+				</tr>
+				<tr>
+					<td>description</td>
+					<td>Provides additional details about the event</td>
+				</tr>
+				</tbody>
+			</table>
+			<figcaption>
+				<p><strong>Table 2.2:</strong> Important hCalender classifications</p>
+			</figcaption>
+		</figure>
+
+	    <p>As the entire demo page is dedicated to the event, the <code>class</code>-application process needs to begin further up the DOM tree. I’ve decided to start at the content container (<code>div#content</code>), to which I’ve assigned the root “vevent” <code>class</code>. While in the following example, the hCalendar content is contained within <code>article#details</code>, applying the <code>class</code> to an ancestor element in this manner gives us the flexibility to include more hCalendar properties in the other <code>article</code>s as well:</p>
+
+		<pre>&lt;div id="content" <strong>class="vevent"</strong>&gt;</pre>
+
+		<p>As I mentioned, the first article (<code>article#details</code>) contains the bulk of the information about the event. Let’s take a look at that markup before we review the application of the hCalendar classes:</p>
+
+		<pre>&lt;article id="details"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;<b class="text">Join us for HTML5 &amp;amp; CSS3</b>&lt;/h1&gt;
+    &lt;p&gt;<b class="text">8&amp;#8211;10 April 2011</b>&lt;/p&gt;
+    &lt;p&gt;<b class="text">Gatlinburg,</b> &lt;abbr title="Tennessee"&gt;<b class="text">TN</b>&lt;/abbr&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;figure&gt;
+    &lt;img src="i/mountains.jpg" alt=""/&gt;
+  &lt;/figure&gt;
+  &lt;section class="main"&gt;
+    <b class="comment">&lt;!-- event overview --&gt;</b>
+  &lt;/section&gt;
+&lt;/article&gt;
+<b class="comment">&lt;!-- / #details --&gt;</b></pre>
+
+    	<p>Glancing over the markup, you’ve probably already figured out where most of the hCalendar classifications should be applied. Right off the bat, you have the name of the event or “summary” in hCalendar parlance:</p>
+
+	    <pre>&lt;h1&gt;<b class="text">Join us for </b><strong>&lt;b class="summary"&gt;</strong><b class="text">HTML5 &amp;amp; CSS3</b><strong>&lt;/b&gt;</strong>&lt;/h1&gt;</pre>
+
+		<p>In terms of source order, the next piece we encounter is the date range “8–10 April 2011.” Traditionally, we would have used abbreviation elements (<code>abbr</code>) to mark up this data, but HTML5 introduces a new element explicitly tasked with indicating temporal information: the <code>time</code> element. One problem: to supply a start and end date for the event, we need to break the content up into two dates before wrapping each in a <code>time</code> element.</p>
+
+		<p>Though it may seem odd at first, what makes the most sense is wrapping the “8” in one <code>time</code> element and “10 April 2011” in the other. We do that because the “8” is really implying “8 April 2011,” albeit in an abbreviated form (which is why <code>abbr</code> made a lot of sense previously). The <code>time</code> element allows for further clarification of dates using the <code>datetime</code> attribute, which is how I’ve expressed the full starting date:</p>
+
+		<pre>&lt;p&gt;<strong>&lt;time datetime="2011-04-08"&gt;</strong><b class="text">8</b><strong>&lt;/time&gt;</strong><b class="text">&amp;#8211;</b><strong>&lt;time datetime="2011-04-10"&gt;</strong><b class="text">10 April 2011</b><strong>&lt;/time&gt;</strong>&lt;/p&gt;</pre>
+
+	    <p>hCalendars only require a summary and a starting date, so we only need to apply the “dtstart” classification to the first <code>time</code> element for the microformat to be valid. But since we have an end date, it makes sense to apply that one too:<a class="footnote-link" href="#footnote-222-21" id="footnote-222-21-backlink">[21]</a></p>
+
+	    <pre>&lt;p&gt;&lt;time <strong>class="dtstart"</strong> datetime="2011-04-08"&gt;<b class="text">8</b>&lt;/time&gt;<b class="text">&amp;#8211;</b>&lt;time <strong>class="dtend"</strong> datetime="2011-04-10"&gt;<b class="text">10 April 2011</b>&lt;/time&gt;&lt;/p&gt;</pre>
+
+	    <p>Continuing down the article, “location” is pretty obvious: Gatlinburg, TN:</p>
+
+	    <pre>&lt;p <strong>class="location"&gt;</strong><b class="text">Gatlinburg,</b> &lt;abbr title="Tennessee"&gt;<b class="text">TN</b>&lt;/abbr&gt;&lt;/p&gt;</pre>
+
+	    <p>The final piece of our hCalendar puzzle is the “description” and the most obvious choice of content for that property is the “main” section of the article:</p>
+
+	    <pre>&lt;section class="main <strong>description</strong>"&gt;
+  <b class="comment">&lt;!-- event overview --&gt;</b>
+&lt;/section&gt;</pre>
+
+	    <p>And that’s it. With the microformatted content in place, it’s now quite simple for users to export the event directly to their calendar.</p>
+
+		<figure id="figure-2-4" class="keep">
+			<img alt="" src="images/Ch2-4.jpg" />
+			<figcaption>
+				<p><strong>Figure 2.4:</strong> Screen shots of the information exposed from this code via Operator.</p>
+			</figcaption>
+		</figure>
+
+		<p>Again, we’ve seen how microformats can directly enhance the meaning of already meaningful markup in order to improve the user experience. Picture perfect progressive enhancement!</p>
+
+		<div class="keep">
+			<h2 id="its-the-foundation">IT’S THE FOUNDATION</h2>
+
+			<p>While progressive enhancement is often discussed in terms of CSS and JavaScript, it applies equally to the markup. As we’ve seen in this chapter, every time we choose a meaningful element, we make it easier for the page to do its job by enhancing accessibility and increasing its visibility to potential users through organic search. We’ve also seen how both classification and identification can feed back into HTML, helping it become an even more expressive language. And, as is the case with microformats, we’ve even seen how the names we choose have the capacity to enhance both the semantics and usability of the content to which they are applied.</p>
+		</div>
+
+		<p>Semantic markup is an invaluable step in the progressive enhancement continuum; in concert with well written content, it forms the foundation upon which the entire user experience is built.</p>
+
+		<footer>
+			<ol id="footnotes">
+				<li><a class="backlink" href="#footnote-222-1-backlink" id="footnote-222-1">[1]</a> If you haven’t already downloaded the sample files, you can do so by visiting <a class="url" href="http://adaptivewebdesign.info">adaptivewebdesign.info</a></li>
+				<li><a class="backlink" href="#footnote-222-2-backlink" id="footnote-222-2">[2]</a> Yeah, I know, you could also use the <code>object</code> element or make it text and use CSS to replace it with an image, but we’re going for simplicity here.</li>
+				<li><a class="backlink" href="#footnote-222-3-backlink" id="footnote-222-3">[3]</a> Some people get very grumpy when they hear the term “alt tag” because tags and attributes are very different things (attributes are applied to the opening tag of an element). If you ever find yourself starting to pronounce a “t” after saying “alt,” catch yourself and roll right into “text.” “Alt attribute” is a bit of a mouthful anyway.</li>
+				<li><a class="backlink" href="#footnote-222-4-backlink" id="footnote-222-4">[4]</a> A screen reader will actually say “image” each time it encounters an <code>img</code> lacking an <code>alt</code> attribute, so be kind to screen reader users and don’t forget to include them.</li>
+				<li><a class="backlink" href="#footnote-222-5-backlink" id="footnote-222-5">[5]</a> HTML 3.0 was an ambitious spec, introducing numerous tags and attributes. Many of those new constructs were dropped by the time it reached recommendation status as HTML 3.2, but the <code>class</code> and <code>id</code> attributes survived. Funny enough, some of the very same constructs proposed in HTML 3.0 have found their way back into the HTML lexicon, either formally as part of HTML5 or quasi-formally as microformats.</li>
+				<li><a class="backlink" href="#footnote-222-6-backlink" id="footnote-222-6">[6]</a> It’s worth noting that <code>class</code> and <code>id</code> each make a (very) brief appearance in <a href="http://www.ietf.org/rfc/rfc1866.txt">the HTML 2 spec</a>, but were not formally-defined attributes. They were simply used to demonstrate the fault tolerant way in which browsers should treat unknown attributes.</li>
+				<li><a class="backlink" href="#footnote-222-7-backlink" id="footnote-222-7">[7]</a> And <a href="http://www.w3.org/MarkUp/html3/html3.txt">the HTML 3 draft</a> did allow for this use, among others.</li>
+				<li><a class="backlink" href="#footnote-222-8-backlink" id="footnote-222-8">[8]</a> From the “Scalability” section of the HTML 3 draft (see footnote 7).</li>
+				<li><a class="backlink" href="#footnote-222-9-backlink" id="footnote-222-9">[9]</a> You’ll see this throughout the HTML 3 draft, whenever <code>class</code> is defined for an element.</li>
+				<li><a class="backlink" href="#footnote-222-10-backlink" id="footnote-222-10">[10]</a> Not to be confusing, but HTML5 also introduces the <code>section</code> element (also seen in the above code example). In HTML5 parlance, the <code>section</code> element denotes a <em >section</em> of content (go figure, right?). In terms of overall organization, I could have declared the whole page an <code>article</code>, making each distinct chunk a <code>section</code> of that <code>article</code>, but I decided that individual <code>article</code> elements made more sense because each chunk of content is independent enough that it could easily exist on its own page. The semantic difference between the two is modest at best and the choice of one over the other is really at the discretion of the author.</li>
+				<li><a class="backlink" href="#footnote-222-11-backlink" id="footnote-222-11">[11]</a> Awwww.</li>
+				<li><a class="backlink" href="#footnote-222-12-backlink" id="footnote-222-12">[12]</a> Google has a lot of <a href="http://code.google.com/apis/socialgraph/">documentation on how to use the Social Graph API</a>. Glenn Jones uses this API in the fantastic JavaScript library <a href="http://identengine.com/">Ident Engine</a>, which he introduced <a href="http://www.alistapart.com/articles/discovering-magic/">in the pages of <cite>A List Apart</cite></a>.</li>
+				<li><a class="backlink" href="#footnote-222-13-backlink" id="footnote-222-13">[13]</a> The <code>footer</code> element is another product of the HTML5 spec and is intended to encapsulate “meta” information about an <code>article</code>, <code>section</code>, or page such as the author, copyright information, and so forth.</li>
+				<li><a class="backlink" href="#footnote-222-14-backlink" id="footnote-222-14">[14]</a> The <a href="http://microformats.org/wiki/">microformats wiki</a> keeps a running list of all microformats and documentation on how to use them.</li>
+				<li><a class="backlink" href="#footnote-222-15-backlink" id="footnote-222-15">[15]</a> <a class="url" href="http://kaply.com/weblog/operator/">kaply.com/weblog/operator/</a></li>
+				<li><a class="backlink" href="#footnote-222-16-backlink" id="footnote-222-16">[16]</a> <a class="url" href="http://visitmix.com/labs/oomph/">visitmix.com/labs/oomph/</a></li>
+				<li><a class="backlink" href="#footnote-222-17-backlink" id="footnote-222-17">[17]</a> <a class="url" href="http://microformatique.com/optimus/">microformatique.com/optimus/</a></li>
+				<li><a class="backlink" href="#footnote-222-18-backlink" id="footnote-222-18">[18]</a> <a class="url" href="http://h2vx.com/">h2vx.com/</a></li>
+				<li><a class="backlink" href="#footnote-222-19-backlink" id="footnote-222-19">[19]</a> <a class="url" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/content-models.html#sectioning-content">whatwg.org/specs/web-apps/current-work/multipage/content-models.html#sectioning-content</a></li>
+				<li><a class="backlink" href="#footnote-222-20-backlink" id="footnote-222-20">[20]</a> What? <code>b</code>? Really? Why not <code>span</code>? Well, in HTML5, the <code>b</code> element has been brought back for the explicit purpose of representing “a span of text to be stylistically offset from the normal prose without conveying any extra importance.” While you can certainly use the <code>span</code> element, <code>b</code> is a more appropriate (and shorter) alternative.</li>
+				<li><a class="backlink" href="#footnote-222-21-backlink" id="footnote-222-21">[21]</a> As of this writing, some microformat parsers have issues with the newer HTML5 elements and attributes. For that reason, it may make sense to duplicate the value of the <code>datetime</code> attribute into a <code>title</code> on the <code>time</code> element or switch to using <code>title</code> on an <code>abbr</code>.</li>
+			</ol>
+		</footer>
+		
+	</div>
+	
+	<nav>
+		<h1>TABLE OF CONTENTS</h1>
+		<ol>
+			<li><a href="index.html">Front Matter</a></li>
+			<li><a href="foreword.html">Foreword</a></li>
+			<li><a href="chapter-1.html">Chapter 1: Think of the User, Not the Browser</a></li>
+			<li><a href="chapter-2.html"><mark>Chapter 2: Progressive Enhancement with Markup</mark></a></li>
+			<li><a href="chapter-3.html">Chapter 3: Progressive Enhancement with CSS</a></li>
+			<li><a href="chapter-4.html">Chapter 4: Progressive Enhancement with JavaScript</a></li>
+			<li><a href="chapter-5.html">Chapter 5: Progressive Enhancement for Accessibility</a></li>
+			<li><a href="chapter-6.html">Chapter 6: Take It Away</a></li>
+			<li><a href="back.html">Back Matter</a></li>
+		<ol>
+	</nav>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58149754-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
