@@ -577,7 +577,7 @@ section#reviews {
 	position: absolute;
 	top: -9px;
 	left: 37px;
-	background: url(/i/adaptive-web-design/voted-banner.png) top left no-repeat;
+	background: url(/i/1st-ed/voted-banner.png) top left no-repeat;
 	width: 90px;
 	display: block;
 	height: 156px;
@@ -612,7 +612,7 @@ section#reviews {
 }
 
 .book-preview blockquote:before {
-    content: 'â€œ';
+    content: '\201F';
     position: absolute;
     left: 0;
     top: -0.35em;
@@ -736,7 +736,7 @@ blockquote p.reviewer {
 }
  
 blockquote p.reviewer:before {
-    content: "â€” ";
+    content: "\2014 ";
 	margin-left: -1.1em;
 }
 
@@ -1301,7 +1301,7 @@ form .notice p, form .notice ol {
 		width: 650px;
 	}
 }html, body {
-    background: #fdf4e8 url('http://cdn.easy-readers.net/i/c/bg.png') 50% 0;
+    background: #fdf4e8 url('/i/c/bg.png') 50% 0;
 }
 
 /* colors */
@@ -1428,18 +1428,18 @@ a.button:focus span {
 }
 
 #top .logo {
-    background: url(http://cdn.easy-readers.net/i/c/logo.png) no-repeat 50% 50%;
+    background: url(/i/c/logo.png) no-repeat 50% 50%;
 }
 
 #top .tagline {
-    background: url(http://cdn.easy-readers.net/i/c/presents.png) no-repeat 50% 20px;
+    background: url(/i/c/presents.png) no-repeat 50% 20px;
 }
 
 #social-links li.twitter a {
-	background-image: url(http://cdn.easy-readers.net/i/c/twitter.png);
+	background-image: url(/i/c/twitter.png);
 }
 #social-links li.facebook a {
-	background-image: url(http://cdn.easy-readers.net/i/c/facebook.png);
+	background-image: url(/i/c/facebook.png);
 }
 
 #easy-network {
@@ -1466,15 +1466,15 @@ a.button:focus span {
 }
 
 #easy-network ul li.easy-designs a {
-    background-image: url(http://cdn.easy-readers.net/i/c/en-easy-designs.png);
+    background-image: url(/i/c/en-easy-designs.png);
 }
 
 #easy-network ul li.blog a {
-    background-image: url(http://cdn.easy-readers.net/i/c/en-blog.png);
+    background-image: url(/i/c/en-blog.png);
 }
 
 #easy-network ul li.r4g a {
-    background-image: url(http://cdn.easy-readers.net/i/c/en-r4g.png);
+    background-image: url(/i/c/en-r4g.png);
 }
 
 .rgba section.author figure img,
@@ -1499,11 +1499,11 @@ a.button:focus span {
 }
 
 #cart .description {
-    background: url(http://cdn.easy-readers.net/i/c/cart.png) no-repeat 0 0;
+    background: url(/i/c/cart.png) no-repeat 0 0;
 }
 
 #adaptive-web-design-preview #free-preview a.button mark {
-    background: url(http://cdn.easy-readers.net/i/c/free-badge.png) no-repeat 50% 50%;
+    background: url(/i/c/free-badge.png) no-repeat 50% 50%;
 }a {
     -webkit-transition: color 0.25s;
     -moz-transition: color 0.25s;
@@ -1545,7 +1545,7 @@ a.button span {
 		content: '';
 	}	
 	.book-preview blockquote:first-of-type:before {
-		content: 'â€œ';
+		content: '\201F';
 	}
 	
 	/* Fonts */
