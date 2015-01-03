@@ -141,6 +141,7 @@ pre, h1 strong,
 dl.checklist {
     position: relative;
     padding-left: 1.75em;
+    width: auto;
 }
 
 /* =Weights */
