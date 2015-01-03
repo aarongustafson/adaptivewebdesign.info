@@ -143,6 +143,10 @@ dl.checklist {
     padding-left: 1.75em;
     width: auto;
 }
+dl.checklist dt,
+dl.checklist dd {
+    padding-right: 0;
+}
 
 /* =Weights */
 h1, h2, strong, thead th, dt,
