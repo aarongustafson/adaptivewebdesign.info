@@ -501,6 +501,10 @@ tbody td {
 }
 
 /* Covers */
+.cover {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
 .cover img {
     display: block;
     margin:  0 auto;
