@@ -78,9 +78,14 @@ table{border-collapse:collapse;border-spacing:0;}
 /* =Typography */
 body {
 	font-family: "Fanwood Text", Baskerville, serif;
-	font-size: 120%;
+	font-size: 140%;
 	margin: 0;
 	padding: 0;
+}
+@media screen and (min-width:60em) {
+    body {
+    	font-size: 120%;
+    }
 }
 h1, h2, h3, h4, h5, h6,
 .byline,
@@ -260,8 +265,13 @@ img, video {
 
 
 /* =Layout */
-.page {
+.page,
+.navigation,
+.contentinfo {
+    margin-left: auto;
+    margin-right: auto;
 	padding: 1em;
+	max-width: 40em;
 }
 .page:only-of-type {
 	padding: 0;
@@ -425,7 +435,6 @@ dt, dd {
 	margin: 0.68em 0;
 }
 #dedication {
-	padding: 10em 0 0;
 	text-align: center;
 }
 #title-page img,
@@ -491,12 +500,23 @@ tbody td {
     font-size: 1.5em;
 }
 
-/* =Navigation */
-nav {
-    border-top:  1px solid #ebebeb;
-    padding: 2em;
+/* Covers */
+.cover img {
+    display: block;
+    margin:  0 auto;
+    max-height: 100vh;
+}
+
+/* =Navigation & footer */
+.navigation,
+.contentinfo {
+    border-top: 1px solid #ebebeb;
+    padding-top: 2em;
 }
 nav h1 {
     margin: 0;
 }
-
+.contentinfo {
+    margin-top: 0;
+    padding-bottom: 2em;
+}
