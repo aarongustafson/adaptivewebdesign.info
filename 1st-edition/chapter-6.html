@@ -36,83 +36,83 @@
 
 	    <h3 id="checklist-html">Content &amp; HTML</h3>
 
-	    <dl>
+	    <dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Author copy that is well-written and makes sense when read aloud</strong></dt>
 			<dd>This is the baseline experience for every user and it matters.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 	      	<dt><b class="checkbox"></b><strong>Choose semantically-appropriate elements</strong></dt>
 			<dd>Using the existing semantics in HTML does wonders for accessibility (and search engine optimization).</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use Microformats to fortify HTML’s gaps</strong></dt>
 			<dd>Microformats are extensions to the HTML lexicon and are supported by numerous browsers and several search engines.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use classification to group elements serving the same function</strong></dt>
 			<dd>Classification (i.e., using the <code>class</code> attribute) helps convey meaning about elements when HTML’s inherent semantics fail you and no microformats fit the bill.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Identify landmark elements</strong></dt>
 			<dd>Identification (i.e., using the <code>id</code> attribute) is a great way to give context to specific regions of a page or specific instances of a classified element.</dd>
 		</dl>
 
 		<h3 id="checklist-css">CSS</h3>
 
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Double check your compound selectors</strong></dt>
 			<dd>Mixing selectors of vastly different complexity can cause issues when a browser doesn’t understand one of them: the entire rule set will be ignored. If your intent is to hide the rule set from older browsers, however, this can be a useful tactic.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Organize your CSS rules with the cascade in mind</strong></dt>
 			<dd>Order matters and proper organization of your style rules can help you create a progressive design and make your CSS more maintainable.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Hide groups of advanced CSS rule sets from older browsers</strong></dt>
 			<dd>One of the most powerful tools available in CSS for hiding rule sets <dfn lang="fr" title="in a large group">en masse</dfn> is by using <code>@media</code> blocks.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use Conditional Comments to handle IE issues</strong></dt>
 			<dd>Older versions of IE are notoriously buggy and Conditional Comments are the best way to provide CSS and JavaScript patches to specific versions of IE. They work best in the “trickle-down” pattern.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Make sure you’ve accounted for alternate media and contexts</strong></dt>
 			<dd>Media assignment and media queries can be used to deliver tailored layouts and experiences based on the user’s context.</dd>
 		</dl>
 		
 		<h3 id="checklist-javascript">JavaScript</h3>
 	
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Ensure all JavaScript is “unobtrusive”</strong></dt>
 			<dd>Scripts should be maintained as far from the markup as possible and should be as generic as possible. This allows you to re-factor them independently. Your JavaScripts should not be tied to specific markup, but be flexible enough to adapt as your pages evolve.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Make sure all content is accessible and all necessary tasks can be completed without JavaScript turned on</strong></dt>
 			<dd>You can’t rely on JavaScript. Period. If you want to enhance with JavaScript, follow the Hijax pattern.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use JavaScript to generate any additional markup it needs</strong></dt>
 			<dd>JavaScript is great at manipulating the DOM, so there’s no reason to hard-code markup into a page that is only there for your script’s benefit.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use JavaScript to enable script-related styles</strong></dt>
 			<dd>There are few things as annoying as content being organized into a widget and having the widget not work because JavaScript is turned off or there’s an error in the script. Use a switch to allow JavaScript to turn widget-related styles on.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Delivered scripts <dfn lang="fr" title="individually">à la carte</dfn> whenever possible</strong></dt>
 			<dd>Any script that can run independently should be designed to do so, with its own set of tests to determine whether or not it can run.</dd>
 		</dl>
 
 		<h3 id="checklist-accessibility">Accessibility</h3>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use ARIA landmarks where appropriate</strong></dt>
 			<dd>If you’re using HTML5, some ARIA landmarks may seem redundant, but it’s better to have too cover your bases. It’s trivial to use them and they can greatly improve the accessibility of a page.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use ARIA roles and states to provide users with more detail about widgets</strong></dt>
 			<dd>When you create a widget using JavaScript, there are very few ways to provide users with valuable information about what is happening when they are interacting with it. Roles and states fill in the blanks.</dd>
 		</dl>
-		<dl>
+		<dl class="checklist">
 			<dt><b class="checkbox"></b><strong>Use <code>tabindex</code> to control a user’s journey through the page</strong></dt>
 			<dd>Using the <code>tabindex</code> attribute, you carve a path through your page, bringing users to the important landmarks quickly and easily. Taking it a step further, JavaScript can be used to adjust what can and cannot be focused as a user interacts with various page components.</dd>
 		</dl>

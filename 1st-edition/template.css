@@ -78,6 +78,7 @@ table{border-collapse:collapse;border-spacing:0;}
 /* =Typography */
 body {
 	font-family: "Fanwood Text", Baskerville, serif;
+	font-size: 120%;
 	margin: 0;
 	padding: 0;
 }
@@ -137,8 +138,9 @@ pre, h1 strong,
 }
 
 
-dt {
+dl.checklist {
     position: relative;
+    padding-left: 1.75em;
 }
 
 /* =Weights */
@@ -284,6 +286,12 @@ h1 strong {
 * + * {
     margin-top: 1.25em;
 }
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6,
 * + div,
 * + p,
 * + pre,
@@ -460,6 +468,22 @@ thead th {
 figcaption,
 tbody td {
 	border-color: #9F9F9E;
+}
+
+/* =Page Topper */
+#page-topper h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+#page-topper h2 {
+	color: #094E55;
+    font-size: 1em;
+	line-height: 1;
+	text-transform: none;
+	margin-top: .3em;
+}
+#page-topper .byline {
+    font-size: 1.5em;
 }
 
 /* =Navigation */
