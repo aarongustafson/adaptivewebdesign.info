@@ -30,11 +30,9 @@
 
 		<p>As with HTML, CSS is designed to be fault tolerant. Browsers ignore any syntax they don’t understand<a class="footnote-link" href="#footnote-222-1" id="footnote-222-1-backlink">[1]</a><a class="footnote-link" href="#footnote-222-2" id="footnote-222-2-backlink">[2]</a> and, by paying attention to how the language has evolved over time, we can easily embrace progressive enhancement by taking advantage of this ignorance to craft layers of design based on a given browser’s capabilities.</p>
 
-		<div class="keep">
-			<h2 id="sometimes-an-error-can-be-a-good-thing">SOMETIMES AN ERROR CAN BE A GOOD&#160;THING</h2>
+		<h2 id="sometimes-an-error-can-be-a-good-thing">SOMETIMES AN ERROR CAN BE A GOOD&#160;THING</h2>
 
-			<p>This isn’t a CSS book, so I’m not going to walk you through all of the options available to you in CSS. One thing I do want to do, however, is give you an ever-so-brief recap of how CSS works because I think it will provide you with invaluable insight into how to construct progressive designs.</p>
-		</div>
+		<p>This isn’t a CSS book, so I’m not going to walk you through all of the options available to you in CSS. One thing I do want to do, however, is give you an ever-so-brief recap of how CSS works because I think it will provide you with invaluable insight into how to construct progressive designs.</p>
 
 		<p>At its most fundamental, CSS is a series of human-readable rule sets, each composed of a selector and declaration block containing a set of property-value pairs (declarations) to be applied to any element matched by the selector.</p>
 
@@ -49,18 +47,17 @@
 
 		<p>Assuming all of our curly braces, colons, and semicolons are in their proper places, the example we just saw contains five points at which a parsing error could occur:</p>
 		
-		<div class="keep">
-			<figure id="markup-1">
-				<img alt="" src="images/Ch3-1.jpg" />
-			</figure>
-			<ol>
-				<li>the selector: <code>p</code>;</li>
-				<li>the first property name: <code>color</code>;</li>
-				<li>the value of the first property: “red”;</li>
-				<li>the second property name: <code>font-weight</code>; and</li>
-				<li>the value assigned to the second property: “bold.”</li>
-			</ol>
-		</div>
+		<figure id="markup-1">
+			<img alt="" src="images/Ch3-1.jpg" />
+		</figure>
+		
+		<ol>
+			<li>the selector: <code>p</code>;</li>
+			<li>the first property name: <code>color</code>;</li>
+			<li>the value of the first property: “red”;</li>
+			<li>the second property name: <code>font-weight</code>; and</li>
+			<li>the value assigned to the second property: “bold.”</li>
+		</ol>
 
 		<p>According to the specification, if a browser encounters this rule set and doesn’t understand a part of it (i.e., it experiences a parsing error), the browser must ignore the larger component of the rule set in which the parsing error occurs.</p>
 
@@ -160,11 +157,10 @@ p:not([title]) {
 
 		<p>While this may not always be the technique you immediately reach for when implementing CSS, it’s a good one to remember when you want to use rule set filtering without altering a selector’s specificity. From a maintainability standpoint, this method is not ideal for more than a single rule set here and there; to apply the concept of rule set filtering <em>en masse</em>, there are better options available, and we’ll get to those shortly.</p>
 
-		<div class="keep">
-			<h2 id="concerns-separated">CONCERNS, SEPARATED</h2>
+		<h2 id="concerns-separated">CONCERNS, SEPARATED</h2>
 
-			<p>The “cascade” is a critically important concept in CSS; in fact it’s the <em>first word</em> in CSS. Literally. Again, it’s beyond the scope of this little book to go through the concept of the cascade in any detail, but there is one facet that can help you become a progressive enhancement expert in no time: order.</p>
-		</div>
+		<p>The “cascade” is a critically important concept in CSS; in fact it’s the <em>first word</em> in CSS. Literally. Again, it’s beyond the scope of this little book to go through the concept of the cascade in any detail, but there is one facet that can help you become a progressive enhancement expert in no time: order.</p>
+
 
 		<p>Order matters. A lot.</p>
 
@@ -340,11 +336,9 @@ a:hover {
 
 		<p>Now that you have a pretty solid understanding of how to wield CSS’s inherent fault tolerance for the betterment of the browsing experience, let’s delve a little deeper and layer on some additional enhancements.</p>
 
-		<div class="keep">
-			<h2 id="a-little-misunderstanding-goes-a-long-way">A LITTLE MISUNDERSTANDING GOES A LONG&#160;WAY</h2>
+		<h2 id="a-little-misunderstanding-goes-a-long-way">A LITTLE MISUNDERSTANDING GOES A LONG&#160;WAY</h2>
 
-			<p>As a fault-tolerant language, CSS is a near perfect addition to the progressive enhancement toolbox. In many ways, ignorance is bliss because we can reliably use new features and syntax without having to worry about the browser falling apart when it doesn’t understand something. But what if a browser <em>thinks</em> it understands something, but its understanding is horribly flawed? Yes, of course, I’m speaking of Internet Explorer.</p>
-		</div>
+		<p>As a fault-tolerant language, CSS is a near perfect addition to the progressive enhancement toolbox. In many ways, ignorance is bliss because we can reliably use new features and syntax without having to worry about the browser falling apart when it doesn’t understand something. But what if a browser <em>thinks</em> it understands something, but its understanding is horribly flawed? Yes, of course, I’m speaking of Internet Explorer.</p>
 
 		<p>IE9 was released as this book was in production. Based on what I’ve seen so far, it looks like the team has made good on their promise to support standards (including CSS) in a completely interoperable way. IE8 was no slouch in the CSS department, but when you start looking back at IE7 and (shudder) IE6, things take a turn for the worse.</p>
 
@@ -362,11 +356,9 @@ a:hover {
 
 		<p>The conditional comment for IE9, by contrast, only targets that specific browser. It could easily be set up in the same “less than or equal to” manner as the subsequent conditional comments, but IE9 is a substantial departure from IE8 on many levels, including its CSS support. Any issues it has are not likely to be issues with those earlier browsers, so there’s no need to make those older browsers read and parse the additional rules. The same setup could have been done for IE8 as well, as the mechanisms that define its CSS support are completely different than those in IE7 and it shares few, if any, issues with IE7 and earlier, but as the design requires that we use some IE-specific filters, it made sense to only have to write them once.</p>
 
-		<div class="keep">
-			<h2 id="beyond-the-basics">BEYOND THE&#160;BASICS</h2>
+		<h2 id="beyond-the-basics">BEYOND THE&#160;BASICS</h2>
 
-			<p>The web is unlike any other medium we’ve encountered thus far. It isn’t print, television, radio, a video game, a kiosk, or an application, but it functions as a hybrid of all of these things and more. Realizing this, the W3C added the ability to target styles to a specific medium. We took advantage of that capability earlier in an <code>@media</code> block, but you’re probably more familiar with using media declarations with linked or embedded stylesheets (using the <code>media</code> attribute) or, possibly, as a suffix to <code>@import</code> statements.</p>
-		</div>
+		<p>The web is unlike any other medium we’ve encountered thus far. It isn’t print, television, radio, a video game, a kiosk, or an application, but it functions as a hybrid of all of these things and more. Realizing this, the W3C added the ability to target styles to a specific medium. We took advantage of that capability earlier in an <code>@media</code> block, but you’re probably more familiar with using media declarations with linked or embedded stylesheets (using the <code>media</code> attribute) or, possibly, as a suffix to <code>@import</code> statements.</p>
 
 		<p>The W3C maintains the list of approved media types, but is open to adding to it as technology evolves. Currently, the list addresses CSS’ application on the computer screen, in print, on televisions, on hand held devices, and in assistant contexts such as screen readers, braille printers, and touch feedback devices. Without a specific media designation, the browser assumes a media type of “screen.”</p>
 
@@ -441,11 +433,9 @@ a:hover {
 
 		<p>In the case of print, it may make the most sense to have a single <code>@media</code> declaration to handle everything, but with other media, it may be advisable to break it up. Each project is different, so you’ll want to play around and see what feels right.</p>
 
-		<div class="keep">
-			<h3 id="not-your-fathers-media-declarations">Not your father’s media&#160;declarations</h3>
+		<h3 id="not-your-fathers-media-declarations">Not your father’s media&#160;declarations</h3>
 
-			<p>A few years after the introduction of independent media support, the W3C upped the ante even more and introduced media queries. Media queries are like media designations on steroids: they provide details about the user’s environment, such as the width of the browser window or even its orientation (as in portrait or landscape). Media queries are incredibly powerful and allow you to really fine-tune your designs for specific devices. As such, they are quickly becoming an indispensable tool in progressive enhancement.</p>
-		</div>
+		<p>A few years after the introduction of independent media support, the W3C upped the ante even more and introduced media queries. Media queries are like media designations on steroids: they provide details about the user’s environment, such as the width of the browser window or even its orientation (as in portrait or landscape). Media queries are incredibly powerful and allow you to really fine-tune your designs for specific devices. As such, they are quickly becoming an indispensable tool in progressive enhancement.</p>
 
 		<p>Using media queries (which can go wherever you’d place a standard media designation), you can add a set of rules to a page based on the capabilities of the user agent. Let’s take a look at an example:</p>
 
@@ -489,7 +479,7 @@ a:hover {
   <b class="comment">/* … */</b>
 }</pre>
 
-		<p><a href="#figure-3-6">Figure 3.6</a> shows the alternate layouts available. In some instances the changes from version to version are pretty drastic (e.g., each has a different navigation treatment) while others are more subtle (e.g., the postcard-based contact form adjusts to accommodate a narrower screen). Without getting caught up in the specific differences between these layouts, the important thing to recognize is that media queries can be used to create truly adaptive layouts using only CSS. For more information on adaptive layouts, consult the <a href="chapter-6.xhtml#further-reading">“Further Reading” section of Chapter 6</a>.</p>
+		<p><a href="#figure-3-6">Figure 3.6</a> shows the alternate layouts available. In some instances the changes from version to version are pretty drastic (e.g., each has a different navigation treatment) while others are more subtle (e.g., the postcard-based contact form adjusts to accommodate a narrower screen). Without getting caught up in the specific differences between these layouts, the important thing to recognize is that media queries can be used to create truly adaptive layouts using only CSS. For more information on adaptive layouts, consult the <a href="chapter-6.html#further-reading">“Further Reading” section of Chapter 6</a>.</p>
 
 		<figure id="figure-3-6">
 			<img alt="" src="images/Ch3-7a.jpg" />
@@ -499,11 +489,9 @@ a:hover {
 			</figcaption>
 		</figure>
 
-		<div class="keep">
-			<h2 id="rich-in-layers">RICH IN LAYERS</h2>
+		<h2 id="rich-in-layers">RICH IN LAYERS</h2>
 
-			<p>As you can see, there are numerous ways we can use CSS to progressively enhance our web pages. Some techniques, such as taking advantage of parsing errors, are so simple and commonplace that you’re probably using them right now. Others, such as faceted style separation, may provide a slightly different take on your current practices or may be completely foreign to you. When used in combination, however, these techniques weave together, layer upon layer, to provide a tailored experience for every user, no matter what her browser or device supports.</p>
-		</div>
+		<p>As you can see, there are numerous ways we can use CSS to progressively enhance our web pages. Some techniques, such as taking advantage of parsing errors, are so simple and commonplace that you’re probably using them right now. Others, such as faceted style separation, may provide a slightly different take on your current practices or may be completely foreign to you. When used in combination, however, these techniques weave together, layer upon layer, to provide a tailored experience for every user, no matter what her browser or device supports.</p>
 
 		<footer>
 			<ol id="footnotes">

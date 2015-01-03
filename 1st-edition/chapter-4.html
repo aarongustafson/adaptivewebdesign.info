@@ -51,11 +51,9 @@ document.all['location']; <b class="comment">// IE</b></pre>
 		<pre><b class="comment">// Unified DOM</b>
 document.getElementById('location');</pre>
 
-		<div class="keep">
-			<h2 id="getting-out-of-the-way">GETTING OUT OF THE&#160;WAY</h2>
+		<h2 id="getting-out-of-the-way">GETTING OUT OF THE&#160;WAY</h2>
 
-			<p>One of the first lessons we learned when the dust settled was that JavaScript was not a panacea for interaction on the web. In fact, it wasn’t even all that reliable.</p>
-		</div>
+		<p>One of the first lessons we learned when the dust settled was that JavaScript was not a panacea for interaction on the web. In fact, it wasn’t even all that reliable.</p>
 
 		<p>First off, even after the W3C standardized the DOM and the browsers generally agreed to support web standards, not everyone was reading from the same playbook; there were enough differences between implementations that it was simply impossible to make any assumptions about the availability of certain methods (such as the lynchpin DOM traversal methods <code>document.getElementById()</code>, which provides access to elements based on their <code>id</code> or <code>document.getElementsByTagName()</code> which, you guessed it, finds elements based on their name). Secondly, even if a browser did have full JavaScript support, the user (or her IT administrator) still had the final say over whether or not JavaScript was even allowed to run.<a class="footnote-link" href="#footnote-222-4" id="footnote-222-4-backlink">[4]</a></p>
 
@@ -63,11 +61,9 @@ document.getElementById('location');</pre>
 
 		<p><em>Warning: From here on out, we’ll be diving into actual JavaScript code. If you have not worked much with JavaScript before, have no fear, I’ll do my best to explain what’s happening at every step of the way so that you can follow along, even if the code reads like Sanskrit to you.</em></p>
 
-		<div class="keep">
-			<h3 id="complete-reliance">100% reliance</h3>
+		<h3 id="complete-reliance">100% reliance</h3>
 
-			<p>Back in the early days of JavaScript, it was not uncommon to write (or at least see) onclick event handlers (scripts executed when someone clicked an element on the page) adorning otherwise useless links.<a class="footnote-link" href="#footnote-222-5" id="footnote-222-5-backlink">[5]</a></p>
-		</div>
+		<p>Back in the early days of JavaScript, it was not uncommon to write (or at least see) onclick event handlers (scripts executed when someone clicked an element on the page) adorning otherwise useless links.<a class="footnote-link" href="#footnote-222-5" id="footnote-222-5-backlink">[5]</a></p>
 
 		<pre>&lt;a href="#" onclick="newWin( 'http://easy-designs.net/' );"&gt;<b class="text">Easy! Designs</b>&lt;/a&gt;</pre>
 
@@ -81,11 +77,9 @@ document.getElementById('location');</pre>
 
 		<p><em>Note: I’m not advocating the use of popups or using JavaScript to open new windows as they introduce a number of accessibility and usability issues. I have, however, chosen this as an example because it illustrates the evolution of our JavaScript code in a manner that’s relatively easy to follow. Rest assured, the lessons you’ll learn by following this example are universally applicable to any other JavaScript-ing you might do.</em></p>
 
-		<div class="keep">
-			<h3 id="becoming-unobtrusive">Becoming unobtrusive</h3>
+		<h3 id="becoming-unobtrusive">Becoming unobtrusive</h3>
 
-			<p>Unobtrusive JavaScript is a catch-all term for programming in a manner that is not reliant on JavaScript. Under this paradigm, users are given access to all page content and can accomplish every necessary task on a page using the basic building blocks of the web (HTML and the HTTP protocol). JavaScript is then layered on to enhance the page.</p>
-		</div>
+		<p>Unobtrusive JavaScript is a catch-all term for programming in a manner that is not reliant on JavaScript. Under this paradigm, users are given access to all page content and can accomplish every necessary task on a page using the basic building blocks of the web (HTML and the HTTP protocol). JavaScript is then layered on to enhance the page.</p>
 
 		<p>Sound familiar? Unobtrusive JavaScript is an idea that meshes perfectly with progressive enhancement philosophy because it forces JavaScript into the role of functional enhancement, as opposed to absolute requirement.</p>
 
@@ -97,12 +91,9 @@ document.getElementById('location');</pre>
 
 		<p>This was a great first step to address the potential absence of JavaScript, but we soon realized there were better ways to manage scenarios like this.</p>
 
-		<div class="keep">
-			<h3 id="more-maintainable">More maintainable</h3>
+		<h3 id="more-maintainable">More maintainable</h3>
 
-			<p>The next step in the evolution of this code involved using the age-old <code>rel</code> attribute (which you’ll recall from <a href="#chapter-2">Chapter 2</a>) to migrate our inline JavaScript code to an external file. This provided two benefits: 1) it gave an additional semantic meaning to the link and 2) it made maintaining websites much easier because developers could change a single JavaScript file and affect the entire site (which is the exact argument we made for external stylesheets over inline use
-			of the <code>style</code> attribute). Here’s the new HTML:</p>
-		</div>
+		<p>The next step in the evolution of this code involved using the age-old <code>rel</code> attribute (which you’ll recall from <a href="#chapter-2">Chapter 2</a>) to migrate our inline JavaScript code to an external file. This provided two benefits: 1) it gave an additional semantic meaning to the link and 2) it made maintaining websites much easier because developers could change a single JavaScript file and affect the entire site (which is the exact argument we made for external stylesheets over inline use of the <code>style</code> attribute). Here’s the new HTML:</p>
 
 		<pre>&lt;a rel="external" href="http://easy-designs.net/"&gt;<b class="text">Easy! Designs</b>&lt;/a&gt;</pre>
 
@@ -127,11 +118,9 @@ while ( i-- )
 
 		<p>Finally, we’d come upon a decent solution that was just about as unobtrusive as you could get and, in 2006, Jeremy Keith gave us a lovely little name for it: Hijax, a clever combination of “hijack,” referring to the fact that the link’s normal behavior was being commandeered, and Ajax, the JavaScript-based mechanism by which web pages could interact with a server without requiring a refresh in the browser. Little did we know, Ajax, which was just growing in popularity at the time, would show us we still had a thing or two to learn when it came to JavaScript event management.</p>
 
-		<div class="keep">
-			<h3 id="truly-flexible">Truly flexible</h3>
+		<h3 id="truly-flexible">Truly flexible</h3>
 
-			<p>With the widespread acceptance and implementation of Ajax techniques<a class="footnote-link" href="#footnote-222-6" id="footnote-222-6-backlink">[6]</a> and other methods of modifying page content on the fly, our age-old method of assigning event handlers wasn’t holding up all that well. After all, if new content was injected into the page with a link marked <code>rel="external"</code>, it wouldn’t have our custom function assigned as an <code>onclick</code> event handler. This is because our script was likely run when the page loaded (<code>window.onload()</code>) prior to the new link being injected via Ajax.</p>
-		</div>
+		<p>With the widespread acceptance and implementation of Ajax techniques<a class="footnote-link" href="#footnote-222-6" id="footnote-222-6-backlink">[6]</a> and other methods of modifying page content on the fly, our age-old method of assigning event handlers wasn’t holding up all that well. After all, if new content was injected into the page with a link marked <code>rel="external"</code>, it wouldn’t have our custom function assigned as an <code>onclick</code> event handler. This is because our script was likely run when the page loaded (<code>window.onload()</code>) prior to the new link being injected via Ajax.</p>
 
 		<p>This presented a tough problem to be sure. In this scenario, it was possible that two links that should act the same would actually act in completely different ways. Can you say usability issue?</p>
 
@@ -172,11 +161,9 @@ while ( i-- )
 
 		<p>This example, while specific, demonstrates why we must continue to evolve our approach to JavaScript-based interactions. Improving our JavaScript comprehension provides direct benefits for progressive enhancement by helping us make our code smarter and more unobtrusive, but it also helps us in terms of maintainability and performance.</p>
 
-		<div class="keep">
-			<h2 id="making-what-we-need">MAKING WHAT WE&#160;NEED</h2>
+		<h2 id="making-what-we-need">MAKING WHAT WE&#160;NEED</h2>
 
-			<p>By now you’re probably getting the gist of unobtrusive JavaScript, but we’ve only been looking at the user experience from the document side of things. There are numerous ways in which JavaScript-based interactions are far superior to those without it. Client-side form validation, for instance, provides the opportunity to give users immediate feedback on potential errors without requiring that they submit the form first.</p>
-		</div>
+		<p>By now you’re probably getting the gist of unobtrusive JavaScript, but we’ve only been looking at the user experience from the document side of things. There are numerous ways in which JavaScript-based interactions are far superior to those without it. Client-side form validation, for instance, provides the opportunity to give users immediate feedback on potential errors without requiring that they submit the form first.</p>
 
 		<figure id="figure-4-3">
 			<img alt="" src="images/Ch4-3.jpg" />
@@ -314,11 +301,9 @@ $window.resize(function(){
 
 		<p>As this simple example demonstrates, JavaScript is perfectly capable of generating everything it needs and getting rid of anything it doesn’t. You could even take this particular function a step farther and make it even more markup agnostic by allowing the root starting point (in our case, the child elements of <code>nav</code>) to be passed dynamically into the function. But I leave that to you to experiment with. Onward!</p>
 
-		<div class="keep">
-			<h2 id="keep-it-copacetic">KEEP IT COPACETIC</h2>
+		<h2 id="keep-it-copacetic">KEEP IT COPACETIC</h2>
 
-			<p>As we’ve covered, many of the progressive enhancement techniques available to us in HTML and CSS are pretty straightforward and may even have been part of your repertoire prior to picking up this book. Progressive enhancement with JavaScript, on the other hand, is a bit more complicated; JavaScript cannot be fault tolerant like the others because it is a programming language.</p>
-		</div>
+		<p>As we’ve covered, many of the progressive enhancement techniques available to us in HTML and CSS are pretty straightforward and may even have been part of your repertoire prior to picking up this book. Progressive enhancement with JavaScript, on the other hand, is a bit more complicated; JavaScript cannot be fault tolerant like the others because it is a programming language.</p>
 
 		<p>Unlike HTML and CSS, which describe content and provide design instructions to a browser, respectively, JavaScript literally executes commands to the browser. Because they actually <em>do</em> something, JavaScript programs stop running when they encounter an error. The potential causes for these errors could be anything from a typo to a missing dependency to accidentally writing an infinite loop. Regardless of the cause, if you write code that doesn’t jive well with the browser’s JavaScript interpreter, it will likely spit a big fat error right in your face (or your customer’s). And no one wants that.</p>
 
@@ -363,11 +348,9 @@ $window.resize(function(){
 
 		<p>If you think about it, the concept of dependency testing is quite similar to using media queries in CSS. And, speaking of CSS, we should talk about how to best manage the interaction between scripts and style.</p>
 
-		<div class="keep">
-			<h2 id="working-with-style">WORKING WITH&#160;STYLE</h2>
+		<h2 id="working-with-style">WORKING WITH&#160;STYLE</h2>
 
-			<p>One script dependency we haven’t discussed yet is CSS. Nine times out of ten, if you are writing JavaScript that interacts with the DOM, you’re also working with CSS in one way or another. When developing with progressive enhancement in mind, it’s important to determine the best way to apply and control styles from within JavaScript so you don’t confuse your users by creating interfaces that don’t actually work. But more on that in a moment.</p>
-		</div>
+		<p>One script dependency we haven’t discussed yet is CSS. Nine times out of ten, if you are writing JavaScript that interacts with the DOM, you’re also working with CSS in one way or another. When developing with progressive enhancement in mind, it’s important to determine the best way to apply and control styles from within JavaScript so you don’t confuse your users by creating interfaces that don’t actually work. But more on that in a moment.</p>
 
 		<p>Over the years, our understanding of how JavaScript and CSS should interact has evolved considerably. In the early days of JavaScript, style management in a script was pretty much nonexistent; we just wrote everything inline by manipulating an element’s <code>style</code> attribute:</p>
 
@@ -435,9 +418,9 @@ $window.resize(function(){
 			<table>
 				<thead>
 					<tr>
-						<th scope="col">STRATEGY</th>
-						<th scope="col">“RESTING” <br/>CLASS</th>
-						<th scope="col">“ACTIVATED” <br/>CLASS</th>
+					<th scope="col">STRATEGY</th>
+					<th scope="col">“RESTING” <br/>CLASS</th>
+					<th scope="col">“ACTIVATED” <br/>CLASS</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -460,7 +443,7 @@ $window.resize(function(){
 			</table>
 			<figcaption>
 				<p><strong>Table 4.1:</strong> Using an “activator” <code>class</code>.</p>
-			</figcaption>			
+			</figcaption>		
 		</figure>
 
 		<p>By following this practice, you can guarantee that no styles will be applied before they are needed.</p>
@@ -483,17 +466,15 @@ $window.resize(function(){
 
 		<p>Obviously, there is an outside chance that style rules intended for content other than your widget could end up bleeding into the widget as well because of issues regarding specificity or the cascade. If you anticipate those potential issues, however, you can take the appropriate action by increasing the specificity of your selectors or by explicitly setting each and every property you want to control within your widget.</p>
 
-		<div class="keep">
-			<h2 id="planning-and-restraint">PLANNING AND RESTRAINT</h2>
+		<h2 id="planning-and-restraint">PLANNING AND RESTRAINT</h2>
 
-			<p>Make no mistake, progressive enhancement with JavaScript requires considerably more effort than it does with CSS or HTML. With a bit of thoughtful reflection and consideration of the numerous factors that affect the web experience, however, it quickly becomes second nature. And, when in doubt, you can always come back to the three maxims:</p>
+		<p>Make no mistake, progressive enhancement with JavaScript requires considerably more effort than it does with CSS or HTML. With a bit of thoughtful reflection and consideration of the numerous factors that affect the web experience, however, it quickly becomes second nature. And, when in doubt, you can always come back to the three maxims:</p>
 
-			<ol>
-			  <li>Make sure all content is accessible and all necessary tasks can be completed without JavaScript turned on.</li>
-			  <li>Use JavaScript to generate any additional markup it needs.</li>
-			  <li>Apply no style before its time.</li>
-			</ol>
-		</div>
+		<ol>
+		  <li>Make sure all content is accessible and all necessary tasks can be completed without JavaScript turned on.</li>
+		  <li>Use JavaScript to generate any additional markup it needs.</li>
+		  <li>Apply no style before its time.</li>
+		</ol>
 
 		<p>Armed with a solid understanding of how to best wield the power of JavaScript, you’re sure to make smart decisions and build even more usable sites.</p>
 
@@ -518,15 +499,15 @@ $window.resize(function(){
 	<nav>
 		<h1>TABLE OF CONTENTS</h1>
 		<ol>
-			<li><a href="index.html">Front Matter</a></li>
-			<li><a href="foreword.html">Foreword</a></li>
-			<li><a href="chapter-1.html">Chapter 1: Think of the User, Not the Browser</a></li>
-			<li><a href="chapter-2.html">Chapter 2: Progressive Enhancement with Markup</a></li>
-			<li><a href="chapter-3.html">Chapter 3: Progressive Enhancement with CSS</a></li>
-			<li><a href="chapter-4.html"><mark>Chapter 4: Progressive Enhancement with JavaScript</mark></a></li>
-			<li><a href="chapter-5.html">Chapter 5: Progressive Enhancement for Accessibility</a></li>
-			<li><a href="chapter-6.html">Chapter 6: Take It Away</a></li>
-			<li><a href="back.html">Back Matter</a></li>
+		<li><a href="index.html">Front Matter</a></li>
+		<li><a href="foreword.html">Foreword</a></li>
+		<li><a href="chapter-1.html">Chapter 1: Think of the User, Not the Browser</a></li>
+		<li><a href="chapter-2.html">Chapter 2: Progressive Enhancement with Markup</a></li>
+		<li><a href="chapter-3.html">Chapter 3: Progressive Enhancement with CSS</a></li>
+		<li><a href="chapter-4.html"><mark>Chapter 4: Progressive Enhancement with JavaScript</mark></a></li>
+		<li><a href="chapter-5.html">Chapter 5: Progressive Enhancement for Accessibility</a></li>
+		<li><a href="chapter-6.html">Chapter 6: Take It Away</a></li>
+		<li><a href="back.html">Back Matter</a></li>
 		<ol>
 	</nav>
 	

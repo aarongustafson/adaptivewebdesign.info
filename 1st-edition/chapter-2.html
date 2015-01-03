@@ -22,27 +22,23 @@
 		</header>
 
 	    <blockquote class="ch-quote">
-	      <p>“The meaning is in the content of the text and not in the&#160;typeface.”</p>
-	      <p class="author">— Wim Crouwel</p>
+			<p>“The meaning is in the content of the text and not in the&#160;typeface.”</p>
+			<p class="author">— Wim Crouwel</p>
 	    </blockquote>
 
 		<p>When it comes to the web, markup calls the shots. It is the foundation upon which every beautiful design and each amazing experience is built. Whether your preferred flavor is HTML or its more rigorous sibling, XHTML, each element has a purpose and can profoundly affect the user experience for better or worse, depending on how you use (or abuse) it.</p>
 
-		<div class="keep">
-			<h2 id="from-a-rough-start-to-the-right-way">FROM A ROUGH START TO THE RIGHT&#160;WAY<sup>™</sup></h2>
+		<h2 id="from-a-rough-start-to-the-right-way">FROM A ROUGH START TO THE RIGHT&#160;WAY<sup>™</sup></h2>
 
-			<p>When we first began building web pages, many of us misunderstood the importance of good markup. Those of us coming to the web from a programming background often considered learning HTML beneath us, so we never put in the time to come to grips with the semantics it provided. Those of us who came to the web from a design background didn’t understand the importance of semantics either. We thought only of the presentational aspect of a web page and latched on to the <code>table</code> as a means of laying out pages on a grid, then we went hog-wild and found hundreds of other uses for the <code>table</code> element, many of which supplanted existing (and well-supported) semantic elements (like lists).</p>
-		</div>
+		<p>When we first began building web pages, many of us misunderstood the importance of good markup. Those of us coming to the web from a programming background often considered learning HTML beneath us, so we never put in the time to come to grips with the semantics it provided. Those of us who came to the web from a design background didn’t understand the importance of semantics either. We thought only of the presentational aspect of a web page and latched on to the <code>table</code> as a means of laying out pages on a grid, then we went hog-wild and found hundreds of other uses for the <code>table</code> element, many of which supplanted existing (and well-supported) semantic elements (like lists).</p>
 
 		<p>In many offices across the globe, advocacy for semantic application of HTML fell on deaf ears; the argument was seen as a largely idealistic one because: 1) the fact remained that old-school websites looked okay in modern browsers and 2) the case for greater web accessibility was lost on many people who had no first-hand experience of using the web with a disability. Then Google came along and changed everything. Suddenly, semantic markup was important.</p>
 
 		<p>Google was the first search engine to take semantics into account when indexing web pages. Starting with the humble anchor (<code>a</code>) element, the cornerstone of their original PageRank algorithm, Google pioneered the use of semantic markup to infer meaning and relevancy. The other search engines soon followed and, as search engine spiders began hunting for other meaningful HTML elements on web pages (e.g., <code>h1</code> which indicates the most important content on a page), semantic markup became more important to the business world because proper use of it meant a better ranking in search engines and, thereby, a greater opportunity to attract new customers.</p>
 
-		<div class="keep">
-			<h2 id="the-semantic-foundation">THE SEMANTIC FOUNDATION</h2>
+		<h2 id="the-semantic-foundation">THE SEMANTIC FOUNDATION</h2>
 
-			<p>If content were soil, semantic markup would be the compost you’d add to ensure a productive garden. It enriches the content, providing your users with clues about intent and context, as well as supplementary information about the content itself.</p>
-		</div>
+		<p>If content were soil, semantic markup would be the compost you’d add to ensure a productive garden. It enriches the content, providing your users with clues about intent and context, as well as supplementary information about the content itself.</p>
 
 		<p>Take, for example, the abbreviation element (<code>abbr</code>). It is used to denote abbreviations (and acronyms, now that it has officially replaced the <code>acronym</code> element):</p>
 		
@@ -54,11 +50,9 @@
 
 		<p>Let’s get started.</p>
 
-		<div class="keep">
-			<h2 id="saying-what-we-mean">SAYING WHAT WE&#160;MEAN</h2>
+		<h2 id="saying-what-we-mean">SAYING WHAT WE&#160;MEAN</h2>
 
-			<p>Looking at the Retreats 4 Geeks web page<a class="footnote-link" href="#footnote-222-1" id="footnote-222-1-backlink">[1]</a>, it may be hard to figure out where to start, but we’ll begin with the most important content: the name of the site and the links to the various sections of the page (since this is, for our purposes, a single-page website).</p>
-		</div>
+		<p>Looking at the Retreats 4 Geeks web page<a class="footnote-link" href="#footnote-222-1" id="footnote-222-1-backlink">[1]</a>, it may be hard to figure out where to start, but we’ll begin with the most important content: the name of the site and the links to the various sections of the page (since this is, for our purposes, a single-page website).</p>
 
 		<figure id="figure-2-1">
 			<img alt="" src="images/Ch2-1.jpg" />
@@ -88,7 +82,7 @@
 
 	    <p>Semantically, a <code>header</code> is used to demarcate any content that is summarily important to a page or section of a page. It can be used to encapsulate headings or heading groups (contained in the new <code>hgroup</code> element), relevant navigational aids, and introductory content. As such, it makes a perfect container for the title of our page and the list of anchors to each article within the page.</p>
 
-	    <p>HTML5 also grants us another more appropriate option when it comes to the navigation. Whereas we would have traditionally identified the ordered list as “nav” or “main-nav,” HTML5’s <code>nav</code> element more directly expresses the semantics we’re trying to imbue the <code>ol</code> with by providing that semantic <code>id</code>. The <code>nav</code> element can be used to wrap any group of navigational links and functions as the semantic equivalent of the ARIA landmark role of “navigation” (which we’ll discuss more in <a href="chapter-5.xhtml">Chapter 5</a>).</p>
+	    <p>HTML5 also grants us another more appropriate option when it comes to the navigation. Whereas we would have traditionally identified the ordered list as “nav” or “main-nav,” HTML5’s <code>nav</code> element more directly expresses the semantics we’re trying to imbue the <code>ol</code> with by providing that semantic <code>id</code>. The <code>nav</code> element can be used to wrap any group of navigational links and functions as the semantic equivalent of the ARIA landmark role of “navigation” (which we’ll discuss more in <a href="chapter-5.html">Chapter 5</a>).</p>
 
 	    <p>With these additions, the markup for this section is now:</p>
 
@@ -107,11 +101,9 @@
 
 	    <p>And, thanks to the fact that they ignore anything they don’t understand, the markup we’ve used will work in every browser, regardless of age. Sure, modern browsers may treat the newer elements differently, but even text-based browsers (such as Lynx) will be able to access the content. Devoid of style and stripped of JavaScript-based interactivity, the markup just works, providing us with the second level of support in the progressive enhancement continuum. (Remember: the content itself forms the crucial first level).</p>
 
-	    <div class="keep">
-		    <h2 id="invisible-and-advisory">INVISIBLE AND&#160;ADVISORY</h2>
+	    <h2 id="invisible-and-advisory">INVISIBLE AND&#160;ADVISORY</h2>
 
-		    <p>As good as this markup is, we’ve neglected a major accessibility requirement by not providing any alternate text for our logo image (expressed using the <code>alt</code> attribute). “Alt text,” as it’s most often known,<a class="footnote-link" href="#footnote-222-3" id="footnote-222-3-backlink">[3]</a> provides a text-based back-up for users who have images turned off; it is also the content that is read to users of screen reading software (such as the blind), which is why its inclusion is critical.</p>
-	    </div>
+	    <p>As good as this markup is, we’ve neglected a major accessibility requirement by not providing any alternate text for our logo image (expressed using the <code>alt</code> attribute). “Alt text,” as it’s most often known,<a class="footnote-link" href="#footnote-222-3" id="footnote-222-3-backlink">[3]</a> provides a text-based back-up for users who have images turned off; it is also the content that is read to users of screen reading software (such as the blind), which is why its inclusion is critical.</p>
 
 	    <p>Returning to the example, I’ve added a simple <code>alt</code> attribute:</p>
     	
@@ -136,11 +128,9 @@
 			</figcaption>
 		</figure>
 
-	    <div class="keep">
-			<h2 id="ad-hoc-semantics">AD-HOC SEMANTICS</h2>
+	    <h2 id="ad-hoc-semantics">AD-HOC SEMANTICS</h2>
 
-			<p>HTML is filled with attributes that help enrich the elements they adorn. It prescribes a number of “fixed use” ones, like <code>alt</code> and <code>title</code>, but it also offers a handful of attributes that can be used to build upon the language’s native semantics in a less formal way. I’m talking, of course, about <code>id</code> and <code>class</code>.</p>
-	    </div>
+		<p>HTML is filled with attributes that help enrich the elements they adorn. It prescribes a number of “fixed use” ones, like <code>alt</code> and <code>title</code>, but it also offers a handful of attributes that can be used to build upon the language’s native semantics in a less formal way. I’m talking, of course, about <code>id</code> and <code>class</code>.</p>
 
 	    <p>When Dave Raggett drafted a specification for HTML 3.0,<a class="footnote-link" href="#footnote-222-5" id="footnote-222-5-backlink">[5]</a> it contained two new concepts: classification and identification, expressed via the <code>class</code> and <code>id</code> attributes respectively.<a class="footnote-link" href="#footnote-222-6" id="footnote-222-6-backlink">[6]</a> These two attributes were not formally introduced into the HTML lexicon until HTML 4.0, but were implemented in browsers around the same time as Cascading Style Sheet (CSS) support was added. And CSS, of course, brought us two simple selectors that targeted these attributes explicitly, causing some unfortunate confusion over the intended use of <code>class</code> and <code>id</code> from the get-go.</p>
 
@@ -186,11 +176,9 @@
 
 	    <p>The <code>class</code> and <code>id</code> attributes allow page authors to create their own semantics on top of those that are part of the spec. Together, these ad-hoc semantics imbue the markup with greater meaning and, over time, have gravitated toward a common set of classifications and identifiers in use across the globe (e.g., <code>div#header</code> and <code>ul#nav</code>). This common set of classifications and identifiers has, in turn, provided valuable feedback in the development of the HTML language itself (resulting in additions like HTML5’s <code>header</code> and <code>nav</code> elements, which we reviewed earlier) and fostered the development of a community-driven set of extensions to HTML known as “microformats.”</p>
 
-	    <div class="keep">
-			<h2 id="codified-conventions">CODIFIED CONVENTIONS</h2>
+	    <h2 id="codified-conventions">CODIFIED CONVENTIONS</h2>
 
-			<p>Microformats are a set of community-driven specifications for how to mark up content to expose semantics (and meta data) that are not available in HTML (or XHTML). At their essence, microformats formalize organically-developed coding conventions into a specification that addresses an oversight or limitation in HTML. For example, HTML provides no robust way to mark up contact information or events, so the community created microformats to fill those needs.</p>
-	    </div>
+		<p>Microformats are a set of community-driven specifications for how to mark up content to expose semantics (and meta data) that are not available in HTML (or XHTML). At their essence, microformats formalize organically-developed coding conventions into a specification that addresses an oversight or limitation in HTML. For example, HTML provides no robust way to mark up contact information or events, so the community created microformats to fill those needs.</p>
 
 	    <p>The first microformat arose from a desire to express associations between individuals on the web and was called the XHTML Friends Network (“XFN” for short). Though not developed as a “microformat” (that term came later), XFN was a perfect example of extending the semantics of HTML with a specific goal in mind.</p>
 
@@ -211,11 +199,9 @@
 
 	    <p>As you can see, microformats are yet another layer in the progressive enhancement continuum, enabling us to make our sites even more useful to our users. After all, how cool is it that, using a tool like Operator or a service like Optimus, we can enable users to import an event to their calendar or a business card to their address book directly from our web page? I think that’s pretty awesome.</p>
 
-	    <div class="keep">
-			<h3 id="call-me-call-me-anytime">Call me, call me&#160;anytime</h3>
+	    <h3 id="call-me-call-me-anytime">Call me, call me&#160;anytime</h3>
 
-			<p>As our demo website is for an event, the hCalendar microformat is an obvious place to start, but let’s hold off on that for a moment and look at how we can apply the hCard microformat to my bio <code>section</code> in the “Instructors” <code>article</code>. Before we take a look at the markup though, let’s go over the key hCard classifications.</p>
-		</div>
+		<p>As our demo website is for an event, the hCalendar microformat is an obvious place to start, but let’s hold off on that for a moment and look at how we can apply the hCard microformat to my bio <code>section</code> in the “Instructors” <code>article</code>. Before we take a look at the markup though, let’s go over the key hCard classifications.</p>
 
 		<figure id="table-2-1">
 			<table>
@@ -321,11 +307,9 @@
 
 		<p>What’s really interesting about microformats is that you can use them however you like. The <code>class</code> names don’t need to appear in any particular order (so long as they appear within an appropriately-classified parent element) and they don’t require that the content match the intended export format in any way. And, as this example demonstrates, the hCard does not need to be marked up like a rolodex card entry; instead, you are free to sprinkle its component parts throughout your prose using the appropriate <code>class</code> names to indicate each one.</p>
 
-		<div class="keep">
-			<h3 id="mark-your-calendars">Mark your calendars</h3>
+		<h3 id="mark-your-calendars">Mark your calendars</h3>
 
 	    	<p>With hCard covered, we can take a look at the hCalendar event microformat mentioned earlier. Again, before we look at the markup, let’s take a look at some of the more important hCalendar classifications.</p>
-		</div>
 		
 		<figure id="table-2-2">
 			<table>
@@ -423,11 +407,9 @@
 
 		<p>Again, we’ve seen how microformats can directly enhance the meaning of already meaningful markup in order to improve the user experience. Picture perfect progressive enhancement!</p>
 
-		<div class="keep">
-			<h2 id="its-the-foundation">IT’S THE FOUNDATION</h2>
+		<h2 id="its-the-foundation">IT’S THE FOUNDATION</h2>
 
-			<p>While progressive enhancement is often discussed in terms of CSS and JavaScript, it applies equally to the markup. As we’ve seen in this chapter, every time we choose a meaningful element, we make it easier for the page to do its job by enhancing accessibility and increasing its visibility to potential users through organic search. We’ve also seen how both classification and identification can feed back into HTML, helping it become an even more expressive language. And, as is the case with microformats, we’ve even seen how the names we choose have the capacity to enhance both the semantics and usability of the content to which they are applied.</p>
-		</div>
+		<p>While progressive enhancement is often discussed in terms of CSS and JavaScript, it applies equally to the markup. As we’ve seen in this chapter, every time we choose a meaningful element, we make it easier for the page to do its job by enhancing accessibility and increasing its visibility to potential users through organic search. We’ve also seen how both classification and identification can feed back into HTML, helping it become an even more expressive language. And, as is the case with microformats, we’ve even seen how the names we choose have the capacity to enhance both the semantics and usability of the content to which they are applied.</p>
 
 		<p>Semantic markup is an invaluable step in the progressive enhancement continuum; in concert with well written content, it forms the foundation upon which the entire user experience is built.</p>
 

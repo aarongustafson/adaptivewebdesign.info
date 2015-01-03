@@ -34,11 +34,9 @@
 
 		<p>Thankfully, designing and developing with progressive enhancement improves accessibility. Progressive enhancement encourages you to build your websites in service of the content and that, more often than not, will help guide you toward the right decision when it comes to accessibility. Of course there’s always room for improvement, hence this chapter.</p>
 
-		<div class="keep">
-			<h2 id="now-you-see-me">NOW YOU SEE&#160;ME…</h2>
+		<h2 id="now-you-see-me">NOW YOU SEE&#160;ME…</h2>
 
-			<p>Perhaps the most heavily-repeated pattern in JavaScript-based page manipulation is showing and hiding content. Tabbed interfaces. Collapsible elements. Accordion widgets. It crops up nearly everywhere. In and of itself, this pattern is not a bad thing, but few people realize how profoundly your choice of hiding mechanism can influence the accessibility of your content to assistive technologies like screen readers.</p>
-		</div>
+		<p>Perhaps the most heavily-repeated pattern in JavaScript-based page manipulation is showing and hiding content. Tabbed interfaces. Collapsible elements. Accordion widgets. It crops up nearly everywhere. In and of itself, this pattern is not a bad thing, but few people realize how profoundly your choice of hiding mechanism can influence the accessibility of your content to assistive technologies like screen readers.</p>
 
 		<p>When it comes to hiding content, there are several mechanisms for doing it and each has a different affect on the page, as summarized in the table below.</p>
 
@@ -145,11 +143,9 @@
 
 		<p>ARIA offers a number of predefined roles, states, and properties that can be of tremendous use when building a JavaScript-heavy site. There are even a handful that are useful whether you are building a highly interactive application or not. We’ll tackle those first.</p>
 
-		<div class="keep">
-			<h2 id="empower-wayfinding">EMPOWER WAYFINDING</h2>
+		<h2 id="empower-wayfinding">EMPOWER WAYFINDING</h2>
 
-			<p>One of the many ways ARIA helps improve the accessibility of a web page is through the use of “landmark” and “structural” roles. Many of these roles formalize the significance we had been attempting to impart to elements for years via by applying semantic classifications and identifiers (as we discussed in <a href="#chapter-2">Chapter 2</a>). ARIA’s landmark and structural roles (and widget roles, which we’ll get to shortly) are assigned to an element using the <code>role</code> attribute.</p>
-		</div>
+		<p>One of the many ways ARIA helps improve the accessibility of a web page is through the use of “landmark” and “structural” roles. Many of these roles formalize the significance we had been attempting to impart to elements for years via by applying semantic classifications and identifiers (as we discussed in <a href="#chapter-2">Chapter 2</a>). ARIA’s landmark and structural roles (and widget roles, which we’ll get to shortly) are assigned to an element using the <code>role</code> attribute.</p>
 
 		<p>I know, I know: <code>role</code> isn’t a valid attribute in HTML 4.x or XHTML 1.x. It’s true. ARIA adds a host of new attributes to the HTML lexicon, which means you won’t be able to validate your pages using the same old Document Type Definitions (DTDs) you’ve been using. If you want to validate your ARIA-infused pages in either of these two languages, you’ll need to use a different set of DTDs<a class="footnote-link" href="#footnote-222-3" id="footnote-222-3-backlink">[3]</a> or make the leap to HTML5 which supports attributes like <code>role</code>.</p>
 
@@ -169,11 +165,9 @@
 
 		<p>You may recall that, in the original example, we wrapped the navigational <code>ol</code> in a new HTML5 element: <code>nav</code>. If you are really on the ball, you’ll also recall that using the <code>nav</code> element is semantically-equivalent to employing the landmark role “navigation.” And this isn’t the only area of overlap between HTML5 and ARIA.</p>
 
-		<div class="keep">
-			<h3 id="redundancy-and-reason">Redundancy and&#160;reason</h3>
-			
-			<p>These two specs developed independently over roughly the same time period and each sought to address the pressing problems they saw with the current state of HTML. (Hence, the inevitable overlap.) The ARIA spec is currently a bit closer to becoming a recommendation than HTML5 is and, as a consequence, many of its unique features are being incorporated into HTML5 as that spec continues to develop. When HTML5 finally reaches the Candidate Recommendation stage, it’s pretty safe to assume that the two specs will have been successfully merged and that redundancies will have been ironed out.</p>
-		</div>
+		<h3 id="redundancy-and-reason">Redundancy and&#160;reason</h3>
+		
+		<p>These two specs developed independently over roughly the same time period and each sought to address the pressing problems they saw with the current state of HTML. (Hence, the inevitable overlap.) The ARIA spec is currently a bit closer to becoming a recommendation than HTML5 is and, as a consequence, many of its unique features are being incorporated into HTML5 as that spec continues to develop. When HTML5 finally reaches the Candidate Recommendation stage, it’s pretty safe to assume that the two specs will have been successfully merged and that redundancies will have been ironed out.</p>
 
 		<p>For the time being, however, there is a considerable amount of overlap between ARIA and HTML5, especially in the case of structural and (to a lesser extent) landmark roles. <a href="#table-5-2">Table 5.2</a> provides a few examples of our traditional ad-hoc semantics, their equivalent ARIA role, and the HTML5 element (if any) that serves the same purpose.</p>
 
@@ -250,11 +244,9 @@
 
 		<p>And with those two minor adjustments, we’ve covered every landmark role that seems sensible to employ on the Retreats 4 Geeks site. Not only that, but we’ve improved the overall accessibility of our page by providing easy ways for users of assistive technology to move around the document.</p>
 
-		<div class="keep">
-			<h2 id="brother-can-you-spare-a-clue">BROTHER CAN YOU SPARE A&#160;CLUE?</h2>
+		<h2 id="brother-can-you-spare-a-clue">BROTHER CAN YOU SPARE A&#160;CLUE?</h2>
 
-			<p>In addition to providing users with a means to find their way around a document, the ARIA spec prescribes other helpful tools as well, not the least of which is its collection of widget roles and states.</p>
-		</div>
+		<p>In addition to providing users with a means to find their way around a document, the ARIA spec prescribes other helpful tools as well, not the least of which is its collection of widget roles and states.</p>
 
 		<p>Widget roles do just what you’d expect them to: describe the role of a given element. These roles are generally divided into two camps: roles that provide a defined structure, and those that don’t. Or, more simply, containers and components. Containers are the elements that house the components of a given widget.</p>
 
@@ -297,11 +289,9 @@
 
 		<p>ARIA’s states and properties go a long way toward helping keep the user informed, but few concepts in ARIA are as simple and immediately useful as Live Regions.</p>
 
-		<div class="keep">
-			<h2 id="its-alive">IT’S ALIVE!</h2>
+		<h2 id="its-alive">IT’S ALIVE!</h2>
 
-			<p>With the advent of Ajax and the resurgence of JavaScript in general, few things proved to be more of a user experience nightmare than live-updating regions of the page. The usability issues were numerous, but the two big ones were: 1) assistive devices weren’t aware of changes to the page and had no way of directing a user’s attention to them; and 2) users taking advantage of page zoom or browsing on a mobile device are oblivious to content updates occurring off-screen. Thankfully, the ARIA spec includes an attribute that directly addresses this egregious problem: <code>aria-live</code>.</p>
-		</div>
+		<p>With the advent of Ajax and the resurgence of JavaScript in general, few things proved to be more of a user experience nightmare than live-updating regions of the page. The usability issues were numerous, but the two big ones were: 1) assistive devices weren’t aware of changes to the page and had no way of directing a user’s attention to them; and 2) users taking advantage of page zoom or browsing on a mobile device are oblivious to content updates occurring off-screen. Thankfully, the ARIA spec includes an attribute that directly addresses this egregious problem: <code>aria-live</code>.</p>
 
 		<p>What’s most exciting about <code>aria-live</code> is its simplicity. By applying this single attribute to an element, you can control how and when content updates within it are presented to your users. The <code>aria-live</code> attribute accepts one of three values:</p>
 
@@ -317,20 +307,16 @@
 
 		<p>With that in place, users will be kept abreast of any errors encountered when filling in their details and will also be informed when the submission is successful.</p>
 
-		<div class="keep">
-			<h2 id="support-and-stumbling-blocks">SUPPORT AND STUMBLING&#160;BLOCKS</h2>
+		<h2 id="support-and-stumbling-blocks">SUPPORT AND STUMBLING&#160;BLOCKS</h2>
 
-			<p>Since its introduction, ARIA has gotten a lot of support from the web community. As of this writing, some level of ARIA support is found in every major browser and has been implemented in popular screen reading tools like JAWS, Windows Eyes, NVDA, and Orca. Influential companies like IBM, Sun Microsystems, Adobe, Yahoo!, and Google are all working diligently to increase ARIA’s effectiveness and reach. Even the Javascript community has embraced ARIA, with both Dojo Dijits<a class="footnote-link" href="#footnote-222-5" id="footnote-222-5-backlink">[5]</a> and jQuery UI<a class="footnote-link" href="#footnote-222-6" id="footnote-222-6-backlink">[6]</a> integrating ARIA’s roles, states, and properties into their components. Of course, the spec is still developing, so no implementation is complete, but progress is being made.</p>
-		</div>
+		<p>Since its introduction, ARIA has gotten a lot of support from the web community. As of this writing, some level of ARIA support is found in every major browser and has been implemented in popular screen reading tools like JAWS, Windows Eyes, NVDA, and Orca. Influential companies like IBM, Sun Microsystems, Adobe, Yahoo!, and Google are all working diligently to increase ARIA’s effectiveness and reach. Even the Javascript community has embraced ARIA, with both Dojo Dijits<a class="footnote-link" href="#footnote-222-5" id="footnote-222-5-backlink">[5]</a> and jQuery UI<a class="footnote-link" href="#footnote-222-6" id="footnote-222-6-backlink">[6]</a> integrating ARIA’s roles, states, and properties into their components. Of course, the spec is still developing, so no implementation is complete, but progress is being made.</p>
 
 		<p>I’d be remiss if I did not mention the one major issue keeping ARIA from fitting neatly into the progressive enhancement stack, at least when it comes to widget-related roles and states: we have no way of testing for ARIA support in the browser or assistive technology and, therefore, can’t make informed decisions about how to best implement a given widget. Derek Featherstone surfaced this issue in his excellent article for <span class="italic-bodycopy italic-bodycopy-override-2">A List Apart</span> Entitled “ARIA and Progressive Enhancement.”<a class="footnote-link" href="#footnote-222-7" id="footnote-222-7-backlink">[7]</a> I highly recommend reading it to better understand the issue. At the time of this writing, a viable solution has not been proposed, but my fingers are crossed.</p>
 	
-		<div class="keep">
-			<h2 id="keystroke-isnt-a-dirty-word">KEYSTROKE ISN’T A DIRTY&#160;WORD</h2>
+		<h2 id="keystroke-isnt-a-dirty-word">KEYSTROKE ISN’T A DIRTY&#160;WORD</h2>
 
-			<p>The last topic I want to touch on before we wrap this, the
-			final chapter of my little book, is keyboard access and controls. With the pervasiveness of the mouse and an increased reliance on touch-based devices like the iPad, it is relatively easy to forget about the humble keyboard, but that would be a critical mistake. The keyboard is an incredibly useful tool and is the standard interface for all non-visual users and most power-users.</p>
-		</div>
+		<p>The last topic I want to touch on before we wrap this, the
+		final chapter of my little book, is keyboard access and controls. With the pervasiveness of the mouse and an increased reliance on touch-based devices like the iPad, it is relatively easy to forget about the humble keyboard, but that would be a critical mistake. The keyboard is an incredibly useful tool and is the standard interface for all non-visual users and most power-users.</p>
 
 		<p>When it comes to the keyboard, we’ve learned a great deal in the last few years. First off, we realized that access keys were a good idea in theory, but not so great in practice.<a class="footnote-link" href="#footnote-222-8" id="footnote-222-8-backlink">[8]</a> Second, we realized that overzealous application of the <code>tabindex</code> attribute could get your users jumping (and not in a good way).<a class="footnote-link" href="#footnote-222-9" id="footnote-222-9-backlink">[9]</a> But the most important thing we discovered is that we could use JavaScript to “juggle” the <code>tabindex</code> attribute to streamline a user’s path through a complex widget like a tabbed interface or an accordion form.</p>
 
@@ -376,11 +362,9 @@
 
 		<p>If you’d like to see this technique in action, you can check out TabInterface.js on Github.<a class="footnote-link" href="#footnote-222-11" id="footnote-222-11-backlink">[11]</a></p>
 
-		<div class="keep">
-			<h2 id="just-do-it-accessibly">JUST DO IT… ACCESSIBLY</h2>
+		<h2 id="just-do-it-accessibly">JUST DO IT… ACCESSIBLY</h2>
 
-			<p>Accessibility is complex and can be difficult to wrap your mind around, but if you tackle it a little at a time, it becomes second nature. And, as with everything else in this book, accessibility is most easily applied in layers, building up the interface bit by bit to create something that meets your users’ needs, whatever they may be.</p>
-		</div>
+		<p>Accessibility is complex and can be difficult to wrap your mind around, but if you tackle it a little at a time, it becomes second nature. And, as with everything else in this book, accessibility is most easily applied in layers, building up the interface bit by bit to create something that meets your users’ needs, whatever they may be.</p>
 
 		<footer>
 			<ol id="footnotes">
