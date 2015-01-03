@@ -504,6 +504,7 @@ tbody td {
 .cover {
     margin-top: 0;
     margin-bottom: 2em;
+    padding: 0;
 }
 .cover img {
     display: block;
