@@ -137,6 +137,10 @@ pre, h1 strong,
 }
 
 
+dt {
+    position: relative;
+}
+
 /* =Weights */
 h1, h2, strong, thead th, dt,
 .byline,
