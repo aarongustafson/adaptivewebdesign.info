@@ -267,6 +267,7 @@ img, video {
 /* =Layout */
 .page,
 .navigation,
+.signup,
 .contentinfo {
     margin-left: auto;
     margin-right: auto;
@@ -512,9 +513,10 @@ tbody td {
     max-height: 100vh;
 }
 
-/* =Navigation & footer */
+/* =Navigation, signup & footer */
 .navigation,
-.contentinfo {
+.contentinfo,
+.signup {
     border-top: 1px solid #ebebeb;
     padding-top: 2em;
 }
@@ -524,4 +526,24 @@ nav h1 {
 .contentinfo {
     margin-top: 0;
     padding-bottom: 2em;
+}
+.form-control__label {
+    font-weight: bold;
+}
+.form-control__input {
+    height: 1em;
+    min-width: 200px;
+    padding: .5em;
+    vertical-align: bottom;
+}
+.form-control__note {
+    display: block;
+    font-size: .8em;
+    font-style: normal;
+    margin-top: .75em;
+}
+.form-button {
+    font-size: 1em;
+    margin-top: .25em;
+    vertical-align: bottom;
 }
