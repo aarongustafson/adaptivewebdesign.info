@@ -58,7 +58,7 @@
 		}
 
 		.reviews > .h-review {
-			$rem-spacing: rem( $default-spacing );
+			$rem-spacing: rem( 24 );
 			flex: 0 1 calc( 50% - #{$rem-spacing} );
 			
 			&:nth-child(odd) {
