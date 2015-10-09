@@ -25,7 +25,9 @@ layout: home
 
       <ul class="book__links">
         {% for link in links.subnav offset:2 %}
-          <li class="book__link"><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% unless link.title == "Foreword" %}
+            <li class="book__link"><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endunless %}
         {% endfor %}
       </ul>
     {% endfor %}
