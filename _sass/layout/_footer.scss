@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    .contentinfo {
+        @include rem( font-size, $font-size-small );
+        text-align: center;
+    	
+        margin-top: 0;
+        @include rem( padding, $default-spacing/2 $default-spacing );
+    }
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+    .contentinfo {
+        border-top: 1px solid $color-border;
+        @include rem( margin-top, $default-spacing );
+    }
+
+}

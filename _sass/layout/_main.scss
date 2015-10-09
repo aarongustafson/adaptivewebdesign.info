@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    Main
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    main.layout-container:focus {
+        outline: none;
+    }
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+    main.layout-container {
+        box-sizing: border-box;
+        @include rem( padding, 0 $default-spacing );
+    }
+
+}
+
+@include breakup-breakpoint( "full" ) {
+
+    main.layout-container > * {
+        max-width: 36em;
+    }
+
+}

@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    Info Panel
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+	.info-panel {
+		@include rem( padding, 0 $default-spacing/2 );
+	}
+
+}
+
+@include breakup-breakpoint( "global" ) {
+	
+	.info-panel {
+		@include rem( padding, 0 $default-spacing );
+	}
+
+}

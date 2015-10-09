@@ -1,0 +1,21 @@
+<header class="banner h-product" id="product" role="banner">
+	<div class="layout-container">
+		<h1 class="banner__title title p-name">
+			<a href="{{ site.baseurl }}/">
+				<b class="title__primary">{{ site.title }}</b><b class="hidden">:</b>
+				<b class="title__secondary">{{ site.subtitle }}</b>
+				{% if page.permalink contains "edition" %}
+					<b class="title__edition">
+						{% if page.permalink contains "1st" %}
+							First
+						{% else %}
+							Second
+						{% endif %}
+						Edition
+					</b>
+				{% endif %}
+			</a>
+		</h1>
+		<p class="banner__byline">By <a class="h-card" href="/author/">Aaron Gustafson</a></p>
+	</div>
+</header>

@@ -1,0 +1,119 @@
+- author: Jeremy Keith
+  author_url: http://adactio.com
+  author_role: "Author, <cite>HTML5 for Web Designers</cite>"
+  review: "Adaptive Web Design</cite> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style. If you aren’t already using progressive enhancement to build websites, you soon will be."
+
+- author: Dan Cederholm
+  author_url: http://simplebits.com
+  author_role: "Author, <cite>CSS3 For Web Designers</cite>"
+  review: "Finally. Progressive enhancement explained with a perfect balance of theory and practice. Aaron’s take-aways will have you progressively-enhancing your markup, style and behavior with ease."
+
+- author: Jonathan Snook
+  author_url: http://snook.ca
+  author_role: "Co-author, <cite>The Art and Science of CSS</cite>"
+  review: "You hear the term ‘Progressive Enhancement’ bandied about as a good thing, and it absolutely is. However, few resources cover the breadth of the topic as well as this book does. <cite>Adaptive Web Design</cite> includes some of the best and broadest coverage in an easy-to-read and well-structured book."
+
+- source: http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/
+  author: Brad Frost
+  author_url: http://bradfrostweb.com
+  author_role: "Mobile web developer"
+  review: "Aaron Gustafson’s <cite>Adaptive Web Design</cite> book provides a metric-shit-tonne of best practices, examples and techniques to progressively enhance websites."
+
+- author: Simon Collison
+  author_url: http://colly.com
+  author_role: "Co-author, <cite>CSS Mastery</cite>"
+  review: "With this forward-thinking book Aaron shows us that anyone can produce accessible, engaging web experiences without sacrificing their ambitions. Through progressive enhancement, he’ll show you how to bring designs to life without compromising the integrity of content. I’ve been learning from Aaron for many years, and suggest you do the same."
+
+- author: Kristina Halvorson
+  author_url: http://braintraffic.com
+  author_role: "Author, <cite>Content Strategy for the Web</cite>"
+  review: "As cross-platform requirements continue to evolve at the speed of light, designing from the content out isn’t just a good idea. It’s an imperative. How then can we meet the challenges of delivering the right content, to the right people, at the right time, and in the right place? <cite>Adaptive Web Design</cite> shares the necessary insights, tools and techniques for web professionals of all stripes to embrace progressive enhancement as a powerful, shared solution."
+
+- author: Christian Heilmann
+  author_url: http://www.wait-till-i.com/
+  author_role: "Author, <cite>Beginning JavaScript with DOM Scripting and Ajax</cite>"
+  review: "HTML5 is the new hotness and a lot of tutorials and demos are there to show off what can be done with it. One thing that a lot of publications right now are missing is information how to use newest technology and keep your products maintainable and working for everybody – not only the cool kids with the newest toys. This book is a voice of reason and explains the very important nuts and bolts instead of blinding you with shiny examples. This is an important step towards building a sturdy web for the future and not another flash in the pan."
+
+- author: Whitney Hess
+  author_url: http://whitneyhess.com
+  author_role: User Experience Expert
+  review: "I’m not a programmer and I hardly ever write code, but my success as a user experience designer hinges on the talent and knowledge of the programmers I collaborate with. It is our responsibility to deliver the best possible product to our users, regardless of their technical or physical constraints or preferences. Aaron Gustafson’s <cite>Adaptive Web Design</cite> has given me a much clearer understanding of the philosophy of progressive enhancement and how to use it. I’m now better equipped to design in layers and ensure my programmers make the necessary considerations to create the experience that all our users deserve."
+
+- source: http://www.456bereastreet.com/archive/201106/adaptive_web_design_book_review/
+  author: Roger Johansson
+  author_url: http://www.456bereastreet.com
+  author_role: "Front-end web developer"
+  review: "If every web professional were to read and fully absorb the information in Aaron Gustafson’s excellent <cite>Adaptive Web Design</cite>, large parts of the Web would become be so much more, well, adaptive than they are today. We would see fewer cases of entire sites failing without warning when JavaScript is off. We would see less non-semantic markup. We would see fewer widgets that are meaningless and confusing without CSS or JavaScript. And so on. … The Web would simply be more robust."
+
+- source: http://susanjeanrobertson.com/geekery/progressive-enhancement-and-responsive-design/
+  author: Susan Jean Robertson
+  author_url: http://susanjeanrobertson.com/
+  author_role: "Front-end web developer"
+  review: "[<cite>Adaptive Web Design</cite>] was a great read and for me what was so helpful was the easy manner in which he laid out using JavaScript to make sure it is an enhancement and not a necessity. The checklist at the back will be referenced again and again. Plus there were lots of little nuggets of CSS and JavaScript that I know will stay with me in my work as I continue to refine and change the way I write code. Now I just need to get this book in the hands of the folks I work with, it is a never ending source of frustration to me that so many tasks on our sites can only be completed with JavaScript enabled."
+
+- source: http://shallowthoughts.org/2011/08/27/review-adaptive-web-design-by-aaron-gustafson
+  author: Bridget Stewart
+  author_url: http://shallowthoughts.org
+  author_role: "Web designer"
+  review: "I often feel I don’t have the time to read everything about web technologies that one must read these days in order to keep up their skills. … At 135 pages (including the index), <cite>Adaptive Web Design</cite> is a quick read, packed with solid information. … Not only does Aaron explain practical things for us to apply, he explains the concept of “fault tolerance” – something I had never really considered before, but think about now before I sit down to craft a site or a web app. Fault tolerance is an important concept that aids in understanding how HTML and CSS work to make the life of web authors a bit easier. … [Y]ou will walk away from it a stronger designer/developer. It’s worth it to find time to read <cite>Adaptive Web Design</cite>."
+
+- source: http://www.dirtystylus.com/blog/2011/08/02/adaptive-web-design-by-aaron-gustafson/
+  author: Mark Llobrera
+  author_url: http://www.dirtystylus.com
+  author_role: "Interactive developer"
+  review: "I picked up Aaron Gustafson’s <cite>Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement</cite> on a whim, largely because Veerle Pieters showed the cover design as part of her talk at An Event Apart Boston. However, it’s quickly become my essential grab-bag guide to the state of the art in web design. Its focus on progressive enhancement through HTML markup, CSS, and JavaScript was exactly what I needed: an overview of today’s best practices. Even if the detail in this book isn’t as comprehensive as its scope (intentionally so), it has enough detail and practical examples to point me in the right direction to dig deeper. … I found <cite>Adaptive Web Design</cite> to be funny, informative, and—most importantly—useful. I was able to funnel what I learned directly into my current (and upcoming) projects. I can’t recommend it enough."
+
+- author: Lis Hubert
+  author_role: "Web designer"
+  author_url: http://www.elisabethhubert.com/
+  review: "I had a fair grasp of the basics of progressive enhancement with CSS and unobtrusive JavaScript, but I took a lot away from this book, particularly the WAI-ARIA and microformats stuff which I’d not really looked into, and made me rethink a lot about how I structure my CSS. It’s also a great looking and well written book, up there with A Book Apart’s series."
+
+- source: http://www.goodreads.com/review/show/202054640
+  author: Corey Dutson
+  author_url: http://www.goodreads.com/user/show/1198481-corey-dutson
+  review: "The book covers a range of different concepts in a clear and easy manner, which makes it a great book for those just getting into thinking about the web (as well as those of us that have been around it for a while)."
+
+- source: "http://www.amazon.com/review/R1ZXFE8LZQH28G/ref=cm_cr_dp_perm?ie=UTF8&amp;ASIN=098358950X&amp;nodeID=283155&amp;tag=&amp;linkCode="
+  author: Anthony Grace “Bognit”
+  author_url: http://simplebits.com
+  author_role: "ASP.NET Web Forms developer"
+  review: "I’m just reading the final chapter in this book and I can't recommend it highly enough. … As an ASP.NET Web Forms developer, I can relate only too well to the need for diligence and common sense when designing websites that are being accessed on a plethora of devices, some not yet envisioned, by so many different people, many of whom have accessibility issues. I have been facing an uphill struggle in my own attempts to embrace solid best practices in my work and this book has restored my confidence in that quest. … The only other book out there in the same league is the one on Progressive Enhancement by the Filament Group; I just wish I had read this one first! There is no better introduction to the topic out there."
+
+- source: http://ludviglindblom.com/adaptive-web-design-book-review/
+  author: Ludvig Lindblom
+  author_url: http://ludviglindblom.com
+  author_role: "Front-end developer"
+  review: "Aaron has succeeded in explaining the reason for using progressive enhancement, the basics of the various techniques, breaking it down chapter by chapter and also ending it with a checklist for all your progressive enhancement needs. All in a book that not only covers the theory (or philosophy if you so will) behind it but which also contains plenty of practical examples of *how*, and more importantly *why*, to implement the techniques. … I can only wish more, *a lot more*, web designers and developers get their hands on <cite>Adaptive Web Design</cite> because I consider it a must have tool in any serious designers/developers toolbox. The more people read it, the less sites breaking when the user has JavaScript turned off and the less non-semantic markup and more accessible content will we see. … *In short, this book will help us make a better, more future proof and more accessible web.*"
+
+- source: http://www.noahread.net/blog/book-review/adaptive-web-design/
+  author: Noah Read
+  author_url: http://www.noahread.net
+  review: "I would not hesitate to recommend this book to anyone. For anyone who wants to know what web standards exist today I would recommend the A Book Apart books for an introduction and inspiration and Adaptive Web Design for nuts and bolts."
+
+- source: "http://www.zeldman.com/2011/06/02/progressive-enhancement-all-you-need-to-know-is-here/#comment-59837"
+  author: Darren
+  review: "I read this book in a single day from cover to cover which is quite an achievement for me (I’m easily distracted!). I think that says something about the quality of the writing. It’s an easy read and very informative without leaving you wondering where to go for more information when those inevitable questions pop into your head. … I liked this book a lot, and I’ll be recommending it."
+
+- source: "http://www.amazon.com/review/R2L99XDN2N4ZT8/ref=cm_cr_dp_perm?ie=UTF8&amp;ASIN=098358950X&amp;nodeID=283155&amp;tag=&amp;linkCode="
+  author: Sean Murphy
+  author_url: http://www.amazon.com/gp/pdp/profile/AELK1COSRNSGO/ref=cm_cr_dp_pdp
+  author_role: "Web designer"
+  review: "<cite>Adaptive Web Design</cite> explains so elegantly what progressive enhancement is all about, convinces you to believe in the practice, and provides practical implementation techniques. The storytelling is superb and content top-notch. If you create on the web, even if you already know a thing or two about progressive enhancement, this is a must read; I loved it!"
+
+- source: http://www.goodreads.com/review/show/218647685
+  author: Rachel Lehman
+  author_url: http://www.goodreads.com/user/show/6539849-rachel-lehman
+  review: "The JavaScript section was the most useful part to me. This is basically a collection of all the current best practice techniques out there today. I liked how many of the JS examples used jQuery — no need to triple the amount of code in the examples when we’re all using jQuery anyway."
+
+- source: http://www.michael-ostergaard.dk/anmeldelse-adaptive-web-design-crafting-rich-experiences-with-progressive-enhancement-af-aaron-gustafson
+  author: Michael Østergaard
+  author_url: http://www.michael-ostergaard.dk
+  author_role: "Web designer"
+  lang: dan
+  review: "Selvom min store passion ligger mest i webdesign, og ikke alene i webudvikling, så er webudvikling stadigvæk en del af det samlede resultat, der i bund og grund er webdesignet. … Derfor synes jeg, at man som webdesigner eller webudvikler (eller begge dele) kan have gavn af bogen. Ganske enkelt fordi, der trænger til at komme mere fokus på tankegangen. … Vi har et ansvar, men her er bogen ikke den endelige brik i puslespillet – det er os selv, der skal ændre vores holdning. Vi skal kræve og ønske et bedre resultat, hvor bogen fungerer som et&nbsp;hjælpemiddel."
+
+- source: http://www.goodreads.com/review/show/216336731
+  author: Michael
+  author_role: "Web designer"
+  author_url: http://www.goodreads.com/user/show/6478647-michael
+  review: "This is a great book for anyone that is interested in the more technical, but not too technical niche of web design. Aaron does a great job of walking the reader through the technical implementations of an adaptive web design and progressive enhancement. It is short so worth taking a read through then using as a reference for future project work. Great job Aaron!"

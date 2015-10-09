@@ -1,0 +1,23 @@
+---
+layout: default
+title: Errata from the Second Edition
+permalink: /2nd-edition/errata/
+---
+
+<p>Sometimes we screw up, sometimes things change. Regardless, books sometimes contain errors. Below are notes on these from the Second Edition of <cite>Adaptive Web Design</cite>.</p>
+
+{% for errata in site.data.errata-2nd-edition %}
+
+	{% if forloop.first %}
+		<ul class="errata">
+	{% endif %}
+
+	{% include errata.html %}
+
+	{% if forloop.last %}
+		</ul>
+	{% endif %}
+
+{% else %}
+	<p>No errata has been discovered… yet.</p>
+{% endfor %}

@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    Block-level Semantics
+\*------------------------------------*/
+@include breakup-breakpoint( "global" ) {
+    
+    * {
+        @include rem( margin-top, 0 );
+	    @include rem( margin-bottom, 0 );
+    }
+    
+    * + * {
+	    @include rem( margin-top, $default-spacing );
+    }
+    
+	blockquote {
+
+	    font-family: $font-stack-sansserif;
+	    font-style: italic;
+	    
+	    margin: 0;
+	    padding: 0;
+
+	    cite {
+	    	font-style: normal;
+	    }
+
+	}
+
+	p {
+    	font-weight: normal;
+    	line-height: $line-height-default;
+
+    	.wf-active & {
+        	word-spacing: 2px;
+    	}
+	}
+
+	[aria-hidden="true"] {
+	    display: none;
+	}
+	
+	hr {
+	    border: 0;
+        border-top: 1px solid $color-rule;
+        
+        height: 0;
+        @include rem( margin, $default-spacing auto );
+	}
+
+}
+
+@include breakup-breakpoint( "print" ) {
+    p, ol, ol, dl {
+    	orphans: 3;
+    	widows: 3;
+    }
+}

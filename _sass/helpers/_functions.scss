@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    Functions
+\*------------------------------------*/
+
+// convert px to ems
+// ---
+// @param [literal] $size: the size
+// @param [literal] $context: the context size
+@function px-to-ems( $size, $context: $font-size-default )
+{
+    $size: 0px + $size;
+    $context: 0px + $context;
+    @return #{$size/$context}em;
+}
+
+// REM values
+// Adapted from http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+@function rem( $values )
+{
+    $px: ();
+    $rem: ();
+    
+    @each $value in $values
+    {
+        @if $value == 0 or $value == auto
+        {
+            $px : append( $px , $value );
+            $rem: append( $rem, $value );
+        }
+        @else
+        {
+            $unit: unit( $value );
+            $val: parseInt( $value );
+            
+            // enforce pixels on unitless measurements
+            @if $unit == ""
+            {
+                $value: $value + 0px;
+                $unit: "px";
+            }
+            
+            // assume pixels
+            @if $unit == "px"
+            {
+                $px : append( $px,  $value );
+                $rem: append( $rem, ( $val / $font-size-default + rem ) );
+            }
+            
+            @if $unit == "rem"
+            {
+                $px : append( $px,  ( $val * $font-size-default + px ) );
+                $rem: append( $rem, $value );
+            }
+        }
+    }
+    
+    @if $px == $rem
+    {
+        @return $px;
+    }
+    @else
+    {
+        @return $rem;
+    }
+}
+
+// convert string to number
+// ---
+// @param [literal] $n: the string
+@function parseInt( $n )
+{
+    @return $n / ($n * 0 + 1);
+}
+
+// Internet Explorer 6
+// ---
+// @param [literal] $value: value for Internet Explorer 6
+@function ie6($value) {
+  @return #{'_' + $value};
+}
+
+// Internet Explorer 6-7
+// ---
+// @param [literal] $value: value for Internet Explorer 6 and 7
+@function ie7($value) {
+  @return #{'!' + $value};
+}
+
+// Internet Explorer 6-8
+// ---
+// @param [literal] $value: value for Internet Explorer 6 to 8
+@function ie8($value) {
+  @return #{$value + ' \9'};
+}
+
+// Internet Explorer 9-10
+// ---
+// @param [literal] $value: value for Internet Explorer 9 and 10
+@function ie9($value) {
+  @return #{$value + '\0'};
+}
+
+// Internet Explorer 6-10
+// ---
+// @param [literal] $value: value for Internet Explorer 6 to 10
+@function ie10($value) {
+  @return #{$value + '\9'};
+}

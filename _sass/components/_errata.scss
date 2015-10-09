@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    Errata
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ){
+	
+	.errata {
+	
+		@include breakup-placeholder( delist );
+		
+		dl {
+			padding: 0;
+			margin: 0;
+		}
+
+		&__detail-label {
+			margin-top: 0;
+			float: left;
+
+			&::after {
+				content: ":\00A0";
+			}
+		}
+
+	}
+
+}

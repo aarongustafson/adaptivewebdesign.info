@@ -1,0 +1,9 @@
+<li class="h-review">
+	<blockquote class="e-description"
+				cite="{{ tweet.url }}"
+				{% if review.lang %}cite="{{ review.lang }}"{% endif %}>
+		{{ tweet.text | markdownify }}
+	</blockquote>
+	<p class="p-reviewer h-card"><a href="{{ tweet.author_url }}">{{ tweet.author_name }}</a></p>
+	<object class="hidden include p-item"></object>
+</li>

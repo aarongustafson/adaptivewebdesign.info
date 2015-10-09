@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    Header
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    .banner {
+
+        background: $color-blue;
+        color: $color-black;
+        border-bottom: 1px solid $color-border;
+
+        @include rem( margin, $default-margin );
+        @include rem( padding, $default-spacing/2 );
+        
+        * + * {
+            margin: 0;
+        }
+
+        &__title a,
+        &__title b {
+            display: block;
+        }
+
+        a:link,
+        a:visited {
+            color: $color-black;
+            border: 0;
+        }
+
+        .layout-container {
+            padding: 0;
+        }
+
+    }
+
+    .title__primary,
+    .title__secondary {
+        display: block;
+        @include rem( font-size, $font-size-body );
+    }
+
+    .title__secondary,
+    .title__edition,
+    .banner__byline {
+        @include rem( font-size, $font-size-small );
+        margin: 0;
+    }
+
+    .title__edition {
+        font-family: $font-stack-sansserif;
+        margin-top: .5em;
+    }
+    
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+    .banner {
+
+        padding: 0;
+        margin-bottom: 0;
+        
+        .layout-container {
+            display: table;
+            width: 100%;
+        }
+
+        &__title,
+        &__byline {
+            display: table-cell;
+            @include rem( padding, ($default-spacing*2/3) $default-spacing );
+            vertical-align: bottom;
+            width: 50%;
+        }
+
+        &__byline {
+            text-align: right;
+        }
+
+    }
+    
+}
+
+@include breakup-breakpoint( "full" ) {
+
+    .banner .layout-container {
+        width: 48em;
+    }
+
+}

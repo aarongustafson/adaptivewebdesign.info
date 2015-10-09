@@ -1,0 +1,36 @@
+<nav>
+    <div class="layout-container">
+        <h2 class="hidden">Site Navigation</h2>
+        <p class="skip-link hidden"><a href="#main">Skip to the content</a></p>
+        <ul class="navigation" id="navigation" tabindex="-1">
+            {% for link in site.navigation %}
+                {% if page.permalink == link.url or page.permalink contains link.url %}
+                    <li class="navigation__item navigation__item--focus">
+                {% else %}
+                    <li class="navigation__item">
+                {% endif %}
+                {% if page.permalink == link.url %}
+                    <mark><a class="navigation__link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></mark>
+                {% else %}
+                    <a class="navigation__link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+                {% endif %}
+                
+                {% if link.subnav %}
+                    <ul class="navigation__subnav subnav">
+                        {% for subpage in link.subnav %}
+                            <li class="subnav__item">
+                                {% if page.permalink == subpage.url %}
+                                    <mark><a class="subnav__link" href="{{ subpage.url | prepend: site.baseurl }}">{{ subpage.title }}</a></mark>
+                                {% else %}
+                                    <a class="subnav__link" href="{{ subpage.url | prepend: site.baseurl }}">{{     subpage.title }}</a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                </ul>
+                {% endif %}
+
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

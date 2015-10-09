@@ -1,0 +1,16 @@
+<li class="errata__item">
+	<dl>
+		<dt class="errata__detail-label errata__detail-label--chapter">Chapter</dt>
+		<dd class="errata__detail-value errata__detail-value--chapter">{{ errata.chapter }}</dd>
+		{% if errata.section %}
+			<dt class="errata__detail-label errata__detail-label--section">Section</dt>
+			<dd class="errata__detail-value errata__detail-value--section">{{ errata.section }}</dd>
+		{% endif %}
+		{% if errata.subsection %}
+			<dt class="errata__detail-label errata__detail-label--subsection">Subsection</dt>
+			<dd class="errata__detail-value errata__detail-value--subsection">{{ errata.subsection }}</dd>
+		{% endif %}
+		<dt class="errata__detail-label errata__detail-label--description">Description</dt>
+		<dd class="errata__detail-value errata__detail-value--description">{{ errata.description | markdownify }}
+	</dl>
+</li>

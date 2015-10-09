@@ -1,0 +1,27 @@
+---
+layout: default
+title: Reviews of the First Edition
+permalink: /1st-edition/reviews/
+---
+
+<p>The first edition of <cite class="h-product">Adaptive Web Design</cite> garnered a lot of praise. Here is a sampling of what folks had to say.</p>
+
+<section id="reviews" class="section">
+	<h2 class="section__title">On the Web</h2>
+
+	<ul class="reviews">
+		{% for review in site.data.reviews-1st-edition %}
+			{% include review.html %}
+		{% endfor %}
+	</ul>
+</section>
+
+<section id="tweets" class="section">
+	<h2 class="section__title">On Twitter</h2>
+
+	<ul class="tweets">
+		{% for tweet in site.data.tweets-1st-edition %}
+			{% include tweet.html %}
+		{% endfor %}
+	</ul>
+</section>

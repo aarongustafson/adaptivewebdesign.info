@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    Buttons
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    button {
+        cursor: pointer;
+    }
+
+    .cta {
+    
+        background: $color-teal;
+        background: linear-gradient( $color-teal, $color-dark-teal );
+        color: $color-white;
+        box-shadow: $default-box-shadow;
+        text-shadow: none;
+    
+        @include breakup-placeholder( small-caps );
+        font-family: $font-stack-sansserif;
+        font-weight: bold;
+        text-align: center;
+
+        border-width: 0;
+        border-radius: 3px;
+        display: inline-block;
+        @include rem( padding, 10 40 );
+        @include rem( margin, 0 0 $default-spacing/2 );
+    
+        cursor: pointer;
+    
+        transition: background $default-transition, color $default-transition;
+        transform: translate3d(0,0,0);
+        
+        &:link,
+        &:visited {
+            border-width: 0;
+            color: $color-white;
+            text-shadow: none;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background: $color-dark-teal;
+            background: linear-gradient( $color-dark-teal, $color-dark-teal );
+            color: $color-white;
+            text-shadow: none;
+            border: 0;
+        }
+        // Shift down and right when clicked
+        &:active {
+            position: relative;
+            top: 1px;
+            left: 1px;
+        }
+    
+    }
+}

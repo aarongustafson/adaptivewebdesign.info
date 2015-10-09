@@ -1,0 +1,23 @@
+---
+layout: default
+title: Errata from the First Edition
+permalink: /1st-edition/errata/
+---
+
+<p>Sometimes we screw up, sometimes things change. Regardless, books sometimes contain errors. Below are notes on these from the First Edition of <cite>Adaptive Web Design</cite>.</p>
+
+{% for errata in site.data.errata-1st-edition %}
+
+	{% if forloop.first %}
+		<ul class="errata">
+	{% endif %}
+
+	{% include errata.html %}
+
+	{% if forloop.last %}
+		</ul>
+	{% endif %}
+
+{% else %}
+	<p>No errata has been discovered… yet.</p>
+{% endfor %}

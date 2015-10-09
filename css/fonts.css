@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'PT Serif Caption'; 
+	font-weight: normal;
+    font-style: normal;
+	src: local('PT Serif Caption'),
+		 local('PTSerifCaption'),
+		 url('/css/PTZ55F_W.woff') format('woff'),
+		 url('/css/PTZ55F_W.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'PT Serif Caption';
+	font-weight: normal;
+	font-style: italic; 
+	src: local('PT Serif Caption Italic'),
+		 local('PTSerifCaption,Italic'),
+		 url('/css/PTZ56F_W.woff') format('woff'),
+		 url('/css/PTZ56F_W.ttf') format('truetype');
+}

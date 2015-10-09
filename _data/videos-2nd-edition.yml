@@ -1,0 +1,19 @@
+- id: 02-06
+  figure: 2-6
+  caption: "<strong>Figure 2.6</strong> This animated graph from Vanguard goes into detail about how much you stand to save by investing with the company, but the text above it perfectly conveys the spirit of the graphic."
+
+- id: 03-05
+  figure: 3-5
+  caption: "<strong>Figure 3.5</strong> [Contents Magazine](http://contentsmagazine.com)’s website with a link anchoring to the navigation."
+
+- id: 04-06
+  figure: 4-6
+  caption: "<strong>Figure 4.6</strong> [Nichols College Graduate &amp; Professional Studies](http://perma.cc/42JU-T7DE) site enhanced site navigation collapsed and expanded."
+
+- id: 04-12
+  figure: 4-12
+  caption: "<strong>Figure 4.12</strong> [North Shore Chiropractic](http://northshorechiro.net) uses vw units to zoom its design on larger screens. On top is the narrower “wide” version below the 64em cutoff; underneath is the design zoomed in when the browser width exceeds 64em."
+
+- id: 05-09
+  figure: 5-9
+  caption: "<strong>Figure 5.9</strong> An accordion interface on [NewYorkCares.org](http://newyorkcares.org)."

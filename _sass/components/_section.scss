@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    Subsections
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+	.section {
+
+		@include rem( margin-top, $default-spacing * 2 );
+
+		@supports (display:flex) {
+
+			main.layout-container > & {
+				max-width: 48em;
+			}
+
+		}
+
+	}
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+	.section__title {
+
+		text-transform: uppercase;
+		text-align: center;
+		
+		&::before,
+		&::after {
+			color: $color-blue-dark;
+				font-size: 0.75em;
+				position: relative;
+				bottom: 0.125em;
+		}
+		&::before {
+				content: '\27E2\27E1\27E1\00A0\00A0';
+		}
+		&::after {
+				content: '\00A0\00A0\27E1\27E1\27E3';
+		}
+
+	}
+
+}

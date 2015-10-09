@@ -1,0 +1,15 @@
+<li class="figure figure--video">
+	<figure id="figure-{{ video.figure }}">
+		<video poster="{{ video.id }}.png" controls preload="none">
+			<source src="{{ video.id }}.mp4" type="video/mp4">
+			<source src="{{ video.id }}.webm" type="video/webm">
+			<img class="figure__alt-image" src="{{ video.id }}.png" alt="">
+			<p>Your browser can’t play this video natively, but you can download it:</p>
+			<ul>
+				<li><a download href="{{ video.id }}.mp4">MP4 format</a></li>
+				<li><a download href="{{ video.id }}.webm">WebM format</a></li>
+			</ul>
+		</video>
+		<figcaption>{{ video.caption | markdownify }}</figcaption>
+	</figure>
+</li>
