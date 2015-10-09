@@ -8,5 +8,5 @@
 		{% if review.author_url %}<a href="{{ review.author_url }}">{{ review.author }}</a>{% else %}{{ review.author }}{% endif %}{% if review.author_role %},
 		<b class="p-role">{{ review.author_role }}</b>{% endif %}
 	</p>
-	<object class="hidden include p-item"></object>
+	<object class="hidden include p-item" data="#product"></object>
 </li>
