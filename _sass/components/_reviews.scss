@@ -11,7 +11,7 @@
 
 	.h-review {
 		@include rem( margin-top, $default-spacing );
-		@include breakup-placeholder( contain-words );
+		//@include breakup-placeholder( contain-words );
 	}
 
 	.p-reviewer {
