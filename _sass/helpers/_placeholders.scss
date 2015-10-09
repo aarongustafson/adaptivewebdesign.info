@@ -39,8 +39,6 @@
 @include breakup-create-placeholder( contain-words ) {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    word-break: break-all;
-    word-break: break-word; /* Safari only */
        -moz-hyphens: auto;
         -ms-hyphens: auto;
     -webkit-hyphens: auto;
