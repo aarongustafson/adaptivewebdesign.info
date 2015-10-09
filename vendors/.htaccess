@@ -1,3 +1,0 @@
-# Parse CSS & JS as PHP
-AddType text/css .css
-AddType text/javascript .js
