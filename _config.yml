@@ -2,8 +2,7 @@
 title: "Adaptive Web Design"
 subtitle: "Crafting Rich Experiences with Progressive Enhancement"
 email: aaron+awd@aaron-gustafson.com
-description: >
-  Forthcoming
+description: "Building an elegant, functional website requires more than just knowing how to code. In Adaptive Web Design, Second Edition, you’ll learn how to use progressive enhancement to build websites that won’t break, work anywhere, are accessible by anyone—on any device, and are designed to work well into the future."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://adaptivewebdesign.info" # the base hostname & protocol for your site
 twitter_username: AdaptiveWebNews
