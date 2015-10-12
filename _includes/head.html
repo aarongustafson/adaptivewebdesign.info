@@ -3,7 +3,7 @@
 	<meta http-equiv="Content-Language" content="en"/>
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +19,13 @@
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
 	<!-- Open Graph -->
-	<meta property="og:site_name" content="{{ site.title }}"/>
-	<meta property="og:title" content="{{ site.title }}: {{ site.subtitle }}"/>
-	<meta property="og:url" content="http://adaptivewebdesign.info"/>
-	<meta property="og:type" content="book"/>
-	<meta property="og:description" content="{{ site.description }}"/>
-	<meta property="og:image" content="{{ site.book_photo }}"/>
-	<meta property="fb:admins" content="100002880350996"/>
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:title" content="{{ site.title }}: {{ site.subtitle }}">
+	<meta property="og:url" content="http://adaptivewebdesign.info">
+	<meta property="og:type" content="book">
+	<meta property="og:description" content="{{ site.description }}">
+	<meta property="og:image" content="{{ site.book_photo }}">
+	<meta property="fb:admins" content="100002880350996">
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="product">
