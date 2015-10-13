@@ -45,11 +45,3 @@
     }
 
 }
-
-@include breakup-breakpoint( "full" ) {
-
-    .figure--cover img {
-        margin-right: -6em;
-    }
-
-}
