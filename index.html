@@ -19,12 +19,12 @@ layout: home
       <b class="book__foreword"><a href="/2nd-edition/read/foreword.html">Foreword by Jeremy Keith</a></b>
     </p>
     {% for links in site.navigation offset:1 limit:1 %}
-      {% for link in links.subnav limit:2 %}
+      {% for link in links.subnav limit:3 %}
         <a class="cta" href="{{ link.url }}">{{ link.title }}</a>
       {% endfor %}
 
       <ul class="book__links">
-        {% for link in links.subnav offset:2 %}
+        {% for link in links.subnav offset:3 %}
           {% unless link.title == "Foreword" %}
             <li class="book__link"><a href="{{ link.url }}">{{ link.title }}</a></li>
           {% endunless %}
