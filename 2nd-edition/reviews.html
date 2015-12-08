@@ -16,14 +16,14 @@ permalink: /2nd-edition/reviews/
 	</ul>
 </section>
 
-{% comment %}
 <section id="tweets" class="section">
 	<h2 class="section__title">On Twitter</h2>
 
 	<ul class="tweets">
 		{% for tweet in site.data.tweets-2nd-edition %}
-			{% include tweet.html %}
+			{% include tweet-embed.html %}
 		{% endfor %}
 	</ul>
+	
+	<script async src="//platform.twitter.com/widgets.js"></script>
 </section>
-{% endcomment %}
