@@ -209,12 +209,12 @@ textarea {
 /*------------------------------------*\
     Main
 \*------------------------------------*/
-main.layout-container {
+main {
   box-sizing: border-box;
   padding: 0 22px;
   padding: 0 1.375rem; }
 
-main.layout-container > * {
+main > * {
   max-width: 36em; }
 
 /*------------------------------------*\
