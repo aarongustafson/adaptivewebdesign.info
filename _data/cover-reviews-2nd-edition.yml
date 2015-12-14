@@ -1,0 +1,9 @@
+- author: Tim Kadlec
+  author_url: http://timkadlec.com
+  author_role: "Author, <cite>Implementing Responsive Design</cite>"
+  review: "<cite>Adaptive Web Design</cite> should be one of the first books on the shelf of anyone building for the web. Showing a deep understanding of the web, Aaron manages to cram nearly 20 years of insight into a book that is an absolute pleasure to read. I dare you to try and read this book without a highlighter handy."
+
+- author: Ethan Marcotte
+  author_url: http://unstoppablerobotninja.com
+  author_role: "Designer; Author, <cite>Responsive Web Design</cite>"
+  review: "The web is the first truly flexible design medium. But its flexibility affects more than our layouts: we’re designing for networks both fast and slow, for devices both modern and not, for users who may not see a screen at all. In this second edition of <cite>Adaptive Web Design</cite>, Aaron shows us how progressive enhancement is the solution to all these challenges, and more."

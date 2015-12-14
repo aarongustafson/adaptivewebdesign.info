@@ -1,13 +1,3 @@
-- author: Jeremy Keith
-  author_url: http://adactio.com
-  author_role: "Author, <cite>HTML5 for Web Designers</cite>"
-  review: "<cite>Adaptive Web Design</cite> not only provides the clearest, most beautiful explanation of progressive enhancement I’ve ever read, it’s also packed full of practical know-how pumped directly into your neocortex through Aaron’s warm and friendly writing style. If you aren’t already using progressive enhancement to build websites, you soon will be."
-
-- author: Dan Cederholm
-  author_url: http://simplebits.com
-  author_role: "Author, <cite>CSS3 For Web Designers</cite>"
-  review: "Finally. Progressive enhancement explained with a perfect balance of theory and practice. Aaron’s take-aways will have you progressively-enhancing your markup, style and behavior with ease."
-
 - author: Jonathan Snook
   author_url: http://snook.ca
   author_role: "Co-author, <cite>The Art and Science of CSS</cite>"
@@ -117,3 +107,23 @@
   author_role: "Web designer"
   author_url: http://www.goodreads.com/user/show/6478647-michael
   review: "This is a great book for anyone that is interested in the more technical, but not too technical niche of web design. Aaron does a great job of walking the reader through the technical implementations of an adaptive web design and progressive enhancement. It is short so worth taking a read through then using as a reference for future project work. Great job Aaron!"
+
+- source: 'http://www.amazon.com/gp/customer-reviews/R3N6XDG2OST47/ref=cm_cr_pr_rvw_ttl?ie=UTF8&amp;ASIN=0134216148'
+  author: Sunflower
+  author_url: http://www.amazon.com/gp/pdp/profile/AK9FTWLCW09RR/ref=cm_cr_pr_pdp?ie=UTF8
+  review: "With this short but well-written book, you’ll learn the key principles and primary techniques for designing web pages that can adapt to devices with different capabilities and display constraints, and are accessible to users equipped with assistive technologies such as screen readers, using only best practices revolving around the effective application of semantic markups, cascading style sheets (CSS), and Javascript.\r\rThe book explains in simple terms what designing web pages with progressive enhancements in mind entails: Keep the initial design simple. Focus first on the semantic markups and basic stylings you can safely use across browsers and devices, then if feature detection code incorporated into the subject web page indicates that a targeted feature is supported, layer on the bells and whistles programmatically through the use of Javascript or CSS rule sets.\r\rThe author provides just enough examples to illustrate the concepts under discussion. If you are just starting to learn about adaptive web design, this book will help you get started in the right direction more quickly than the Filament Group's [Designing with Progressive Enhancement: Building the Web that Works for Everyone](http://www.amazon.com/Designing-with-Progressive-Enhancement-Building-the-Web-that-Works-for-Everyone/dp/0321658884/ref=cm_cr_asin_lnk?ie=UTF8) book. The latter, however, does provide a slightly more in-depth discussion of adaptive web design and a more extensive collection of examples than this book."
+
+- source: 'http://www.amazon.com/gp/customer-reviews/R2XWWDD32LA36H/ref=cm_cr_pr_rvw_ttl?ie=UTF8&amp;ASIN=0134216148'
+  author: Ruby K
+  author_url: http://www.amazon.com/gp/pdp/profile/A2IU407UTN8YL6/ref=cm_cr_pr_pdp?ie=UTF8
+  review: "When I first started hearing about media queries and adaptive or responsive website design (I believe I heard about these techniques through Website Magazine), I had no idea where to turn to learn them but I knew I needed to jump on it! Web design evolves FAST. I must admit that when I turned to Amazon to find a good book on the subject; initially I was drawn to choose this book simply because of the beautiful and stunning chameleon cover - its so approachable and friendly, it makes media queries less frightening! But after 'looking inside the book' via Amazon and reading more reviews about it from others; I was sold. It shipped fast and with a thoughtful letter from the author and I read it cover-to-cover within a couple of days just like a good novel. I keep all of my design and development books for later reference, so this is definitely one I will be referring back to as I begin to build my first fully responsive and adaptive website. Mobile internet use is so huge now; I'm glad I didn't wait any longer to get this book. A great read for any designer - freelance or agency! :)"
+
+- source: 'http://www.amazon.com/gp/customer-reviews/RENVESNG1V2FW/ref=cm_cr_pr_rvw_ttl?ie=UTF8&amp;ASIN=0134216148'
+  author: S. Watson
+  author_url: http://www.amazon.com/gp/pdp/profile/A2VC5156FT8BYD/ref=cm_cr_pr_pdp?ie=UTF8
+  review: "Even as an introduction to the topic, this book is simply brilliant. With few exceptions, the author writes in a very clear, teaching style, walking the reader through the topic. With the explosion of smart mobile devices, and the coming “web everywhere” technologies, the web developer really has no clue as to what browser capabilities or screen size the users of the site will have. Telling potential customers, clients, or even info junkies, that “This website only works in Firefox 5+ in landscape mode over a high-speed connection with JavaScript enabled” is no longer acceptable.\r\rBy embracing Progressive Enhancement now, you’ll enable your users to perform all necessary tasks and access all content regardless of their browser version or JavaScript capabilities, even with CSS turned off (think accessibility). Understanding the required backward compatibility of HTML and CSS is the key to future proofing your site.\r\rThe only negative is that I disagree with how the author uses a few of the HTML5 tags in the code samples, but since HTML5 is still a work in progress, it does not change the 5 star rating.\r\rRead it once, read it again, and then look into these other books to add pieces to the Adaptive Web Design puzzle:\r\rResponsive Web Design ([...])\rMobile First ([...])\rDesigning with Progressive Enhancement: Building the Web that Works for Everyone ([...]"
+
+- source: 'http://www.amazon.com/gp/customer-reviews/R2MFCKUYXTOM5E/ref=cm_cr_pr_rvw_ttl?ie=UTF8&amp;ASIN=0134216148'
+  author: caseybaggz
+  author_url: http://www.amazon.com/gp/pdp/profile/AOZWHTPTB9QXL/ref=cm_cr_pr_pdp?ie=UTF8
+  review: "Great read for the beginner or the experienced front end programmer to remind the steps to progressive enhancement for the best outcome for any site."

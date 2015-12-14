@@ -6,6 +6,16 @@ permalink: /1st-edition/reviews/
 
 <p>The first edition of <cite class="h-product">Adaptive Web Design</cite> garnered a lot of praise. Here is a sampling of what folks had to say.</p>
 
+<section id="cover" class="section">
+	<h2 class="section__title">From the Cover</h2>
+
+	<ul class="reviews">
+		{% for review in site.data.cover-reviews-1st-edition %}
+			{% include review.html %}
+		{% endfor %}
+	</ul>
+</section>
+
 <section id="reviews" class="section">
 	<h2 class="section__title">On the Web</h2>
 
