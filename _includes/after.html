@@ -13,3 +13,11 @@
   ga('create', 'UA-58149754-1', 'auto');
   ga('send', 'pageview');
 </script>
+
+{% if page.permalink contains "1st-edition" %}
+  {% include json-ld/1st-edition.html %}
+{% elsif page.permalink contains "2nd-edition" %}
+  {% include json-ld/2nd-edition.html %}
+{% elsif page.permalink contains "author" %}
+  {% include json-ld/author.html %}
+{% endif %}
