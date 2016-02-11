@@ -31,7 +31,7 @@ navigation:
         title: 'Buy from <abbr aria-label="Barnes &amp; Noble">B&amp;N</abbr>'
       - url: "http://click.linksynergy.com/link?id=ksYXFf8a/VY&amp;offerid=145244.2319719&amp;type=2&amp;murl=http%3A%2F%2Fwww.peachpit.com%2Ftitle%2F9780134216140"
         title: Buy from New Riders
-      - url: /2nd-edition/read/forward.html
+      - url: /2nd-edition/read/foreword.html
         title: Foreword
       - url: /2nd-edition/reviews/
         title: Reviews
