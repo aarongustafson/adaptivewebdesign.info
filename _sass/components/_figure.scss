@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    Media Elements
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    .figure {
+        @include rem( margin, $default-spacing auto );
+
+        &-list {
+            @include breakup-placeholder( delist );
+        }
+
+        &--video video {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+        &--video figure {
+            margin: 0;
+        }
+        &--video + &--video {
+            @include rem( margin-top, $default-spacing* 2 );
+        }
+
+        &--video video {
+            max-width: 100%;
+        }
+
+        &--cover img {
+        	box-shadow: $default-box-shadow;
+        	max-width: 50%;
+        	height: auto;
+        	margin: 0 auto;
+        }
+    }
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+    .figure--cover img {
+        max-width: 40%;
+        float: right;
+        @include rem( margin, 0 0 $default-spacing $default-spacing );
+    }
+
+}

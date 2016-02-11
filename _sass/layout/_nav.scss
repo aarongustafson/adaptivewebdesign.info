@@ -1,0 +1,124 @@
+/*------------------------------------*\
+    Navigation
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    nav {
+        background: $color-dark-teal;
+        color: $color-white;
+
+        .layout-container {
+            padding: 0;
+        }
+
+    }
+    
+    .navigation:focus {
+        outline: none;
+    }
+
+	.navigation,
+	.subnav {
+		border-top: 1px solid $color-border;
+	}
+
+    .navigation__link:link,
+    .navigation__link:visited,
+    .subnav__link:link,
+    .subnav__link:visited {
+    	color: $color-white;
+
+    	display: block;
+    	@include rem( padding, $default-spacing/4 $default-spacing/2 );
+    	border: 0;
+    }
+
+    .navigation__link:hover,
+    .navigation__link:focus,
+    .navigation__link:active,
+    .subnav__link:hover,
+    .subnav__link:focus,
+    .subnav__link:active {
+    	background: $color-blue-very-dark;
+    	color: $color-white;
+
+    	display: block;
+    	@include rem( padding, $default-spacing/4 $default-spacing/2 );
+    	border: 0;
+    }
+
+    .navigation__item--focus {
+        background: $color-teal;
+    }
+
+    mark .subnav__link:link,
+    mark .subnav__link:visited {
+        background: $color-blue-very-dark;
+    }
+    
+    .subnav__item {
+    	border-bottom: 1px solid $color-border;
+    }
+
+    .subnav__link:link {
+    	@include rem( padding-left, $default-spacing*1.5 );
+    }
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+	nav {
+		margin-top: 0;
+	}
+
+    .navigation {
+        
+        border-top: 0;
+        @include rem( font-size, $font-size-small );
+
+        &__item {
+        	border-bottom: 1px solid $color-border;
+        	@include rem( padding, 0 $default-spacing/2 );
+
+        	@include breakup-placeholder( clearfix );
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        &__link {
+            font-weight: bold;
+
+        	float: left;
+        	@include rem( padding, 0 $default-spacing );
+
+        	&::after {
+        		content: ":";
+        	}
+        }
+
+    }
+
+    .subnav {
+
+    	border: 0;
+        padding: 0;
+
+    	float: left;
+		@include breakup-placeholder( clearfix );
+    	
+    	&__item {
+        	border: 0;
+    		float: left;
+    	}
+
+    	&__link:link {
+    		@include rem( padding-left, $default-spacing/2 );
+    	}
+    	
+    }
+
+}

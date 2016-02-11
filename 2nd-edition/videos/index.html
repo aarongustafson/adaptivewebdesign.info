@@ -1,0 +1,13 @@
+---
+layout: default
+title: Videos from the Second Edition
+permalink: /2nd-edition/videos/
+---
+
+<p>Below are video versions of a few of the figures from the book. I’ve included them here for the people reading it in print. Digital versions that can handle video have these embedded.</p>
+
+<ol class="figure-list">
+{% for video in site.data.videos-2nd-edition %}
+	{% include video.html %}
+{% endfor %}
+</ol>

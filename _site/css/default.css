@@ -1,0 +1,1131 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    Main CSS
+\*------------------------------------*/
+/*------------------------------------*\
+    $VENDORS
+	Other people’s code
+\*------------------------------------*/
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*------------------------------------*\
+    $HELPERS
+	SASS Tools
+\*------------------------------------*/
+/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+/*	Debug controls
+	========================================================================== */
+/*	URLs
+	========================================================================== */
+/*	Breakpoint Management
+	========================================================================== */
+/*	Grid Management
+	========================================================================== */
+/*	Legacy support
+	========================================================================== */
+/*	Typography
+	========================================================================== */
+/*	Colors
+	========================================================================== */
+/*	Images
+	========================================================================== */
+/*	Defaults
+	========================================================================== */
+/*------------------------------------*\
+    Functions
+\*------------------------------------*/
+/*------------------------------------*\
+    Mixins
+\*------------------------------------*/
+/*------------------------------------*\
+    Placeholders
+\*------------------------------------*/
+html body {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.4; }
+  .wf-active html body, html .wf-active body {
+    word-spacing: 2px; }
+nav ol, nav
+ul, .list--no-indications, .fields, .book__links, .figure-list, .reviews,
+.tweets, .errata {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+.hidden, object[data^="#"] {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); }
+html body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+table thead, .cta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  letter-spacing: 2px 	;
+  text-transform: uppercase;
+  word-spacing: 1px; }
+/*------------------------------------*\
+    $BASE
+	Global element styles
+\*------------------------------------*/
+/*------------------------------------*\
+    Body-level settings
+\*------------------------------------*/
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@viewport {
+  width: device-width;
+  zoom: 1.0; }
+html {
+  background: linear-gradient(#FF6BA6 1px, transparent 1px);
+  background-size: 100% .75;
+  background: #e1ede9;
+  color: #2c2825; }
+  html body {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    margin: 0 auto; }
+
+/*------------------------------------*\
+    Heading Levels
+\*------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: "PT Serif Caption", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.1; }
+  .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6 {
+    word-spacing: 2px; }
+  h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+    margin-top: 11px;
+    margin-top: 0.6875rem; }
+
+h1 {
+  font-size: 48px;
+  font-size: 3rem; }
+
+section > h1,
+h2 {
+  font-size: 32px;
+  font-size: 2rem; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+/*------------------------------------*\
+    Block-level Semantics
+\*------------------------------------*/
+* {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+* + * {
+  margin-top: 22px;
+  margin-top: 1.375rem; }
+
+blockquote {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
+  margin: 0;
+  padding: 0; }
+  blockquote cite {
+    font-style: normal; }
+
+p {
+  font-weight: normal;
+  line-height: 1.4; }
+  .wf-active p {
+    word-spacing: 2px; }
+
+[aria-hidden="true"] {
+  display: none; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #8FC7C7;
+  height: 0;
+  margin: 22px auto;
+  margin: 1.375rem auto; }
+
+/*------------------------------------*\
+    Lists
+\*------------------------------------*/
+ol,
+ul {
+  line-height: 1.4;
+  margin-left: 22px;
+  margin-left: 1.375rem;
+  padding-left: 0; }
+  nav ol, nav
+  ul {
+    margin: 0; }
+    nav ol li, nav
+    ul li {
+      margin: 0; }
+
+li + li {
+  margin-top: 11px;
+  margin-top: 0.6875rem; }
+
+dl {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 22px;
+  padding: 0 1.375rem;
+  max-width: 700px;
+  max-width: 43.75rem; }
+  dl dt {
+    font-weight: bold; }
+  dl dd {
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0; }
+
+/*------------------------------------*\
+    Links
+\*------------------------------------*/
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #0181A6;
+    border-bottom: 1px dotted;
+    border-bottom-color: rgba(1, 129, 166, 0.25);
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease; }
+  a:hover, a:focus, a:active {
+    color: #006B73;
+    border-bottom-color: #006B73; }
+  a[href^=mailto], a[href^=tel] {
+    white-space: nowrap; }
+  a.email, a.tel {
+    white-space: nowrap; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    border-bottom-width: 0; }
+    h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active, h5 a:hover, h5 a:focus, h5 a:active, h6 a:hover, h6 a:focus, h6 a:active {
+      border-bottom-width: 1px; }
+  a[rel="full-article"]::after {
+    content: "\00A0\2192"; }
+  a[rel="original-article"]::after {
+    content: "\00A0\2192";
+    display: inline-block;
+    transform: translateX(-0.25em) rotate(-45deg) translateY(0.25em); }
+
+/*------------------------------------*\
+    Text-level semantics
+\*------------------------------------*/
+abbr {
+  cursor: help;
+  border: 0; }
+  abbr[title] {
+    border: 0; }
+
+mark {
+  background: transparent;
+  color: #2c2825;
+  color: inherit;
+  font-weight: normal;
+  font-weight: inherit;
+  font-style: normal;
+  font-style: inherit; }
+
+b {
+  font-weight: inherit; }
+
+i {
+  font-style: inherit; }
+
+sub, sup {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-style: inherit;
+  font-weight: inherit;
+  position: relative; }
+
+sub {
+  bottom: -1em; }
+
+sup {
+  bottom: 1em; }
+
+time {
+  white-space: nowrap; }
+
+/*------------------------------------*\
+    Code styles
+\*------------------------------------*/
+code,
+kbd {
+  background-color: #F9F9F9;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  color: #2c2825;
+  font-style: normal;
+  padding: .05em .25em;
+  white-space: nowrap; }
+
+pre {
+  background-color: #F9F9F9;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  color: #2c2825;
+  font-style: normal;
+  white-space: prewrap;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .05em .25em;
+  max-width: 700px;
+  max-width: 43.75rem; }
+  pre code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    white-space: normal; }
+
+/*------------------------------------*\
+    Media Elements
+\*------------------------------------*/
+object[data*="svg"] {
+  pointer-events: none; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+picture {
+  display: block; }
+
+.noscript-picture {
+  margin: 0;
+  padding: 0; }
+
+.media-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+
+figcaption {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  margin-top: 11px;
+  margin-top: 0.6875rem; }
+
+footer ~ noscript img {
+  width: 1px;
+  height: 1px; }
+
+/*------------------------------------*\
+    Tables
+\*------------------------------------*/
+table {
+  border-collapse: collapse;
+  margin: 0 0 22px;
+  margin: 0 0 1.375rem;
+  width: 100%;
+  min-width: 100px; }
+  table thead {
+    border-bottom: 3px solid #8FC7C7;
+    font-size: 14px;
+    font-size: 0.875rem;
+    text-transform: uppercase; }
+    table thead th {
+      font-weight: bold; }
+      table thead th p {
+        font-weight: bold;
+        display: inline;
+        margin: 0; }
+  table tbody {
+    font-size: 24px;
+    font-size: 1.5rem; }
+  table tr {
+    border-top: 1px solid #8FC7C7; }
+  table td,
+  table th {
+    font-weight: normal;
+    text-align: left;
+    padding: 15px;
+    padding: 0.9375rem;
+    padding-left: 0; }
+    table td:last-child,
+    table th:last-child {
+      padding-right: 0; }
+    table td :last-child,
+    table th :last-child {
+      margin-bottom: 0; }
+    table td[colspan],
+    table th[colspan] {
+      font-weight: bold; }
+
+/*------------------------------------*\
+    Form Styles
+\*------------------------------------*/
+form {
+  margin: 0 0 22px;
+  margin: 0 0 1.375rem; }
+  form ul,
+  form ol {
+    list-style: none; }
+  form li {
+    margin-bottom: .5em; }
+
+.fields__group {
+  margin: 0 0 22px;
+  margin: 0 0 1.375rem; }
+  .fields__group:last-child {
+    margin: 0; }
+  .fields__group label {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: block; }
+  .fields__group input,
+  .fields__group select,
+  .fields__group textarea {
+    color: #8FC7C7;
+    font-size: 14px;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    border: 1px solid;
+    margin: 5px 0;
+    margin: 0.3125rem 0;
+    padding: 5px;
+    padding: 0.3125rem;
+    transition: background-color 0.25s ease, color 0.25s ease; }
+  .fields__group input,
+  .fields__group textarea {
+    background: #e1ede9;
+    color: #2c2825;
+    display: block;
+    width: 100%; }
+  .fields__group input[type=search] {
+    -webkit-appearance: textfield; }
+  .fields__group select {
+    font-size: 24px;
+    font-size: 1.5rem;
+    max-width: 100%; }
+  .fields__group__note {
+    font-size: 14px;
+    font-size: 0.875rem; }
+.fields__required {
+  color: #f00;
+  font-weight: normal; }
+.fields .validation-error input,
+.fields .validation-error select,
+.fields .validation-error textarea {
+  color: #f00; }
+
+@-moz-document url-prefix() {
+  .fields select {
+    font-size: 14px;
+    font-size: 0.875rem; } }
+/*------------------------------------*\
+    Animations
+\*------------------------------------*/
+/*------------------------------------*\
+    $LAYOUT
+	Page layout
+\*------------------------------------*/
+/*------------------------------------*\
+    Grid
+\*------------------------------------*/
+.layout-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1% 	;
+  padding: 0 11px;
+  padding: 0 0.6875rem;
+  position: relative; }
+  .layout-container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .layout-container__primary, .layout-container__secondary {
+    margin: 0 auto;
+    box-sizing: border-box; }
+
+/*------------------------------------*\
+    Post
+\*------------------------------------*/
+.page__title {
+  margin-bottom: 22px;
+  margin-bottom: 1.375rem; }
+
+/*------------------------------------*\
+    Header
+\*------------------------------------*/
+.banner {
+  background: #8FC7C7;
+  color: #2c2825;
+  border-bottom: 1px solid #8FC7C7;
+  margin: 0 0 22px;
+  margin: 0 0 1.375rem;
+  padding: 11px;
+  padding: 0.6875rem; }
+  .banner * + * {
+    margin: 0; }
+  .banner__title a, .banner__title b {
+    display: block; }
+  .banner a:link,
+  .banner a:visited {
+    color: #2c2825;
+    border: 0; }
+  .banner .layout-container {
+    padding: 0; }
+
+.title__primary,
+.title__secondary {
+  display: block;
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.title__secondary,
+.title__edition,
+.banner__byline {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0; }
+
+.title__edition {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-top: .5em; }
+
+/*------------------------------------*\
+    Main
+\*------------------------------------*/
+main:focus {
+  outline: none; }
+
+/*------------------------------------*\
+    Navigation
+\*------------------------------------*/
+nav {
+  background: #006B73;
+  color: #fff; }
+  nav .layout-container {
+    padding: 0; }
+
+.navigation:focus {
+  outline: none; }
+
+.navigation,
+.subnav {
+  border-top: 1px solid #8FC7C7; }
+
+.navigation__link:link,
+.navigation__link:visited,
+.subnav__link:link,
+.subnav__link:visited {
+  color: #fff;
+  display: block;
+  padding: 5.5px 11px;
+  padding: 0.34375rem 0.6875rem;
+  border: 0; }
+
+.navigation__link:hover,
+.navigation__link:focus,
+.navigation__link:active,
+.subnav__link:hover,
+.subnav__link:focus,
+.subnav__link:active {
+  background: #1d3a3a;
+  color: #fff;
+  display: block;
+  padding: 5.5px 11px;
+  padding: 0.34375rem 0.6875rem;
+  border: 0; }
+
+.navigation__item--focus {
+  background: #0181A6; }
+
+mark .subnav__link:link,
+mark .subnav__link:visited {
+  background: #1d3a3a; }
+
+.subnav__item {
+  border-bottom: 1px solid #8FC7C7; }
+
+.subnav__link:link {
+  padding-left: 33px;
+  padding-left: 2.0625rem; }
+
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
+.contentinfo {
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 0;
+  padding: 11px 22px;
+  padding: 0.6875rem 1.375rem; }
+
+/*------------------------------------*\
+    Print Layout stuff
+\*------------------------------------*/
+/*------------------------------------*\
+    $COMPONENTS
+	Interface patterns
+\*------------------------------------*/
+/*------------------------------------*\
+    Media Query Watcher (for JS)
+\*------------------------------------*/
+#getActiveMQ-watcher {
+  font-family: "global"; }
+
+/*------------------------------------*\
+    Modules
+\*------------------------------------*/
+.module__title {
+  font-size: 24px;
+  font-size: 1.5rem; }
+.module * + * {
+  margin-top: 11px;
+  margin-top: 0.6875rem; }
+
+/*------------------------------------*\
+    Buttons
+\*------------------------------------*/
+button {
+  cursor: pointer; }
+
+.cta {
+  background: #0181A6;
+  background: linear-gradient(#0181A6, #006B73);
+  color: #fff;
+  box-shadow: 1px 1px 5px rgba(44, 40, 37, 0.8);
+  text-shadow: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  border-width: 0;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px 40px;
+  padding: 0.625rem 2.5rem;
+  margin: 0 0 11px;
+  margin: 0 0 0.6875rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  transform: translate3d(0, 0, 0); }
+  .cta:link, .cta:visited {
+    border-width: 0;
+    color: #fff;
+    text-shadow: none; }
+  .cta:hover, .cta:focus, .cta:active {
+    background: #006B73;
+    background: linear-gradient(#006B73, #006B73);
+    color: #fff;
+    text-shadow: none;
+    border: 0; }
+  .cta:active {
+    position: relative;
+    top: 1px;
+    left: 1px; }
+
+/*------------------------------------*\
+    Info Panel
+\*------------------------------------*/
+.info-panel {
+  padding: 0 11px;
+  padding: 0 0.6875rem; }
+
+.info-panel {
+  padding: 0 22px;
+  padding: 0 1.375rem; }
+
+/*------------------------------------*\
+    Book
+\*------------------------------------*/
+.book {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; }
+  .book__edition {
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 0; }
+  .book__meta {
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 0 0 22px;
+    margin: 0 0 1.375rem; }
+  .book__foreword {
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .book__links {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-top: 11px;
+    margin-top: 0.6875rem; }
+  .book__link {
+    display: inline;
+    margin: 0; }
+    .book__link + .book__link::before {
+      content: "|\00A0"; }
+
+/*------------------------------------*\
+    Media Elements
+\*------------------------------------*/
+.figure {
+  margin: 22px auto;
+  margin: 1.375rem auto; }
+  .figure--video video {
+    max-width: 100%;
+    max-height: 80vh; }
+  .figure--video figure {
+    margin: 0; }
+  .figure--video + .figure--video {
+    margin-top: 44px;
+    margin-top: 2.75rem; }
+  .figure--video video {
+    max-width: 100%; }
+  .figure--cover img {
+    box-shadow: 1px 1px 5px rgba(44, 40, 37, 0.8);
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto; }
+
+/*------------------------------------*\
+    Webmentions
+\*------------------------------------*/
+.video-embed {
+  border: 1px solid #DDD;
+  height: 0;
+  overflow: hidden;
+  position: relative; }
+  .video-embed__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .video-embed--16x9 {
+    padding-bottom: 56.25%;
+    /* 9/16*100 */ }
+  .video-embed--4x3 {
+    padding-bottom: 75%;
+    /* 3/4*100 */ }
+  .video-embed--1x1 {
+    padding-bottom: 100%; }
+  .video-embed__lazy-link:link, .video-embed__lazy-link:visited {
+    background: #2c2825 center center no-repeat;
+    background-size: cover;
+    color: #DDD;
+    text-decoration: none;
+    text-align: left;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+    .video-embed__lazy-link:link:hover, .video-embed__lazy-link:link:focus, .video-embed__lazy-link:visited:hover, .video-embed__lazy-link:visited:focus {
+      text-decoration: none;
+      color: #FFF; }
+  .video-embed__lazy-div {
+    width: 100%;
+    height: 100%;
+    background: url(/c/i/play-button.png) center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .video-embed__lazy-div:hover {
+      background-image: url(/c/i/play-button-hover.png); }
+  .video-embed__lazy-info {
+    background: #2c2825;
+    background-color: rgba(44, 40, 37, 0.9);
+    margin: 0;
+    padding: 11px;
+    padding: 0.6875rem;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px; }
+
+/*------------------------------------*\
+    Rules
+\*------------------------------------*/
+.rule {
+  max-width: 220px;
+  max-width: 13.75rem; }
+
+/*------------------------------------*\
+    Reviews
+\*------------------------------------*/
+.h-review {
+  margin-top: 22px;
+  margin-top: 1.375rem; }
+
+.p-reviewer {
+  margin: 0;
+  padding-left: 66px;
+  padding-left: 4.125rem; }
+  .p-reviewer::before {
+    content: "\2014";
+    margin-left: -22px;
+    margin-left: -1.375rem; }
+
+.p-role {
+  display: block;
+  margin: 0; }
+
+.e-description blockquote {
+  font-size: 18px;
+  font-size: 1.125rem;
+  border-left: 5px solid #8FC7C7;
+  margin-top: 22px;
+  margin-top: 1.375rem;
+  padding-left: 11px;
+  padding-left: 0.6875rem; }
+  .e-description blockquote > :first-child::before {
+    display: none; }
+
+/*------------------------------------*\
+    Subsections
+\*------------------------------------*/
+.section {
+  margin-top: 44px;
+  margin-top: 2.75rem; }
+  @supports (display: flex) {
+    main.layout-container > .section {
+      max-width: 48em; } }
+
+/*------------------------------------*\
+    Errata
+\*------------------------------------*/
+.errata dl {
+  padding: 0;
+  margin: 0; }
+.errata__detail-label {
+  margin-top: 0;
+  float: left; }
+  .errata__detail-label::after {
+    content: ":\00A0"; }
+
+/*------------------------------------*\
+    $PAGES
+	Page-specific styles
+	(use sparingly)
+\*------------------------------------*/
+/*------------------------------------*\
+    Homepage
+\*------------------------------------*/
+body.home .contentinfo {
+  border-top: 1px solid #8FC7C7;
+  margin-top: 22px;
+  margin-top: 1.375rem; }
+
+/*------------------------------------*\
+    $BASE
+	Global element styles
+\*------------------------------------*/
+/*------------------------------------*\
+    Body-level settings
+\*------------------------------------*/
+/*------------------------------------*\
+    Heading Levels
+\*------------------------------------*/
+@media print {
+  h1, h2, h3, h4, h5, h6 {
+    page-break-inside: avoid;
+    page-break-after: avoid; }
+    h1 a[href]:after, h2 a[href]:after, h3 a[href]:after, h4 a[href]:after, h5 a[href]:after, h6 a[href]:after {
+      display: block;
+      margin-left: 0;
+      margin-bottom: 10pt; }
+    h1 a[href^="#"]:after,
+    h1 a[href^="mailto:"]:after,
+    h1 a[href^="tel:"]:after, h2 a[href^="#"]:after,
+    h2 a[href^="mailto:"]:after,
+    h2 a[href^="tel:"]:after, h3 a[href^="#"]:after,
+    h3 a[href^="mailto:"]:after,
+    h3 a[href^="tel:"]:after, h4 a[href^="#"]:after,
+    h4 a[href^="mailto:"]:after,
+    h4 a[href^="tel:"]:after, h5 a[href^="#"]:after,
+    h5 a[href^="mailto:"]:after,
+    h5 a[href^="tel:"]:after, h6 a[href^="#"]:after,
+    h6 a[href^="mailto:"]:after,
+    h6 a[href^="tel:"]:after {
+      display: none; } }
+/*------------------------------------*\
+    Block-level Semantics
+\*------------------------------------*/
+@media print {
+  p, ol, ol, dl {
+    orphans: 3;
+    widows: 3; } }
+/*------------------------------------*\
+    Lists
+\*------------------------------------*/
+/*------------------------------------*\
+    Links
+\*------------------------------------*/
+@media print {
+  a {
+    text-decoration: none; }
+    a[href]:after {
+      content: "(" attr(href) ")";
+      font-size: 10pt;
+      margin-left: 9pt; }
+    a[href^="/"]:after {
+      content: " (http://adaptivewebdesign.info" attr(href) ")"; }
+    a[href^="#"]:after, a[href^="mailto:"]:after, a[href^="tel:"]:after {
+      display: none; } }
+/*------------------------------------*\
+    Text-level semantics
+\*------------------------------------*/
+/*------------------------------------*\
+    Code styles
+\*------------------------------------*/
+/*------------------------------------*\
+    Media Elements
+\*------------------------------------*/
+/*------------------------------------*\
+    Tables
+\*------------------------------------*/
+@media only screen and (max-width: 770px) {
+  .layout-container__primary table {
+    border: 0;
+    padding-bottom: 0;
+    display: block;
+    width: 100%; }
+    .layout-container__primary table caption {
+      display: block; }
+    .layout-container__primary table thead {
+      display: none; }
+    .layout-container__primary table tbody,
+    .layout-container__primary table tr,
+    .layout-container__primary table th,
+    .layout-container__primary table td {
+      border: 0;
+      display: block;
+      padding: 0;
+      text-align: left; }
+    .layout-container__primary table tr {
+      margin: 0 0 22px;
+      margin: 0 0 1.375rem; }
+    .layout-container__primary table th[data-title]:before,
+    .layout-container__primary table td[data-title]:before {
+      content: attr(data-title) ": ";
+      font-weight: bold; }
+    .layout-container__primary table th:not([data-title]) {
+      font-weight: bold; }
+    .layout-container__primary table td:empty {
+      display: none; } }
+/*------------------------------------*\
+    Form Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    Animations
+\*------------------------------------*/
+/*------------------------------------*\
+    $LAYOUT
+	Page layout
+\*------------------------------------*/
+/*------------------------------------*\
+    Grid
+\*------------------------------------*/
+/*------------------------------------*\
+    Post
+\*------------------------------------*/
+/*------------------------------------*\
+    Header
+\*------------------------------------*/
+/*------------------------------------*\
+    Main
+\*------------------------------------*/
+/*------------------------------------*\
+    Navigation
+\*------------------------------------*/
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
+/*------------------------------------*\
+    Print Layout stuff
+\*------------------------------------*/
+@media print {
+  @page {
+    margin: .75in;
+    padding: 0; }
+  * {
+    background: transparent; }
+
+  body {
+    background: #e1ede9;
+    color: #2c2825;
+    font-size: 12pt;
+    margin: 0;
+    position: relative; }
+
+  section,
+  [role="contentinfo"] {
+    border-top: 1px solid;
+    margin: 2em 0 0;
+    padding: 2em 0 0; }
+
+  nav,
+  button,
+  .button,
+  .nav-jump,
+  .pagination {
+    display: none; }
+
+  b#license {
+    display: block; }
+
+  input[type=submit] {
+    display: none; } }
+/*------------------------------------*\
+    $COMPONENTS
+	Interface patterns
+\*------------------------------------*/
+/*------------------------------------*\
+    Media Query Watcher (for JS)
+\*------------------------------------*/
+@media print {
+  #getActiveMQ-watcher {
+    font-family: "print"; } }
+/*------------------------------------*\
+    Modules
+\*------------------------------------*/
+/*------------------------------------*\
+    Buttons
+\*------------------------------------*/
+/*------------------------------------*\
+    Info Panel
+\*------------------------------------*/
+/*------------------------------------*\
+    Book
+\*------------------------------------*/
+/*------------------------------------*\
+    Media Elements
+\*------------------------------------*/
+/*------------------------------------*\
+    Webmentions
+\*------------------------------------*/
+/*------------------------------------*\
+    Rules
+\*------------------------------------*/
+/*------------------------------------*\
+    Reviews
+\*------------------------------------*/
+/*------------------------------------*\
+    Subsections
+\*------------------------------------*/
+/*------------------------------------*\
+    Errata
+\*------------------------------------*/
+/*------------------------------------*\
+    $PAGES
+	Page-specific styles
+	(use sparingly)
+\*------------------------------------*/
+/*------------------------------------*\
+    Homepage
+\*------------------------------------*/

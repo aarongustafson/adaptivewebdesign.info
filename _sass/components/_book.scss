@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    Book
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+	.book {
+
+		font-family: $font-stack-sansserif;
+		
+		&__edition {
+			@include rem( font-size, $font-size-body );
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		&__meta {
+			@include rem( font-size, $font-size-default );
+			@include rem( margin, 0 0 $default-spacing );
+		}
+
+		&__foreword {
+			@include rem( font-size, $font-size-small );
+		}
+
+		&__links {
+			@include breakup-placeholder( delist );
+			@include rem( font-size, $font-size-small );
+			@include rem( margin-top, $default-spacing/2 );
+		}
+		&__link {
+			display: inline;
+			margin: 0;
+
+			& + &::before {
+				content: "|\00A0";
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,12 @@
+- chapter: 2
+  section: Codified Conventions
+  subsection: Mark your calendars
+  description: "In Table 2.2, “hCalendar” was misspelled"
+
+- chapter: 3
+  section: Sometimes An Error Can Be a Good Thing
+  description: "In the first printing of the book, I characterized the various levels of specificity as being 10 times more specific than one another. In later printings, it was corrected to say `id` selectors are *infinitely* more specific than `class` selectors, and so on."
+
+- chapter: 5
+  section: Opening quote
+  description: "In early versions of the Kindle edition, a space was missing between “deeds” and “to” in the quote from Benjamin Franklin."

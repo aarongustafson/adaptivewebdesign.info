@@ -1,0 +1,66 @@
+---
+layout: home
+---
+
+<article id="second-edition" class="book layout-container__primary">
+  <figure class="figure figure--cover">
+    <a href="/2nd-edition/">
+      <img src="/2nd-edition/cover-320.jpg"
+           srcset="/2nd-edition/cover-320.jpg 320w, /2nd-edition/cover-600.jpg 600w, /2nd-edition/cover-800.jpg 800w, /2nd-edition/cover-1024.jpg 1024w"
+           sizes="(min-width:60em) 250px, (min-width:43.125em) 60%, 50%"
+           class="book__cover"
+           alt="">
+    </a>
+  </figure>
+  <div class="info-panel">
+    <h2 class="book__edition"><a href="/2nd-edition/">Second Edition</a></h2>
+    <p class="book__meta">
+      <b class="hidden">Published on</b> <time datetime="2015-12-06" class="book__published"><abbr aria-label="December">Dec</abbr> 2015</time> (New Riders)<br>
+      <b class="book__foreword"><a href="/2nd-edition/read/foreword.html">Foreword by Jeremy Keith</a></b>
+    </p>
+    {% for links in site.navigation offset:1 limit:1 %}
+      {% for link in links.subnav limit:3 %}
+        <a class="cta" href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+
+      <ul class="book__links">
+        {% for link in links.subnav offset:3 %}
+          {% unless link.title == "Foreword" %}
+            <li class="book__link"><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+</article>
+
+<article id="first-edition" class="book layout-container__secondary">
+  <figure class="figure figure--cover">
+    <a href="/1st-edition/">
+      <img src="/1st-edition/cover-320.jpg"
+           srcset="/1st-edition/cover-320.jpg 320w, /1st-edition/cover-600.jpg 600w, /1st-edition/cover-800.jpg 800w, /1st-edition/cover-1024.jpg 1024w"
+           sizes="(min-width:60em) 250px, (min-width:43.125em) 60%, 50%"
+           class="book__cover"
+           alt="">
+    </a>
+  </figure>
+  <div class="info-panel">
+    <h2 class="book__edition"><a href="/1st-edition/">First Edition</a></h2>
+    <p class="book__meta">
+      <b class="hidden">Published on</b> <time datetime="2011-05-31" class="book__published">May 2011</time> (Easy Readers)<br>
+      <b class="book__foreword"><a href="/1st-edition/read/foreword.html">Foreword by Jeffrey Zeldman</a></b>
+    </p>
+
+    {% for links in site.navigation limit:1 %}
+      {% for link in links.subnav limit:1 %}
+        <a class="cta" href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+
+      <ul class="book__links">
+        {% for link in links.subnav offset:1 %}
+          <li class="book__link"><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+</article>

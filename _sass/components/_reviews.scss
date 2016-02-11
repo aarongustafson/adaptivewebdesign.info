@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    Reviews
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+	.reviews,
+	.tweets {
+		@include breakup-placeholder( delist );
+	}
+
+	.h-review {
+		@include rem( margin-top, $default-spacing );
+		//@include breakup-placeholder( contain-words );
+	}
+
+	.p-reviewer {
+
+	    margin: 0;
+	    @include rem( padding-left, 3 * $default-spacing );
+
+	    &::before {
+	    	content: "\2014";
+	    	@include rem( margin-left, 0-$default-spacing );
+	    }
+
+	}
+
+	.p-role {
+		display: block;
+		margin: 0;
+	}
+
+	.e-description blockquote {
+		@include rem( font-size, $font-size-caption );
+
+		border-left: 5px solid $color-blue;
+		@include rem( margin-top, $default-spacing );
+		@include rem( padding-left, $default-spacing / 2 );
+
+		& > :first-child::before {
+			display: none;
+		}
+	}
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+	@supports (display:flex) {
+
+		.reviews,
+		.tweets {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			align-content: space-between;
+		}
+
+		.h-review blockquote > :first-child::before {
+	    	color: $color-blue;
+
+	    	content: "\275D";
+	    	@include rem( font-size, 34 );
+	    	font-style: normal;
+	    	
+	    	position: absolute;
+    		margin-left: -.75em;
+    		margin-top: -.3em;
+		}
+
+		.reviews > .h-review {
+			$rem-spacing: rem( 24 );
+			flex: 0 1 calc( 50% - #{$rem-spacing} );
+			
+			&:nth-child(odd) {
+				@include rem( margin-right, $default-spacing * 2 );
+			}
+		}
+
+		.tweets > .h-review {
+			$rem-spacing: rem( ($default-spacing * 3) / 2 );
+			flex: 0 1 calc( 33% - #{$rem-spacing} );
+			@include rem( margin-right, $default-spacing * 2 );
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+
+	}
+}

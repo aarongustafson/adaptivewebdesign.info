@@ -1,0 +1,40 @@
+---
+layout: default
+title: Reviews of the Second Edition
+description: Folks are saying some very nice things about the Second Edition of Adaptive Web Design.
+permalink: /2nd-edition/reviews/
+---
+
+<p>The second edition of <cite class="h-product">Adaptive Web Design</cite> is quickly gathering accolades. Below are some reviews that have been sent to me or posted online.</p>
+
+<section id="cover" class="section">
+	<h2 class="section__title">From the Cover</h2>
+
+	<ul class="reviews">
+		{% for review in site.data.cover-reviews-2nd-edition %}
+			{% include review.html %}
+		{% endfor %}
+	</ul>
+</section>
+
+<section id="reviews" class="section">
+	<h2 class="section__title">On the Web</h2>
+
+	<ul class="reviews">
+		{% for review in site.data.reviews-2nd-edition %}
+			{% include review.html %}
+		{% endfor %}
+	</ul>
+</section>
+
+<section id="tweets" class="section">
+	<h2 class="section__title">On Twitter</h2>
+
+	<ul class="tweets">
+		{% for tweet in site.data.tweets-2nd-edition %}
+			{% include tweet-embed.html %}
+		{% endfor %}
+	</ul>
+	
+	<script async src="//platform.twitter.com/widgets.js"></script>
+</section>

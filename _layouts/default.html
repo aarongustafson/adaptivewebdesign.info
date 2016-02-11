@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" id="adaptivewebdesign_info">
+  {% include head.html %}
+  <body class="page">
+
+    {% include header.html %}
+
+    <main id="main" tabindex="-1" role="main">
+      <div class="layout-container">
+        <h1 class="page__title">{{ page.title }}</h1>
+
+        {{ content }}
+      </div>
+    </main>
+
+    {% include navigation.html %}
+    {% include footer.html %}
+    {% include after.html %}
+    
+  </body>
+</html>

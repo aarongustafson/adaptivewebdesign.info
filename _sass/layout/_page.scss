@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    Post
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+    .page {
+        
+        &__title {
+            @include rem( margin-bottom, $default-spacing );
+        }
+
+    }
+    
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+    @supports (display:flex) {
+        
+        .page {
+            
+            display: flex;
+            flex-flow: column;
+
+            & > header {
+                order: 1;
+            }
+            & > nav {
+                order: 2;
+            }
+            & > main {
+                order: 3;
+            }
+            & > footer {
+                order: 4;
+            }
+        }
+
+    }
+
+
+}

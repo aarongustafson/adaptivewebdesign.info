@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    Homepage
+\*------------------------------------*/
+
+@include breakup-breakpoint( "global" ) {
+
+	body.home .contentinfo {
+    	border-top: 1px solid $color-border;
+    	@include rem( margin-top, $default-spacing );
+	}
+
+}
+
+@include breakup-breakpoint( "medium" ) {
+
+	body.home {
+
+		.book__cover {
+			float: none;
+			margin: 0 auto;
+			max-width: 60%;
+		}
+
+		.banner {
+			@include rem( margin-bottom, $default-spacing );
+		}
+
+	}
+}
+
+@include breakup-breakpoint( "full" ) {
+
+	body.home {
+
+		#main {
+			@include rem( padding-top, $default-spacing );
+			max-width: 990px;
+			margin: 0 auto;
+		}
+
+		.book__cover {
+			
+			box-shadow: $default-box-shadow;
+
+			width: 275px;
+			height: 425px;
+
+			margin-bottom: -140px;
+			
+			float: right;
+			position: relative;
+				
+		}
+
+		.layout-container__primary {
+
+			position: relative;
+			z-index: 1;
+
+			.book__cover {
+				transform: rotate(-5deg);
+				right: -20px;
+				//shape-outside: polygon(-18px -11px, 290px -43px, 327px 415px, 26px 445px);
+			}
+		}
+
+		.layout-container__secondary .book__cover {
+			transform: rotate(5deg);
+			float: left;
+			left: -20px;
+			//shape-outside: polygon(24px -41px, 332px -15px, 289px 442px, -22px 415px);
+		}
+
+		.info-panel {
+			max-width: 275px;
+			position: relative;
+			z-index: 1;
+		}
+		.layout-container__secondary .info-panel {
+			text-align: right;
+			max-width: 100%;
+		}
+
+	}
+
+	@supports (width:100vw) {
+
+		body.home {
+			
+			#main {
+				max-width: 100%;
+			}
+
+			.book__cover {			
+				width: 28vw;
+				max-width: 250px;
+				height: auto;
+			}
+
+			.info-panel {
+				@include rem( max-width, 275 );
+			}
+
+		}
+	}
+
+}

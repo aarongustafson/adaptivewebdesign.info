@@ -1,0 +1,21 @@
+# Hey there, long time no talk.
+
+In all likelihood, you may have forgotten about this little mailing list. Perhaps you’re one of the folks who signed up to hear more about Easy Readers titles when I originally wrote *Adaptive Web Design* back in 2011. If you’ve joined more recently, it may have been when you read the free version of [*Adaptive Web Design* online](http://adaptivewebdesign.info/1st-edition/). Regardless of how you ended up on this list, I’d like to thank you for sticking around and I’d also like to talk a bit about what’s going to happen with it.
+
+First off, as you probably know, [we decided to shut down Easy Readers at the close of 2014](http://easy-readers.net). We had high hopes for releasing more books, but were having a hard time carving out the necessary bandwidth to do it right. When that happened, we transferred all of Easy Readers’ assets to me, personally. Needless to say, I’m sitting on about 50 more print copies of *Adaptive Web Design*’s first edition. If you’re interested in buying one, feel free to email me; I’ll happily sign it for you too :-)
+
+Speaking of the book, nearly a year ago I decided I wanted to give it the update it deserves. Given that we’d closed Easy Readers, I approached a few friends with the prospect and those conversations resulted in a publishing deal with New Riders. A modest update turned into a wholesale rewrite—I’ll discuss the reasons for that in a separate missive—which I finished a few weeks ago. The fruits of that work will become [available far and wide on December 6th](http://www.amazon.com/Adaptive-Web-Design-Experiences-Progressive/dp/0134216148/). I’m thrilled with the Second Edition and hope you’ll dig it too.
+
+So that gets you up to speed with all things *Adaptive Web Design*-related, but doesn’t really address this list.
+
+I’ve been pondering the idea of putting together a newsletter on progressive enhancement and related topics for quite a while now, but didn’t feel confident I’d be able to maintain a regular cadence with the work it would require. To be frank, it was hard to balance my client work with writing at length about how to make the web better for every user. When [I joined Microsoft in February](https://www.aaron-gustafson.com/notebook/ch-ch-ch-changes/), things changed. Now making the web better is my job and I can spend more time writing about progressive enhancement, accessibility, and the like. I’ve stepped up [my blogging](https://www.aaron-gustafson.com/notebook/) again and even [started a linkblog](https://www.aaron-gustafson.com/notebook/links/) to highlight the great work being done by others in the field. And so I decided to revisit the idea of a newsletter—the Adaptive Web newsletter.
+
+Here’s my plan: Once or twice a month, I’ll send you an email with some thoughts on what’s going on on the web right now. Often it will be something to do with progressive enhancement, but in some cases it might be about tooling, industry trends, or something else I think you might find interesting. Sometimes it’ll be a short thought, but I wouldn’t rule out the possibility of longer pieces too; I don’t know where it will go, so I’m trying not to make too many predictions. Chances are I’ll include a list of some solid reading material as well, along with some context around why it matters.
+
+If this sounds interesting to you, awesome. You’re on the list and you’ll get the emails. If you’re not interested in something like that, I won’t be offended if you unsubscribe. I don’t want to fill your inbox unnecessarily. Alternately, if you’re interested in the content, but not the newsletter, most of it will work its way onto my blog and/or linkblog at some point. I am leaning toward the newsletter getting long-form pieces early, but you can always subscribe to one of my RSS feeds and you will get it eventually.
+
+So that’s it. I’m excited about this next chapter and I hope you’ll join me on it. As always, if you have questions feel free to reply to this email or hit me up on Twitter. I’ll get back to you as quickly as I’m able.
+
+Cheers,
+
+Aaron

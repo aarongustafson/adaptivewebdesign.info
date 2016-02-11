@@ -1,0 +1,129 @@
+/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+
+/*	Debug controls
+	========================================================================== */
+$debug-grid: false; // true;
+
+
+/*	URLs
+	========================================================================== */
+$domain: "http://adaptivewebdesign.info";
+$cdn_domain: "";
+
+
+/*	Breakpoint Management
+	========================================================================== */
+$bp-tiny: 320;
+$bp-tiny-em: 20em;
+$bp-small: 460;
+$bp-small-em: 28.75em;
+$bp-medium: 690;
+$bp-medium-em: 43.125em;
+$bp-full: 960;
+$bp-full-em: 60em;
+$breakup-breakpoints: (
+    "global":       "screen",
+    "tiny":         "(min-width: #{$bp-tiny-em})",
+    "small":        "(min-width: #{$bp-small-em})",
+    "medium":       "(min-width: #{$bp-medium-em})",
+    "full":         "(min-width: #{$bp-full-em})",
+    "print":        "print",
+    "old-ie":       "screen"
+);
+
+
+/*	Grid Management
+	========================================================================== */
+$grid-full-column-sizes: "( 60px 20px )";
+$grid-breakpoints: (
+    "tiny":     3,
+    "small":    6,
+    "medium":   8,
+    "full":     12
+);
+
+
+/*	Legacy support
+	========================================================================== */
+$legacy-support-for-ie6: true;
+$legacy-support-for-ie7: true;
+$legacy-support-for-ie8: true;
+$support-for-original-webkit-gradients: true;
+
+
+/*	Typography
+	========================================================================== */
+// Font Stacks
+$font-stack-sansserif: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+$font-stack-serif: Georgia, serif;
+$font-stack-headings: 'PT Serif Caption', Georgia, serif;
+$font-stack-body: $font-stack-serif;
+$font-stack-nav: $font-stack-sansserif;
+
+// Font-weights
+$font-weight-sansserif: 400;
+$font-weight-sansserif-bold: 700;
+$font-weight-serif: 500;
+$font-weight-mono: 500;
+
+// Font sizes
+$font-size-default: 16;
+$font-size-h1: 48;
+$font-size-h2: 32;
+$font-size-h3: 24;
+$font-size-body: 20;
+$font-size-nav: 18;
+$font-size-caption: 18;
+$font-size-code: 18;
+$font-size-small: 14;
+$font-size-tiny: 12;
+
+// Line heights
+$line-height-default: 1.4;
+$line-height-headings: 1.1;
+
+// spacing
+$default-spacing: 22;
+$default-margin: 0 0 $default-spacing;
+
+// table spacing
+$table-spacing: 15;
+
+/*	Colors
+	========================================================================== */
+// Color Names
+$color-black: #2c2825;
+$color-white: #fff;
+$color-grey: #666;
+$color-grey-light: #DDD;
+$color-off-white: #F9F9F9;
+$color-purple: #7D3B88;
+$color-purple-mid: darken( $color-purple, 10% );
+$color-purple-dark: darken( $color-purple, 20% );
+$color-purple-light: lighten( $color-purple, 20% );
+$color-teal: #0181A6;
+$color-dark-teal: #006B73;
+$color-blue: #8FC7C7;
+$color-blue-dark: darken( $color-blue, 30% );
+$color-blue-very-dark: darken( $color-blue, 50% );
+$color-light-blue: lighten( #D1E3DD, 5% );
+
+// Functional Colors
+$color-background: $color-light-blue;
+$color-text: $color-black;
+$color-text-light: $color-grey;
+$color-link: $color-teal;
+$color-link-hover: $color-dark-teal;
+$color-border: $color-blue;
+$color-rule: $color-blue;
+
+/*	Images
+	========================================================================== */
+$css_images: "/css/images";
+
+/*	Defaults
+	========================================================================== */
+$default-box-shadow: 1px 1px 5px rgba( $color-black, .8 );
+$default-transition: .25s ease;

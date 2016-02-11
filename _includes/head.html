@@ -1,0 +1,65 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Language" content="en"/>
+
+	<title>{% if page.title %}{{ page.title }} of {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}" media="all">
+	<link rel="stylesheet" href="{{ "/css/advanced.css" | prepend: site.baseurl }}" media="only screen">
+	<link rel="stylesheet" href="{{ "/css/fonts.css" | prepend: site.baseurl }}" media="only screen" async>
+	<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="{{ "/css/old-ie.css" | prepend: site.baseurl }}" media="all">
+	<![endif]-->
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+	<!-- Open Graph -->
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:title" content="{{ site.title }}: {{ site.subtitle }}">
+	<meta property="og:url" content="http://adaptivewebdesign.info">
+	<meta property="og:type" content="book">
+	<meta property="og:description" content="{{ site.description }}">
+	<meta property="og:image" content="{{ site.book_photo }}">
+	<meta property="fb:admins" content="100002880350996">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="product">
+	<meta name="twitter:creator" content="AaronGustafson">
+	<meta name="twitter:title" content="{{ site.title }}: {{ site.subtitle }}">
+	<meta name="twitter:description" content="{{ site.description }}">
+	<meta name="twitter:image:src" content="{{ site.book_photo }}">
+	<meta name="twitter:image:width" content="320px">
+	<meta name="twitter:image:height" content="495px">
+	<meta name="twitter:domain" content="AdaptiveWebDesign.info">
+			        
+	<!-- Facebook -->
+	<meta property="fb:admins" content="100002880350996"/>
+
+	<!-- Google Plus -->
+	<meta itemprop="image" content="{{ site.book_photo }}"/>
+
+	<!-- Icons! -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
