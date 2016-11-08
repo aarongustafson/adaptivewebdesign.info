@@ -482,7 +482,7 @@
 			<li><a href="chapter-5.html">Chapter 5: Progressive Enhancement for Accessibility</a></li>
 			<li><a href="chapter-6.html">Chapter 6: Take It Away</a></li>
 			<li><a href="back.html">Back Matter</a></li>
-		<ol>
+		</ol>
 	</nav>
 	
 	<aside class="signup">
@@ -519,6 +519,13 @@
 	  ga('create', 'UA-58149754-1', 'auto');
 	  ga('send', 'pageview');
 
+	</script>
+
+	<script>
+    	// Offline access
+    	if ('serviceWorker' in navigator) {
+        	navigator.serviceWorker.register('/1st-edition/read/sw.js');
+    	}
 	</script>
 </body>
 </html>

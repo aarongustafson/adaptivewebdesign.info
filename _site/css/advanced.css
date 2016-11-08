@@ -446,10 +446,11 @@
     height: 425px;
     margin-bottom: -140px;
     float: right;
-    position: relative; }
-  body.home .layout-container__primary {
     position: relative;
     z-index: 1; }
+  body.home .layout-container__primary {
+    position: relative;
+    z-index: 2; }
     body.home .layout-container__primary .book__cover {
       transform: rotate(-5deg);
       right: -20px; }
@@ -458,9 +459,7 @@
     float: left;
     left: -20px; }
   body.home .info-panel {
-    max-width: 275px;
-    position: relative;
-    z-index: 1; }
+    max-width: 275px; }
   body.home .layout-container__secondary .info-panel {
     text-align: right;
     max-width: 100%; }
