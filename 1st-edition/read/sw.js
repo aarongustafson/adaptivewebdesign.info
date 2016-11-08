@@ -10,6 +10,7 @@ var version = 'v1::';
    then the service worker won't be installed either.
 */
 var awd1e_assets = [
+  '/1st-edition/read/',
 	'/1st-edition/read/index.html',
 	'/1st-edition/read/foreword.html',
 	'/1st-edition/read/chapter-1.html',
