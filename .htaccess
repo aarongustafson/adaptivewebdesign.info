@@ -1,0 +1,3 @@
+<FilesMatch "sw\.js$">
+  Header set Cache-Control "must-revalidate, max-age=600"
+</FilesMatch>
