@@ -1,11 +1,14 @@
 {
   "name": "Adaptive Web Design, First Edition",
-  "short_name": "AWD 1E",
+  "short_name": "AWD",
   "theme_color": "#0c5863",
   "background_color": "#dccbb1",
-  "display": "browser",
-  "scope": "https://adaptivewebdesign.info/1st-edition/read/",
-  "start_url": ".",
+  "display": "minimal-ui",
+  "scope": "/1st-edition/read/",
+  "start_url": "index.html",
+  "dir": "ltr",
+  "lang": "en-US",
+  ​​"orientation": "portrait-primary",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
@@ -48,5 +51,5 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null
+  "prefer_related_applications": false
 }
