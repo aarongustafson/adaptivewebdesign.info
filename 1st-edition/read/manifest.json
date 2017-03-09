@@ -4,8 +4,8 @@
   "theme_color": "#0c5863",
   "background_color": "#dccbb1",
   "display": "browser",
-  "Scope": "https://adaptivewebdesign.info/1st-edition/read/",
-  "start_url": "https://adaptivewebdesign.info/1st-edition/read/",
+  "scope": "https://adaptivewebdesign.info/1st-edition/read/",
+  "start_url": ".",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
