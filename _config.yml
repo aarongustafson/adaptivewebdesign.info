@@ -10,6 +10,25 @@ book_photo: http://adaptivewebdesign.info/2nd-edition/cover-320.png
 
 # Build settings
 markdown: kramdown
+exclude:
+  # Ruby & Gems
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - vendor
+  # Gulp
+  - gulpfile.js
+  - package.json
+  # Content
+  - README.md
+  # Caches
+  - node_modules
+  - .cache
+  - .sass-cache
+  # Git
+  - .gitignore
+  # Docker
+  - docker-compose.yml
 
 # Navigation
 navigation:
