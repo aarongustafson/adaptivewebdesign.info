@@ -523,6 +523,11 @@ tbody td {
 nav h1 {
     margin: 0;
 }
+nav [aria-selected="true"] {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
 .contentinfo {
     margin-top: 0;
     padding-bottom: 2em;
