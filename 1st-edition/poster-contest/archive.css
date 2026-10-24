@@ -1,0 +1,21 @@
+html {
+  font: 1.125em/1.6 Georgia, serif;
+  color: #222;
+  background: #fff;
+}
+body {
+  max-width: 64rem;
+  margin: auto;
+  padding: 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #8b1920;
+}
+#logos a {
+  display: inline-block;
+  margin-right: 1rem;
+}
